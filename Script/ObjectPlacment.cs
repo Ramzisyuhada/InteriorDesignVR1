@@ -31,10 +31,6 @@ public class ObjectPlacment : XRGrabInteractable
     private float _transformY;
 
 
-    /// <summary>
-    /// CSG ALGORITMA
-    /// </summary>
-    /// 
 
 
     protected override void Awake()

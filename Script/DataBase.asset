@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: DataBase
   m_EditorClassIdentifier: 
   objectsData:
-  - <name>k__BackingField: Cube
+  - <Jenis>k__BackingField: 
+    <name>k__BackingField: Cube
     <id>k__BackingField: 1
     <prefab>k__BackingField: {fileID: 6709196866541531818, guid: 714d94568fc14b84f8f0ec9915a495f0,
       type: 3}
     <materials>k__BackingField:
     - {fileID: 2100000, guid: 27671ef6ad4a82148ade30fbd4ec5d32, type: 2}
     - {fileID: 7390553463975553142, guid: 7ab6f3b0fd1a6ba41b2a47766c16613f, type: 3}
-  - <name>k__BackingField: Paint
+  - <Jenis>k__BackingField: 
+    <name>k__BackingField: Paint
     <id>k__BackingField: 2
     <prefab>k__BackingField: {fileID: 1627497564551428, guid: eded3844e29c2ec40bc278e2cbd31279,
       type: 3}
@@ -35,3 +37,15 @@ MonoBehaviour:
     - {fileID: 2100000, guid: c86cb7dd3b68e2a40a6205641e36bf97, type: 2}
     - {fileID: 2100000, guid: 20f382ca5b67580458b454c14e57251e, type: 2}
     - {fileID: 2100000, guid: f5d9b99d4099af548a4914382db262a2, type: 2}
+  - <Jenis>k__BackingField: Furniture
+    <name>k__BackingField: Fatboy
+    <id>k__BackingField: 2
+    <prefab>k__BackingField: {fileID: 8182456632398002180, guid: f57f4129b5dbc634ba2e4fb06999a2ed,
+      type: 3}
+    <materials>k__BackingField: []
+  - <Jenis>k__BackingField: Furniture
+    <name>k__BackingField: Chair
+    <id>k__BackingField: 2
+    <prefab>k__BackingField: {fileID: 617509622161494754, guid: 191f1adc5173c914c8148343bbcc3232,
+      type: 3}
+    <materials>k__BackingField: []

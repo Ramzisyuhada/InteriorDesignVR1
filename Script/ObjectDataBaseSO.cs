@@ -14,6 +14,10 @@ public class ObjectDataBaseSO : ScriptableObject
 [Serializable]
 public class ObjectData
 {
+
+    [field: SerializeField]
+    public string Jenis { get; set; }
+
     [field: SerializeField]
     public string name {  get; set; }
     [field: SerializeField] 
