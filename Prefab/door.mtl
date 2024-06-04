@@ -1,0 +1,7 @@
+newmtl Door_1_Black
+map_Pm Door_1_Spec.tga
+bump Door_1_Normal.tga
+map_Kd Door_1_Albedo.tga
+Kd 0.05147055 0.05147055 0.05147055
+d 1
+
