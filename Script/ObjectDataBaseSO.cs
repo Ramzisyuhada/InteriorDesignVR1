@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 
 [CreateAssetMenu]
@@ -26,6 +28,9 @@ public class ObjectData
     public GameObject prefab { get; set; }
 
     [field: SerializeField]
-    public List<Material> materials { get; set; } 
+    public List<Material> materials { get; set; }
+
+    [field: SerializeField]
+    public Sprite SourceImage { get; set; }
 }
 

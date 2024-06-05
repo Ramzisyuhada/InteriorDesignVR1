@@ -32,8 +32,11 @@ public class Wallplacment : MonoBehaviour
     [SerializeField] private XRRayInteractor rayRight;
 
 
+    bool xsnap;
 
-     private enum Controller
+    bool ysnap;
+    List<GameObject> pole = new List<GameObject>();
+    private enum Controller
     {
         Rotation,
         Transform,
@@ -59,7 +62,11 @@ public class Wallplacment : MonoBehaviour
         UpdateControllerActiveState();
 
     }
-
+    private void SetEndPoles()
+    {
+        GameObject p1 = Instantiate(Wall, startInstance.transform.position, startInstance.transform.rotation);
+        GameObject p2 = Instantiate(Wall, endInstance.transform.position, endInstance.transform.rotation);
+    }
     private void UpdateControllerActiveState()
     {
         float leftValue = inputActionLeft.action.ReadValue<float>();
@@ -78,47 +85,39 @@ public class Wallplacment : MonoBehaviour
 
     Vector3 GridSnap(Vector3 originalPosisition) {
 
-        int granularity = 1;
+        float granularity = 1f;
         Vector3 Snap = new Vector3(Mathf.Floor(originalPosisition.x / granularity) * granularity, originalPosisition.y, Mathf.Floor(originalPosisition.z / granularity) * granularity);
         return Snap;
     }
+    private bool isFirstButtonPressed = false;
 
     private void HandleInput()
     {
-        float leftValue = inputActionLeft.action.ReadValue<float>();
-        float rightValue = inputActionRight.action.ReadValue<float>();
-        bool inputActive = leftValue != 0 || rightValue != 0;
+        bool leftButtonDown = inputActionLeft.action.triggered;
+        bool rightButtonDown = inputActionRight.action.triggered;
 
-        if (inputActive)
+        if (!isFirstButtonPressed)
         {
-            if (!isStartSet)
+            if (leftButtonDown || rightButtonDown)
             {
                 SetStartPoint();
-                isStartSet = true;
+                isFirstButtonPressed = true;
                 isCreating = true;
-            }
-            else if (!isCreating)
-            {
-                SetEndPoint();
-                isCreating = true;
-                isStartSet = false;
             }
         }
-        else 
-
+        else
         {
-
-            if(isCreating)
+            if (leftButtonDown || rightButtonDown)
             {
-                Adjust();
+                SetEndPoint();
+                isFirstButtonPressed = false;
                 isCreating = false;
-
             }
+        }
 
-
-
-
-
+        if (isCreating)
+        {
+            Adjust();
         }
     }
 
@@ -128,7 +127,7 @@ public class Wallplacment : MonoBehaviour
         endInstance.SetActive(true);
 
         startInstance.transform.position = GridSnap(GetWorldPoint());
-        WallInstance  = Instantiate(Wall, startInstance.transform.position,Quaternion.identity);
+        WallInstance  = Instantiate(Wall, GridSnap(startInstance.transform.position),Quaternion.identity);
       
 
     }
@@ -142,9 +141,19 @@ public class Wallplacment : MonoBehaviour
     private void Adjust()
     {
         endInstance.transform.position = GridSnap(GetWorldPoint());
-        endInstance.transform.position = new Vector3(startInstance.transform.position.x, endInstance.transform.position.y, endInstance.transform.position.z);
+        if (xsnap)
+        {
+            endInstance.transform.position = new Vector3(startInstance.transform.position.x, endInstance.transform.position.y, endInstance.transform.position.z);
 
-        
+        }
+        if (ysnap)
+        {
+            endInstance.transform.position = new Vector3(endInstance.transform.position.x, endInstance.transform.position.y, startInstance.transform.position.z);
+
+        }
+
+        endInstance.transform.position = new Vector3(endInstance.transform.position.x, endInstance.transform.position.y, startInstance.transform.position.z);
+
         AdjustWall();
 
     }

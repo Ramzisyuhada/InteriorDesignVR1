@@ -96,6 +96,9 @@ public class MenuController : MonoBehaviour
             inventory.transform.localPosition = Vector3.zero;
             inventory.transform.localScale = item.transform.localScale;
             inventory.transform.rotation = item.transform.rotation;
+
+            Transform Background = inventory.transform.GetChild(0);
+            
             btn.Add(inventory.GetComponent<Button>());
             Button button = inventory.GetComponent<Button>();
             if (button != null)
@@ -113,7 +116,6 @@ public class MenuController : MonoBehaviour
         if (index >= 0 && index < listgameobject.Count)
         {
             GameObject selectedObject = listgameobject[index];
-            Debug.Log("Selected item: " + selectedObject.name);
             EquipObject(selectedObject);
         }
     }
