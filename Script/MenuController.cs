@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -24,20 +25,39 @@ public class MenuController : MonoBehaviour
     private static GameObject  _canvas;
 
     private static List<Button> btn = new List<Button>();
-
-
     private static List<GameObject> listgameobject = new List<GameObject>();
 
     private static GameObject selectedObject;
 
+
+    private Vector3 originalCanvasScale;
+    private Quaternion originalCanvasRotation;
     private void Start()
     {
         database1 = database;
         _canvas = canvas;
+
+        originalCanvasScale = _canvas.transform.localScale;
+        originalCanvasRotation = _canvas.transform.rotation;
     }
-    private void Update()
+     void Update()
     {
         buttonn();
+        if (Input.GetKeyDown(KeyCode.JoystickButton1))
+        {
+            Debug.Log("test00");
+            GameObject currentCanvas = Instantiate(canvas);
+            currentCanvas.transform.SetParent(Camera.main.transform);
+            currentCanvas.transform.localPosition = new Vector3(0, 0f, 1.5f);
+            currentCanvas.transform.localScale = originalCanvasScale;
+
+            currentCanvas.transform.localRotation = Quaternion.identity; // Reset rotation
+
+            _canvas = currentCanvas;
+
+            currentCanvas.SetActive(true);
+        }
+
     }
 
     private void buttonn()
@@ -45,7 +65,6 @@ public class MenuController : MonoBehaviour
         float leftValue = inputAction.action.ReadValue<float>();
         float rightValue = inputActionClose.action.ReadValue<float>();
 
-        Debug.Log(leftValue);
        
     }
 
@@ -64,8 +83,7 @@ public class MenuController : MonoBehaviour
             inventoryChild.gameObject.SetActive(true);
             Transform InventorySlot = inventoryChild.GetChild(0);
 
-            Item(InventorySlot.gameObject,
-            inventoryChild.gameObject, jenis);
+            Item(InventorySlot.gameObject, inventoryChild.gameObject, jenis);
             Debug.Log(inventoryChild.gameObject.name);
         }
 
@@ -92,9 +110,13 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < objects.Count; i++)
         {
             GameObject inventory = Instantiate(item);
+
             inventory.transform.SetParent(Inventory1.transform);
+
             inventory.transform.localPosition = Vector3.zero;
+
             inventory.transform.localScale = item.transform.localScale;
+
             inventory.transform.rotation = item.transform.rotation;
 
             Transform Background = inventory.transform.GetChild(0);
@@ -125,8 +147,16 @@ public class MenuController : MonoBehaviour
     private void EquipObject(GameObject selectedObject)
     {
 
+
         Vector3 newPosition = new Vector3(selectedObject.transform.position.x, selectedObject.transform.position.y, Camera.main.transform.position.z * 2);
         GameObject instantiatedItem = Instantiate(selectedObject, newPosition, Quaternion.identity);
+        Transform menuBarang = Camera.main.transform.Find("MenuBarang(Clone)");
+        listgameobject.Clear();
+        btn.Clear();
 
+        if (menuBarang != null)
+        {
+             Destroy(menuBarang.gameObject);
+        }
     }
 }

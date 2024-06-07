@@ -53,6 +53,9 @@ public class Wallplacment : MonoBehaviour
         startInstance.SetActive(false);
         endInstance.SetActive(false);
 
+
+
+
     }
 
     void Update()
@@ -152,7 +155,7 @@ public class Wallplacment : MonoBehaviour
 
         }
 
-        endInstance.transform.position = new Vector3(endInstance.transform.position.x, endInstance.transform.position.y, startInstance.transform.position.z);
+      //  endInstance.transform.position = new Vector3(endInstance.transform.position.x, endInstance.transform.position.y, startInstance.transform.position.z);
 
         AdjustWall();
 

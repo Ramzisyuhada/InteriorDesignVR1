@@ -32,9 +32,21 @@ public class ObjectPlacment : XRGrabInteractable
 
 
 
+    static CSGBrush cube;
+    static CSGBrush sphere;
+    static CSGBrush cylinder;
+    static CSGBrushOperation CSGOp = new CSGBrushOperation();
+    static CSGBrush cube_inter_sphere;
+    static CSGBrush finalres;
+    bool Move = false;
+    float value_add;
 
+    private GameObject _hasil;
+   
     protected override void Awake()
     {
+        CSGOp = new CSGBrushOperation();
+
         base.Awake();
         objectRenderer = GetComponent<Renderer>();
         if (objectRenderer != null ) 
@@ -47,6 +59,9 @@ public class ObjectPlacment : XRGrabInteractable
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
+
+
+
         base.OnSelectEntered(args);
         if (_material != null)
         {
@@ -56,6 +71,62 @@ public class ObjectPlacment : XRGrabInteractable
         objectRenderer.GetComponent<Rigidbody>().isKinematic = false;
 
         Debug.Log("Object Selected: " + gameObject.name);
+    }
+    public void CreateBrush(GameObject obj,GameObject hasil)
+    {
+        cube = new CSGBrush(hasil);
+        cube.build_from_mesh(hasil.GetComponent<MeshFilter>().mesh);
+
+
+        cylinder = new CSGBrush(obj);
+        cylinder.build_from_mesh(obj.GetComponent<MeshFilter>().mesh);
+    }
+
+    public void CreateObjet(GameObject obj, GameObject hasil)
+    {
+        Vector3 originalScale = hasil.transform.localScale;
+        Bounds originalBounds = hasil.GetComponent<MeshFilter>().mesh.bounds;
+
+        BoxCollider originalCubeCollider = hasil.GetComponent<BoxCollider>();
+        Vector3 originalCubeColliderCenter = originalCubeCollider.center;
+        Vector3 originalCubeColliderSize = originalCubeCollider.size;
+        Debug.Log(originalScale.z);
+
+
+        CSGOp.merge_brushes(Operation.OPERATION_SUBTRACTION, cube, cylinder, ref finalres);
+
+        hasil.GetComponent<MeshFilter>().mesh.Clear();
+        finalres.getMesh(hasil.GetComponent<MeshFilter>().mesh);
+        Bounds newBounds = hasil.GetComponent<MeshFilter>().mesh.bounds;
+
+
+        // Jika Anda ingin memeriksa apakah ukuran berubah
+        if (originalBounds.size != newBounds.size)
+        {
+            Debug.Log("Ukuran mesh berubah, menyesuaikan kembali ke ukuran asli.");
+
+            // Hitung faktor skala untuk mengembalikan ukuran asli
+            Vector3 scaleFactor = new Vector3(
+                originalBounds.size.x,
+                originalBounds.size.y,
+                originalBounds.size.z
+            );
+
+            hasil.transform.localScale = scaleFactor;
+
+
+            originalCubeCollider.size = new Vector3(newBounds.size.x, newBounds.size.y, originalScale.z);
+
+            originalCubeCollider.center = new Vector3(newBounds.center.x, newBounds.center.y, 0f);
+
+
+        }
+        else
+        {
+            Debug.Log("Ukuran mesh tetap sama.");
+        }
+        //  originalCubeCollider.center = originalCubeColliderCenter;
+        //  originalCubeCollider.size = originalCubeColliderSize;
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -72,6 +143,8 @@ public class ObjectPlacment : XRGrabInteractable
             transform.position = newPosition;
 
         }
+        CreateBrush(transform.gameObject, _hasil);
+        CreateObjet(transform.gameObject, _hasil);
         objectRenderer.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         objectRenderer.GetComponent<Rigidbody>().isKinematic = true;
         Debug.Log("Object Deselected: " + gameObject.name);
@@ -121,10 +194,16 @@ public class ObjectPlacment : XRGrabInteractable
         {
             if (hit.collider.CompareTag("Wall"))
             {
+                finalres = new CSGBrush(hit.transform.gameObject);
+                _hasil = hit.transform.gameObject;
                 transform.rotation = _quaternion;
+                _hasil = hit.transform.gameObject;
 
-                transform.position = new Vector3(transform.position.x, transform.position.y, hit.point.z);
-                Debug.Log(hit.point.z);
+                // Mendapatkan posisi tengah collider
+                Vector3 center = hit.collider.bounds.center;
+                // Menyesuaikan posisi objek
+                transform.position = new Vector3(transform.position.x, transform.position.y, center.z);
+                Debug.Log(center.z);
                 return true;
             }
         }

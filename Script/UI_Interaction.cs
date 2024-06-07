@@ -19,6 +19,7 @@ public class UI_Interaction : MonoBehaviour
     [SerializeField] private InputActionProperty inputActionRight;
     [SerializeField] private InputActionProperty inputActionLeftrotate;
     [SerializeField] private InputActionProperty inputActionRightrotate;
+
     [SerializeField] private XRRayInteractor rayLeft;
     [SerializeField] private XRRayInteractor rayRight;
 
@@ -127,6 +128,11 @@ public class UI_Interaction : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                if (currentCanvas != null)
+                    Destroy(currentCanvas);
+            }
         }
     }
 
@@ -153,12 +159,11 @@ public class UI_Interaction : MonoBehaviour
     {
         currentCanvas = Instantiate(_canvas);
 
-        currentCanvas.transform.SetParent(hitObject.transform);
-        currentCanvas.transform.localPosition = new Vector3(0, 1.0f, 0);
+        currentCanvas.transform.SetParent(Camera.main.transform);
+        currentCanvas.transform.localPosition = new Vector3(0, 0f, 1.5f);
         currentCanvas.transform.localScale = originalCanvasScale;
 
         Vector3 directionToPlayer = Camera.main.transform.position - currentCanvas.transform.position;
-        directionToPlayer.y = 0f; 
 
         currentCanvas.transform.rotation = Quaternion.LookRotation(directionToPlayer);
         currentCanvas.SetActive(true);
