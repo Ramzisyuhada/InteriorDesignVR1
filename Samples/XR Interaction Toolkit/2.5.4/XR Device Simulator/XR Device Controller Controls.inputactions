@@ -314,7 +314,7 @@
                 {
                     "name": "",
                     "id": "c17eb846-7a66-4006-9d57-6b91831868d0",
-                    "path": "<XRController>{LeftHand}/{PrimaryAction}",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

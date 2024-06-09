@@ -43,15 +43,17 @@ public class MenuController : MonoBehaviour
      void Update()
     {
         buttonn();
-        if (Input.GetKeyDown(KeyCode.JoystickButton1))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             Debug.Log("test00");
             GameObject currentCanvas = Instantiate(canvas);
             currentCanvas.transform.SetParent(Camera.main.transform);
             currentCanvas.transform.localPosition = new Vector3(0, 0f, 1.5f);
             currentCanvas.transform.localScale = originalCanvasScale;
+            currentCanvas.transform.localRotation = Quaternion.identity; 
+            Vector3 direction = currentCanvas.transform.position - Camera.main.transform.position;
 
-            currentCanvas.transform.localRotation = Quaternion.identity; // Reset rotation
+            currentCanvas.transform.position = Camera.main.transform.position + direction.normalized * 4f;
 
             _canvas = currentCanvas;
 
@@ -70,26 +72,46 @@ public class MenuController : MonoBehaviour
 
     public void Furniture()
     {
+        listgameobject.Clear();
+        btn.Clear();
         Inventory("Furniture");
+    
     }
-
+    public void Decorationt()
+    {
+         listgameobject.Clear();
+        btn.Clear();
+        Inventory("Decorationt");
+     
+    }
 
     private void Inventory(string jenis)
     {
-        Transform Background = _canvas.transform.GetChild(0);
-        Transform inventoryChild = Background.GetChild(1);
-        if (inventoryChild != null && inventoryChild.name == "Inventory")
-        {
-            inventoryChild.gameObject.SetActive(true);
-            Transform InventorySlot = inventoryChild.GetChild(0);
+        Transform Background = _canvas.transform.GetChild(1);
+        Transform ListoObjectItem = Background.GetChild(1);
+        Transform Viweport = ListoObjectItem.GetChild(0);
+        Transform Content = Viweport.GetChild(0);
 
-            Item(InventorySlot.gameObject, inventoryChild.gameObject, jenis);
-            Debug.Log(inventoryChild.gameObject.name);
+       /* Transform cloneTransform = Content.Find("List Object(Clone)");
+        if (cloneTransform != null)
+        {
+            Destroy(cloneTransform.gameObject);
+        }*/
+
+        Transform ListObject = Content.GetChild(0);
+
+        Transform ListObject1 = ListObject.GetChild(0);
+        if (ListObject != null && ListObject.name == "List Object")
+        {
+
+            Transform btn = ListObject.GetChild(0);
+            Item(btn.gameObject, ListObject.gameObject, jenis, Content.gameObject);
+            Debug.Log(Content.gameObject.name);
         }
 
     }
 
-    private void Item(GameObject item, GameObject Inventory1, string jenis)
+    private void Item(GameObject item, GameObject Inventory1, string jenis,GameObject content)
 
     {
         
@@ -102,26 +124,29 @@ public class MenuController : MonoBehaviour
             }
         }
 
-        CreateButton(item, Inventory1, listgameobject);
+        CreateButton(item, Inventory1, listgameobject, content);
     }
 
-    private void CreateButton(GameObject item, GameObject Inventory1,List<GameObject> objects) 
+    private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content)
     {
+        GameObject currentParent = Instantiate(Inventory1, content.transform);
+    
         for (int i = 0; i < objects.Count; i++)
         {
-            GameObject inventory = Instantiate(item);
+            if (currentParent.transform.childCount >= 4)
+            {
+               
 
-            inventory.transform.SetParent(Inventory1.transform);
+                currentParent = Instantiate(Inventory1, content.transform);
+            }
+
+            GameObject inventory = Instantiate(item);
+            inventory.transform.SetParent(currentParent.transform);
 
             inventory.transform.localPosition = Vector3.zero;
-
             inventory.transform.localScale = item.transform.localScale;
-
             inventory.transform.rotation = item.transform.rotation;
 
-            Transform Background = inventory.transform.GetChild(0);
-            
-            btn.Add(inventory.GetComponent<Button>());
             Button button = inventory.GetComponent<Button>();
             if (button != null)
             {
@@ -129,8 +154,11 @@ public class MenuController : MonoBehaviour
                 button.onClick.AddListener(() => OnButtonClick(index));
                 btn.Add(button);
             }
+
             inventory.SetActive(true);
         }
+        Inventory1.SetActive(false);
+
     }
 
     private void OnButtonClick(int index)
@@ -148,9 +176,14 @@ public class MenuController : MonoBehaviour
     {
 
 
-        Vector3 newPosition = new Vector3(selectedObject.transform.position.x, selectedObject.transform.position.y, Camera.main.transform.position.z * 2);
-        GameObject instantiatedItem = Instantiate(selectedObject, newPosition, Quaternion.identity);
-        Transform menuBarang = Camera.main.transform.Find("MenuBarang(Clone)");
+        Vector3 cameraPosition = Camera.main.transform.position;
+        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward * 4f;
+        Quaternion rotation = Quaternion.LookRotation(cameraPosition - objectPosition);
+
+        GameObject instantiatedItem = Instantiate(selectedObject, objectPosition, Quaternion.identity);
+
+
+        Transform menuBarang = Camera.main.transform.Find("MenuItem(Clone)");
         listgameobject.Clear();
         btn.Clear();
 

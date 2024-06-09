@@ -1,0 +1,21 @@
+Thank you for purchasing WallPen!
+
+This file goes over the basics of how to get started, including creating a interior, controls and creating your own Wallsets.
+
+CREATING A INTERIOR-----
+
+A Interior is a GameObject that all the walls and floors of a specific building are parented to. To create one, simply add the "WallpenInterior" component to a GameObject. You can change the size of the Interior via the "Interior Size" value, but be warned, this may corrupt any interior drawing you've made already.
+
+CONTROLS-----
+You can see which mode you're in via the top left corner of the scene view. Clicking the cube icon will change you from wall mode, to floor mode, and vice versa. You can click the three dots beside it to change any settings for the respective mode, such as whether the floor faces up, or down.
+
+When drawing walls, make sure you have a wallset and a interior selected, then hold Left Shift while pressing Left Mouse to drag a wall out.
+When drawing floors, it works the same, except you don't need a wallset selected.
+
+
+CREATING A WALLSET-----
+A Wallset holds all the prefabs of a specific type of wall, e.g cobblestone, fencing, etc. You will need to create each piece in a software of your choice
+(Don't worry, we include a demo set to help you get started!)
+You can poke around the demo wallsets to get a feel for how they're setup, edit them, tweak them etc. Or, use them as a base for your own! It's up to you!
+
+Have fun! Remember, if you need any help, click the three dots. They'll give some help based on the mode you're in.

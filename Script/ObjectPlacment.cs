@@ -70,7 +70,6 @@ public class ObjectPlacment : XRGrabInteractable
         objectRenderer.GetComponent<Rigidbody>().constraints= RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
         objectRenderer.GetComponent<Rigidbody>().isKinematic = false;
 
-        Debug.Log("Object Selected: " + gameObject.name);
     }
     public void CreateBrush(GameObject obj,GameObject hasil)
     {
@@ -100,12 +99,10 @@ public class ObjectPlacment : XRGrabInteractable
         Bounds newBounds = hasil.GetComponent<MeshFilter>().mesh.bounds;
 
 
-        // Jika Anda ingin memeriksa apakah ukuran berubah
         if (originalBounds.size != newBounds.size)
         {
             Debug.Log("Ukuran mesh berubah, menyesuaikan kembali ke ukuran asli.");
 
-            // Hitung faktor skala untuk mengembalikan ukuran asli
             Vector3 scaleFactor = new Vector3(
                 originalBounds.size.x,
                 originalBounds.size.y,
@@ -125,8 +122,7 @@ public class ObjectPlacment : XRGrabInteractable
         {
             Debug.Log("Ukuran mesh tetap sama.");
         }
-        //  originalCubeCollider.center = originalCubeColliderCenter;
-        //  originalCubeCollider.size = originalCubeColliderSize;
+ 
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -143,11 +139,10 @@ public class ObjectPlacment : XRGrabInteractable
             transform.position = newPosition;
 
         }
-        CreateBrush(transform.gameObject, _hasil);
-        CreateObjet(transform.gameObject, _hasil);
         objectRenderer.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         objectRenderer.GetComponent<Rigidbody>().isKinematic = true;
-        Debug.Log("Object Deselected: " + gameObject.name);
+
+
     }
     private bool SnapToPosition()
     {
@@ -190,20 +185,19 @@ public class ObjectPlacment : XRGrabInteractable
     private bool PlaceOnWall()
     {
         RaycastHit hit;
+        RaycastHit[] hits;
+
         if (Physics.Raycast(transform.position, Vector3.forward, out hit, Mathf.Infinity))
         {
             if (hit.collider.CompareTag("Wall"))
             {
-                finalres = new CSGBrush(hit.transform.gameObject);
-                _hasil = hit.transform.gameObject;
-                transform.rotation = _quaternion;
-                _hasil = hit.transform.gameObject;
 
-                // Mendapatkan posisi tengah collider
-                Vector3 center = hit.collider.bounds.center;
-                // Menyesuaikan posisi objek
-                transform.position = new Vector3(transform.position.x, transform.position.y, center.z);
-                Debug.Log(center.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y, hit.point.z);
+                
+
+
+
+
                 return true;
             }
         }
@@ -219,7 +213,8 @@ public class ObjectPlacment : XRGrabInteractable
             {
                 transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
 
-
+                Debug.Log("Objects on wall:");
+                
                 return true;
             }
         }
@@ -229,11 +224,19 @@ public class ObjectPlacment : XRGrabInteractable
     private bool PlaceOnSurface()
     {
         RaycastHit hit;
+        HashSet<Collider> collider1 = new HashSet<Collider>();
+        HashSet<float> Jarak = new HashSet<float>();
+        float x;
+        
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
         {
             if (hit.collider.CompareTag("Surface"))
             {
-                transform.position = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+                transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+               
+
+                
+             
                 return true;
             }
 
