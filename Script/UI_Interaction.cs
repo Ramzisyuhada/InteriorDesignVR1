@@ -350,7 +350,7 @@ public class UI_Interaction : MonoBehaviour
                     {
                         if (inputActionLeft.action.WasPressedThisFrame())
                         {
-                            btn[i].onClick.Invoke();
+                            //btn[i].onClick.Invoke();
                         }
                     }
                 }
