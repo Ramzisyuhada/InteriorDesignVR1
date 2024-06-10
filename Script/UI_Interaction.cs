@@ -25,9 +25,10 @@ public class UI_Interaction : MonoBehaviour
 
     [Header("Canvas")]
     [SerializeField] private GameObject _canvas;
+    [SerializeField]
+    private GameObject colorpicker;
 
 
-   
 
     private static GameObject currentCanvas;
     private Vector3 originalCanvasScale;
@@ -39,8 +40,12 @@ public class UI_Interaction : MonoBehaviour
 
 
     private static GameObject Inventory;
-
+    private static GameObject gameobject;
     private static List<Button> btn = new List<Button>();
+
+
+
+    public ColorPicker colorPicker;
     public  enum Controller 
     {
         
@@ -123,16 +128,13 @@ public class UI_Interaction : MonoBehaviour
                         barang = hitObject;
                         if (hitObject != null && !HasChildCanvas(hitObject))
                         {
+                            gameobject = hitObject.gameObject;
                             ShowCanvas(hitObject);
                         }
                     }
                 }
             }
-            else
-            {
-                if (currentCanvas != null)
-                    Destroy(currentCanvas);
-            }
+            
         }
     }
 
@@ -159,19 +161,32 @@ public class UI_Interaction : MonoBehaviour
     {
         currentCanvas = Instantiate(_canvas);
 
-        currentCanvas.transform.SetParent(Camera.main.transform);
-        currentCanvas.transform.localPosition = new Vector3(0, 0f, 1.5f);
+        Bounds bounds = GetBoundsOfSelectedObject(hitObject);
+        currentCanvas.transform.position = bounds.center + Vector3.up * (bounds.extents.y + 1f); // Offset 0.1f agar di atas objek
+
         currentCanvas.transform.localScale = originalCanvasScale;
 
-        Vector3 directionToPlayer = Camera.main.transform.position - currentCanvas.transform.position;
+        Vector3 directionToCamera = Camera.main.transform.position - currentCanvas.transform.position;
+        currentCanvas.transform.rotation = Quaternion.LookRotation(directionToCamera);
 
-        currentCanvas.transform.rotation = Quaternion.LookRotation(directionToPlayer);
         currentCanvas.SetActive(true);
 
 
     }
 
-
+    private Bounds GetBoundsOfSelectedObject(GameObject selectedObject)
+    {
+        Renderer renderer = selectedObject.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            return renderer.bounds;
+        }
+        else
+        {
+            Debug.LogWarning("Renderer component not found on selectedObject.");
+            return new Bounds(Vector3.zero, Vector3.zero);
+        }
+    }
     void _actionscale()
     {
         Vector2 leftValue = inputActionLeftrotate.action.ReadValue<Vector2>();
@@ -245,22 +260,58 @@ public class UI_Interaction : MonoBehaviour
         SetControllerType(Controller.Texture);
     }
 
+    public void Destroy1()
+    {
+     
+        Destroy(gameobject);
+        Destroy(currentCanvas);
+    }
     private void Texture()
     {
-        Transform Background = currentCanvas.transform.GetChild(0);
-        Transform inventoryChild = Background.GetChild(1);
-        if (inventoryChild != null && inventoryChild.name == "Inventory")
-        {
-            inventoryChild.gameObject.SetActive(true);
-            Transform InventorySlot = inventoryChild.GetChild(0);
+        Transform childTransform = currentCanvas.transform.GetChild(2); 
+        GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
 
-            Item(InventorySlot.gameObject,
-            inventoryChild.gameObject);
-            Debug.Log(inventoryChild.gameObject.name);
+        colorPicker.onColorChanged += OnColorChanged;
+
+        if (existingColorPicker == null)
+        {
+            GameObject newColorPicker = Instantiate(colorpicker);
+            newColorPicker.transform.SetParent(childTransform, false);
+        }
+        else
+        {
+           
+            colorPicker.onColorChanged -= OnColorChanged;
         }
 
+        if (gameobject != null)
+        {
+            ColorPicker cp = existingColorPicker.GetComponent<ColorPicker>();
+            if (cp != null)
+            {
+                gameobject.GetComponent<Renderer>().material.color = cp.color;
+            }
+            else
+            {
+                Debug.LogWarning("ColorPicker component not found on existingColorPicker.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("gameobject not assigned.");
+        }
     }
 
+
+    public void OnColorChanged(Color c)
+    {
+    }
+
+    private void OnDestroy()
+    {
+        if (colorPicker != null)
+            colorPicker.onColorChanged -= OnColorChanged;
+    }
     private void Item(GameObject item,GameObject  Inventory1)
 
     {
