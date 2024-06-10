@@ -8,28 +8,40 @@ public class HandController : MonoBehaviour
     private InputDevice _Targetdevices;
     void Start()
     {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDeviceCharacteristics leftcontrollercharacteristics = InputDeviceCharacteristics.Left | InputDeviceCharacteristics.Controller;
-        InputDevices.GetDevicesWithCharacteristics(leftcontrollercharacteristics, devices);
+        var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
 
-        foreach (var device in devices)
+        if (leftHandDevices.Count == 1)
         {
-            Debug.Log(device.name + device.characteristics);
+            _Targetdevices = leftHandDevices[0];
         }
-        if(devices.Count > 0)
+        else if (leftHandDevices.Count > 1)
         {
-            _Targetdevices = devices[1];
+            Debug.Log("Found more than one left hand!");
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        _Targetdevices.TryGetFeatureValue(CommonUsages.primaryButton, out bool _primaryButton);
-        Debug.Log(_primaryButton);
-        _Targetdevices.TryGetFeatureValue(CommonUsages.trigger, out float _trigger);
-        Debug.Log(_trigger);
+        var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
 
+        if (leftHandDevices.Count == 1)
+        {
+            UnityEngine.XR.InputDevice device = leftHandDevices[0];
+            bool triggerValue;
+            if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
+            {
+                Debug.Log("Trigger button is pressed.");
+            }
+        }
+        else if (leftHandDevices.Count > 1)
+        {
+            Debug.Log("Found more than one left hand!");
+        }
 
     }
+
+   
 }
