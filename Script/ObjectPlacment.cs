@@ -233,10 +233,21 @@ public class ObjectPlacment : XRGrabInteractable
             if (hit.collider.CompareTag("Surface"))
             {
                 transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-               
 
-                
-             
+                Bounds parentBounds = hit.transform.GetComponent<Renderer>().bounds;
+
+                float objLengthZ = transform.GetComponent<Renderer>().bounds.size.z; 
+                float newPositionZ = Mathf.Clamp(hit.point.z, parentBounds.min.z + (objLengthZ / 2f), parentBounds.max.z - (objLengthZ / 2f));
+                transform.position = new Vector3(hit.point.x, hit.point.y, newPositionZ);
+
+                float distanceToEdgeZ = Mathf.Abs(transform.position.z - parentBounds.min.z);
+                float snappingThreshold = 0.005f;
+                if (distanceToEdgeZ <= snappingThreshold)
+                {
+                    Debug.Log("test");
+                    transform.position = new Vector3(hit.point.x, hit.point.y, newPositionZ);
+
+                }
                 return true;
             }
 
@@ -245,6 +256,16 @@ public class ObjectPlacment : XRGrabInteractable
         return false;
     }
 
+    void jarak()
+    {
+      //  Bounds parentBounds = hit.transform.GetComponent<Renderer>().bounds;
+
+        // Menghitung jarak antara posisi objek dan tepi parent pada sumbu z
+      //  float distanceToEdgeZ = Mathf.Abs(transform.position.z - parentBounds.min.z);
+
+        // Output atau gunakan nilai jarak yang telah dihitung
+       // Debug.Log("Jarak ke tepi parent (sumbu z): " + distanceToEdgeZ);
+    }
 
     private void Update()
     {
