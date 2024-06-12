@@ -13,108 +13,78 @@ MonoBehaviour:
   m_Name: DataBase
   m_EditorClassIdentifier: 
   objectsData:
-  - <Jenis>k__BackingField: 
-    <name>k__BackingField: Cube
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Tanaman
+    <id>k__BackingField: 0
+    <prefab>k__BackingField: {fileID: 0}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0a184ad0566ce6c4da4d9b9f64afc512,
+      type: 3}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Pot
     <id>k__BackingField: 1
-    <prefab>k__BackingField: {fileID: 6709196866541531818, guid: 714d94568fc14b84f8f0ec9915a495f0,
+    <prefab>k__BackingField: {fileID: 0}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0bf16361174892848b6e47b7865085b9,
       type: 3}
-    <materials>k__BackingField:
-    - {fileID: 2100000, guid: 27671ef6ad4a82148ade30fbd4ec5d32, type: 2}
-    - {fileID: 7390553463975553142, guid: 7ab6f3b0fd1a6ba41b2a47766c16613f, type: 3}
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Furniture
-    <name>k__BackingField: Kursi1
-    <id>k__BackingField: 1
-    <prefab>k__BackingField: {fileID: 4237530767371831047, guid: 5958774f45c9daf4e873787b11ccf454,
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Buku
+    <id>k__BackingField: 2
+    <prefab>k__BackingField: {fileID: 3413711846715311720, guid: 7695c0d2e92da0e4f8d08c7909230b47,
       type: 3}
     <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Furniture
-    <name>k__BackingField: Office Chair
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 1743156886038142, guid: ef47a1c558992174ea86c7f7702cdd69,
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0cf5d1148f986804f9798f5a22f9f6d2,
+      type: 3}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Buku2
+    <id>k__BackingField: 3
+    <prefab>k__BackingField: {fileID: 3447407846402289519, guid: 009ac3bc89a8c994aaa64e90fed60ab2,
       type: 3}
     <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Furniture
-    <name>k__BackingField: Chair
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 617509622161494754, guid: 191f1adc5173c914c8148343bbcc3232,
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 224d1e95a5b533749a93d8b521dd579b,
+      type: 3}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Buku3
+    <id>k__BackingField: 4
+    <prefab>k__BackingField: {fileID: 298304564950268036, guid: 20fb32c38fa4cf14c98f0e754db93073,
       type: 3}
     <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Furniture
-    <name>k__BackingField: Chair
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 617509622161494754, guid: 191f1adc5173c914c8148343bbcc3232,
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8ab29f4d3ffcd85488b1a4811e3ea487,
+      type: 3}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Buku5
+    <id>k__BackingField: 6
+    <prefab>k__BackingField: {fileID: 9186298254406481068, guid: 26a2420e41111fa4384c8adc35b250b1,
       type: 3}
     <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Decorationt
-    <name>k__BackingField: Paint
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 1627497564551428, guid: eded3844e29c2ec40bc278e2cbd31279,
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b7028090f40d7024daacd2bfe5777527,
       type: 3}
-    <materials>k__BackingField:
-    - {fileID: 2100000, guid: 97923140cb419a1448fee6c0cbe7872e, type: 2}
-    - {fileID: 2100000, guid: 129d635f36d5e9d4fa3b656a8ef75ceb, type: 2}
-    - {fileID: 2100000, guid: ee4db12e22efd5f4cb56300fbccda30f, type: 2}
-    - {fileID: 2100000, guid: 39801b91c835ba944a3b1c21cecd0fd5, type: 2}
-    - {fileID: 2100000, guid: 8125ef854c31e6447b60f45d7262f058, type: 2}
-    - {fileID: 2100000, guid: ddc8c45e4ad44ac4b97855d23d3ecdd2, type: 2}
-    - {fileID: 2100000, guid: 66b8d2bec15e0104b999d5c7dfb45fdc, type: 2}
-    - {fileID: 2100000, guid: c86cb7dd3b68e2a40a6205641e36bf97, type: 2}
-    - {fileID: 2100000, guid: 20f382ca5b67580458b454c14e57251e, type: 2}
-    - {fileID: 2100000, guid: f5d9b99d4099af548a4914382db262a2, type: 2}
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Decorationt
-    <name>k__BackingField: Gambar1
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 3529715222844787653, guid: a973e73f7585b964d92ce18b95208191,
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Cangkir
+    <id>k__BackingField: 7
+    <prefab>k__BackingField: {fileID: 4476808827924231168, guid: 7c525024ae8431e45b357520bb8407a6,
       type: 3}
-    <materials>k__BackingField:
-    - {fileID: 2100000, guid: 97923140cb419a1448fee6c0cbe7872e, type: 2}
-    - {fileID: 2100000, guid: 129d635f36d5e9d4fa3b656a8ef75ceb, type: 2}
-    - {fileID: 2100000, guid: ee4db12e22efd5f4cb56300fbccda30f, type: 2}
-    - {fileID: 2100000, guid: 39801b91c835ba944a3b1c21cecd0fd5, type: 2}
-    - {fileID: 2100000, guid: 8125ef854c31e6447b60f45d7262f058, type: 2}
-    - {fileID: 2100000, guid: ddc8c45e4ad44ac4b97855d23d3ecdd2, type: 2}
-    - {fileID: 2100000, guid: 66b8d2bec15e0104b999d5c7dfb45fdc, type: 2}
-    - {fileID: 2100000, guid: c86cb7dd3b68e2a40a6205641e36bf97, type: 2}
-    - {fileID: 2100000, guid: 20f382ca5b67580458b454c14e57251e, type: 2}
-    - {fileID: 2100000, guid: f5d9b99d4099af548a4914382db262a2, type: 2}
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Decorationt
-    <name>k__BackingField: Gambar1
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 6242588949998114681, guid: 4ddbd3d5e66f9884aab343784845f035,
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 22e90b688646e1e4984858fae79f4bd9,
       type: 3}
-    <materials>k__BackingField:
-    - {fileID: 2100000, guid: 97923140cb419a1448fee6c0cbe7872e, type: 2}
-    - {fileID: 2100000, guid: 129d635f36d5e9d4fa3b656a8ef75ceb, type: 2}
-    - {fileID: 2100000, guid: ee4db12e22efd5f4cb56300fbccda30f, type: 2}
-    - {fileID: 2100000, guid: 39801b91c835ba944a3b1c21cecd0fd5, type: 2}
-    - {fileID: 2100000, guid: 8125ef854c31e6447b60f45d7262f058, type: 2}
-    - {fileID: 2100000, guid: ddc8c45e4ad44ac4b97855d23d3ecdd2, type: 2}
-    - {fileID: 2100000, guid: 66b8d2bec15e0104b999d5c7dfb45fdc, type: 2}
-    - {fileID: 2100000, guid: c86cb7dd3b68e2a40a6205641e36bf97, type: 2}
-    - {fileID: 2100000, guid: 20f382ca5b67580458b454c14e57251e, type: 2}
-    - {fileID: 2100000, guid: f5d9b99d4099af548a4914382db262a2, type: 2}
-    <SourceImage>k__BackingField: {fileID: 0}
-  - <Jenis>k__BackingField: Decorationt
-    <name>k__BackingField: Gambar1
-    <id>k__BackingField: 2
-    <prefab>k__BackingField: {fileID: 7344289596221149521, guid: 0f727257952d5d541a4c01e97ae9d29c,
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Cangkir2
+    <id>k__BackingField: 8
+    <prefab>k__BackingField: {fileID: 0}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7117fe83f94b6a24e97588aa331093a6,
       type: 3}
-    <materials>k__BackingField:
-    - {fileID: 2100000, guid: 97923140cb419a1448fee6c0cbe7872e, type: 2}
-    - {fileID: 2100000, guid: 129d635f36d5e9d4fa3b656a8ef75ceb, type: 2}
-    - {fileID: 2100000, guid: ee4db12e22efd5f4cb56300fbccda30f, type: 2}
-    - {fileID: 2100000, guid: 39801b91c835ba944a3b1c21cecd0fd5, type: 2}
-    - {fileID: 2100000, guid: 8125ef854c31e6447b60f45d7262f058, type: 2}
-    - {fileID: 2100000, guid: ddc8c45e4ad44ac4b97855d23d3ecdd2, type: 2}
-    - {fileID: 2100000, guid: 66b8d2bec15e0104b999d5c7dfb45fdc, type: 2}
-    - {fileID: 2100000, guid: c86cb7dd3b68e2a40a6205641e36bf97, type: 2}
-    - {fileID: 2100000, guid: 20f382ca5b67580458b454c14e57251e, type: 2}
-    - {fileID: 2100000, guid: f5d9b99d4099af548a4914382db262a2, type: 2}
-    <SourceImage>k__BackingField: {fileID: 0}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Tanaman1
+    <id>k__BackingField: 9
+    <prefab>k__BackingField: {fileID: 0}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4060db7c20683c046adbaaf61729ac10,
+      type: 3}
+  - <Jenis>k__BackingField: Decoration
+    <name>k__BackingField: Jam Digital
+    <id>k__BackingField: 10
+    <prefab>k__BackingField: {fileID: 0}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 103cfa3efce39bb4991b5f4eaf266c16,
+      type: 3}

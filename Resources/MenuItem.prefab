@@ -120,7 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2573869904019506845}
   m_HandleRect: {fileID: 7091043713766286153}
   m_Direction: 0
-  m_Value: -0.000002883559
+  m_Value: -0.0000031538927
   m_Size: 0.055762235
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1039,8 +1039,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4497703370842192572}
-  m_LocalRotation: {x: 0.21209234, y: 0, z: 0, w: 0.9772497}
-  m_LocalPosition: {x: 0, y: 0, z: 2.93}
+  m_LocalRotation: {x: -0.17107901, y: 0.0978407, z: -0.017075934, w: -0.98023856}
+  m_LocalPosition: {x: 0, y: 0, z: 3.2171512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1050,7 +1050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 24.49, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.3599854, y: 2.669983}
+  m_AnchoredPosition: {x: 1.2087402, y: 0.7421112}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8709423520836626161
@@ -1390,9 +1390,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8209884048634649487, guid: 9087b5185b5927d4185eaaaedf3b77aa,
+          type: 3}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: Furniture
+        m_MethodName: Decorationt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1955,7 +1956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5515895545963331435
 RectTransform:
   m_ObjectHideFlags: 0

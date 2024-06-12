@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,11 +23,12 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject canvas;
     GameObject instantiatedObject;
-    private static GameObject  _canvas;
+    private static GameObject _canvas;
+    private static GameObject menucanvas;
 
     private static List<Button> btn = new List<Button>();
     private static List<GameObject> listgameobject = new List<GameObject>();
-
+    private static List<Sprite> Sprite = new List<Sprite>();
     private static GameObject selectedObject;
 
 
@@ -45,19 +47,40 @@ public class MenuController : MonoBehaviour
         buttonn();
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Debug.Log("test00");
-            GameObject currentCanvas = Instantiate(canvas);
-            currentCanvas.transform.SetParent(Camera.main.transform);
-            currentCanvas.transform.localPosition = new Vector3(0, 0f, 1.5f);
-            currentCanvas.transform.localScale = originalCanvasScale;
-            currentCanvas.transform.localRotation = Quaternion.identity; 
-            Vector3 direction = currentCanvas.transform.position - Camera.main.transform.position;
+            if (menucanvas == null)
+            {
+                GameObject currentCanvas = Instantiate(canvas);
+                menucanvas = currentCanvas;
+                Vector3 cameraPosition = Camera.main.transform.position;
+                Quaternion cameraRotation = Camera.main.transform.rotation;
 
-            currentCanvas.transform.position = Camera.main.transform.position + direction.normalized * 4f;
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
-            _canvas = currentCanvas;
+                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
-            currentCanvas.SetActive(true);
+                menucanvas.transform.DORestart();
+
+                DOTween.Play(menucanvas);
+                
+            }
+            else
+            {
+                Vector3 cameraPosition = Camera.main.transform.position;
+                Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                menucanvas.transform.DORestart();
+
+                DOTween.Play(menucanvas);
+            }
+
+
+
         }
 
     }
@@ -79,25 +102,20 @@ public class MenuController : MonoBehaviour
     }
     public void Decorationt()
     {
-         listgameobject.Clear();
+        listgameobject.Clear();
         btn.Clear();
-        Inventory("Decorationt");
+        Inventory("Decoration");
      
     }
 
     private void Inventory(string jenis)
     {
-        Transform Background = _canvas.transform.GetChild(1);
+        Transform Background = menucanvas.transform.GetChild(1);
         Transform ListoObjectItem = Background.GetChild(1);
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
 
-       /* Transform cloneTransform = Content.Find("List Object(Clone)");
-        if (cloneTransform != null)
-        {
-            Destroy(cloneTransform.gameObject);
-        }*/
-
+  
         Transform ListObject = Content.GetChild(0);
 
         Transform ListObject1 = ListObject.GetChild(0);
@@ -121,13 +139,15 @@ public class MenuController : MonoBehaviour
             if (data.Jenis == jenis)
             {
                 listgameobject.Add(data.prefab);
+                Sprite.Add(data.SourceImage);
+                
             }
         }
 
-        CreateButton(item, Inventory1, listgameobject, content);
+        CreateButton(item, Inventory1, listgameobject, content,Sprite);
     }
 
-    private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content)
+    private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content,List<Sprite> img) 
     {
         GameObject currentParent = Instantiate(Inventory1, content.transform);
     
@@ -139,8 +159,8 @@ public class MenuController : MonoBehaviour
 
                 currentParent = Instantiate(Inventory1, content.transform);
             }
-
             GameObject inventory = Instantiate(item);
+            inventory.GetComponent<Image>().sprite = img[i];
             inventory.transform.SetParent(currentParent.transform);
 
             inventory.transform.localPosition = Vector3.zero;
@@ -183,7 +203,7 @@ public class MenuController : MonoBehaviour
         GameObject instantiatedItem = Instantiate(selectedObject, objectPosition, Quaternion.identity);
 
 
-        Transform menuBarang = Camera.main.transform.Find("MenuItem(Clone)");
+        GameObject menuBarang = GameObject.Find("MenuItem(Clone)");
         listgameobject.Clear();
         btn.Clear();
 
