@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
+using DG.Tweening;
 
 public class UI_Interaction : MonoBehaviour
 {
@@ -28,8 +30,11 @@ public class UI_Interaction : MonoBehaviour
     [SerializeField]
     private GameObject colorpicker;
 
+    [SerializeField]
 
+    GameObject player;
 
+    private static GameObject static_player;
     private static GameObject currentCanvas;
     private Vector3 originalCanvasScale;
     private Quaternion originalCanvasRotation;
@@ -109,30 +114,41 @@ public class UI_Interaction : MonoBehaviour
     {
         Ray ray = new Ray(GetRaycastOrigin(), GetRaycastDirection());
         RaycastHit hit;
-
+        
         float leftValue = inputActionLeft.action.ReadValue<float>();
         float rightValue = inputActionRight.action.ReadValue<float>();
         bool inputActive = leftValue != 0 || rightValue != 0;
         if (inputActive)
         {
             UpdateControllerActiveState();
-
-            if (Physics.Raycast(ray, out hit))
+            // Define a layer mask to exclude canvas layer
+            int canvasLayer = LayerMask.NameToLayer("UI"); // Change "YourCanvasLayerName" to your actual canvas layer name
+            int layerMask = 1 << canvasLayer;
+            layerMask = ~layerMask; // Invert the layer mask
+            if (Physics.Raycast(ray, out hit,30, layerMask))
             {
                 if (hit.collider != null)
                 {
                     GameObject hitObject = hit.collider.gameObject;
                     if (hitObject != barang)
                     {
-                        CleanUpPreviousCanvas();
+
+                        //CleanUpPreviousCanvas();
                         barang = hitObject;
                         if (hitObject != null && !HasChildCanvas(hitObject))
                         {
                             gameobject = hitObject.gameObject;
+                            static_player = player;
+
                             ShowCanvas(hitObject);
                         }
                     }
+                    if (hitObject.GetComponent<Canvas>() != null)
+                {
+                    return;
                 }
+                }
+
             }
             
         }
@@ -159,17 +175,39 @@ public class UI_Interaction : MonoBehaviour
     }
     private void ShowCanvas(GameObject hitObject)
     {
-        currentCanvas = Instantiate(_canvas);
+        if (currentCanvas == null)
+        {
+            currentCanvas = Instantiate(_canvas);
+            currentCanvas.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y / 2, Camera.main.transform.position.z + 1.5f);
+            currentCanvas.transform.DOMove(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y / 2, Camera.main.transform.position.z + 1.5f),1f);
+        }
+        else
+        {
+            Vector3 cameraPosition = static_player.transform.position;
+            Quaternion cameraRotation = Camera.main.transform.rotation;
 
-        Bounds bounds = GetBoundsOfSelectedObject(hitObject);
-        currentCanvas.transform.position = bounds.center + Vector3.up * (bounds.extents.y + 1f); // Offset 0.1f agar di atas objek
+            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z),1f);
+            
+
+            currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+            currentCanvas.transform.DORestart();
+
+            DOTween.Play(currentCanvas);
+
+        }
+
+        //currentCanvas.transform.position = Camera.main.transform.forward;
+        /*Bounds bounds = GetBoundsOfSelectedObject(hitObject);
+        currentCanvas.transform.position = bounds.center + Vector3.up * (bounds.extents.y + 1f);
 
         currentCanvas.transform.localScale = originalCanvasScale;
 
         Vector3 directionToCamera = Camera.main.transform.position - currentCanvas.transform.position;
         currentCanvas.transform.rotation = Quaternion.LookRotation(directionToCamera);
 
-        currentCanvas.SetActive(true);
+        currentCanvas.SetActive(true);*/
 
 
     }

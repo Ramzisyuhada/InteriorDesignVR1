@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1784301321}
   m_OriginBaseGameObject: {fileID: 229861497}
   m_CameraFloorOffsetObject: {fileID: 1203543202}
-  m_RequestedTrackingOriginMode: 2
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
 --- !u!4 &229861500
 Transform:
@@ -1586,7 +1586,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4069,6 +4069,11 @@ PrefabInstance:
       propertyPath: rayRight
       value: 
       objectReference: {fileID: 1540411297}
+    - target: {fileID: 4261448202071293668, guid: 4f91d2812d5ec384985b51778d205451,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 229861497}
     - target: {fileID: 4261448202071293668, guid: 4f91d2812d5ec384985b51778d205451,
         type: 3}
       propertyPath: _canvas
