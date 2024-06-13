@@ -292,6 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3954693816646107205}
   - component: {fileID: 5381016758723525034}
+  - component: {fileID: 7076211680423797575}
   m_Layer: 0
   m_Name: Keyboard1
   m_TagString: Untagged
@@ -309,8 +310,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8277235147705658523}
   - {fileID: 1793435034652824410}
@@ -347,6 +348,27 @@ LODGroup:
     - renderer: {fileID: 7152073787170304212}
     - renderer: {fileID: 8290964483703784473}
   m_Enabled: 1
+--- !u!65 &7076211680423797575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443423073891277567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.83, y: 0.05, z: 0.47}
+  m_Center: {x: 0, y: 0.03, z: 0.06}
 --- !u!1 &4919984724288914277
 GameObject:
   m_ObjectHideFlags: 0

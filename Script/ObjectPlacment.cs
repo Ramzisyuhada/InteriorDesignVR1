@@ -49,12 +49,17 @@ public class ObjectPlacment : XRGrabInteractable
 
         base.Awake();
         objectRenderer = GetComponent<Renderer>();
-        if (objectRenderer != null ) 
+        if (objectRenderer != null )
+        {
+            _transformY = objectRenderer.transform.position.y;
+            _quaternion = objectRenderer.transform.rotation;
+
             _currentmaterial = objectRenderer.material;
+
+        }
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
-        _transformY = objectRenderer.transform.position.y;
-        _quaternion = objectRenderer.transform.rotation;
+        
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -63,6 +68,8 @@ public class ObjectPlacment : XRGrabInteractable
 
 
         base.OnSelectEntered(args);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
         if (_material != null)
         {
             objectRenderer.material = _material;
@@ -128,6 +135,8 @@ public class ObjectPlacment : XRGrabInteractable
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
         if (_material != null)
         {
             objectRenderer.material = _currentmaterial;
@@ -139,6 +148,7 @@ public class ObjectPlacment : XRGrabInteractable
             transform.position = newPosition;
 
         }
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
         objectRenderer.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         objectRenderer.GetComponent<Rigidbody>().isKinematic = true;
 

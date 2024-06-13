@@ -34,6 +34,11 @@ public class MenuController : MonoBehaviour
 
     private Vector3 originalCanvasScale;
     private Quaternion originalCanvasRotation;
+
+
+
+
+
     private void Start()
     {
         database1 = database;
@@ -45,7 +50,7 @@ public class MenuController : MonoBehaviour
      void Update()
     {
         buttonn();
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B) )
         {
             if (menucanvas == null)
             {
@@ -78,13 +83,32 @@ public class MenuController : MonoBehaviour
 
                 DOTween.Play(menucanvas);
             }
-
+            Destroy(GameObject.Find("Canvas(Clone)"));
 
 
         }
 
     }
+    public void Close()
+    {
+        Destroy(menucanvas);
+    }
+    private void ResetUI()
+    {
+        Transform content = menucanvas.transform.GetChild(2).GetChild(1).GetChild(0).GetChild(0);
+        Debug.Log(content.gameObject.name);
+        for (int i = content.childCount - 1; i >= 0; i--)
+        {
+            Transform child = content.GetChild(i);
+            if (child.gameObject.activeSelf)
+            {
+                Destroy(child.gameObject);
+            }
+        }
 
+        Transform listObjectTemplate = content.GetChild(0);
+        listObjectTemplate.gameObject.SetActive(true);
+    }
     private void buttonn()
     {
         float leftValue = inputAction.action.ReadValue<float>();
@@ -95,22 +119,50 @@ public class MenuController : MonoBehaviour
 
     public void Furniture()
     {
+        ResetUI();
+
         listgameobject.Clear();
         btn.Clear();
+        Sprite.Clear();
+
         Inventory("Furniture");
     
     }
     public void Decorationt()
     {
+        ResetUI();
+
         listgameobject.Clear();
         btn.Clear();
+        Sprite.Clear();
+
         Inventory("Decoration");
      
     }
 
+    public void Ceiling()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+
+        Inventory("Ceiling Light");
+    }
+
+    public void Walldecor()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("WallDecor");
+    }
     private void Inventory(string jenis)
     {
-        Transform Background = menucanvas.transform.GetChild(1);
+        Transform Background = menucanvas.transform.GetChild(2);
         Transform ListoObjectItem = Background.GetChild(1);
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
@@ -138,19 +190,26 @@ public class MenuController : MonoBehaviour
         {
             if (data.Jenis == jenis)
             {
+                Debug.Log(jenis);
                 listgameobject.Add(data.prefab);
                 Sprite.Add(data.SourceImage);
                 
             }
         }
 
-        CreateButton(item, Inventory1, listgameobject, content,Sprite);
+        CreateButton(item, Inventory1, listgameobject, content,Sprite); 
     }
 
     private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content,List<Sprite> img) 
     {
+        /*foreach (Transform data in content.transform)
+        {
+            Destroy(data.gameObject);
+        }*/
+        Inventory1.SetActive(true);
+
         GameObject currentParent = Instantiate(Inventory1, content.transform);
-    
+        
         for (int i = 0; i < objects.Count; i++)
         {
             if (currentParent.transform.childCount >= 4)
@@ -204,8 +263,7 @@ public class MenuController : MonoBehaviour
 
 
         GameObject menuBarang = GameObject.Find("MenuItem(Clone)");
-        listgameobject.Clear();
-        btn.Clear();
+    
 
         if (menuBarang != null)
         {

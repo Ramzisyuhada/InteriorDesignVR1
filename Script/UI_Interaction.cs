@@ -125,10 +125,11 @@ public class UI_Interaction : MonoBehaviour
         {
             UpdateControllerActiveState();
 
-            int layerMask = 1 << LayerMask.NameToLayer("UI");
-            layerMask = ~layerMask;
+            int layerMaskUI = 1 << LayerMask.NameToLayer("UI");
+            int layerMaskPlayer = 1 << LayerMask.NameToLayer("Floor");
+            int combinedLayerMask = layerMaskUI | layerMaskPlayer;
 
-            if (Physics.Raycast(ray, out hit, 30, layerMask))
+            if (Physics.Raycast(ray, out hit, 30, ~combinedLayerMask))
             {
                 if (hit.collider != null)
                 {
@@ -142,6 +143,8 @@ public class UI_Interaction : MonoBehaviour
                             static_player = player;
 
                             ShowCanvas(hitObject);
+                            Destroy(GameObject.Find("MenuItem(Clone)"));
+
                         }
                     }
                     if (hitObject.GetComponent<Canvas>() != null)
@@ -151,6 +154,15 @@ public class UI_Interaction : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Close()
+    {
+        SetControllerType(Controller.None);
+
+        Destroy(currentCanvas);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
     }
     private bool IsPointerOverUIElement()
     {
@@ -198,14 +210,24 @@ public class UI_Interaction : MonoBehaviour
         if (currentCanvas == null)
         {
             currentCanvas = Instantiate(_canvas);
-            currentCanvas.transform.DOMove(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y / 2, Camera.main.transform.position.z + 1.5f),1f);
+            Vector3 cameraPosition = Camera.main.transform.position;
+            Quaternion cameraRotation = Camera.main.transform.rotation;
+
+            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 3.5f;
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+            currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+            currentCanvas.transform.DORestart();
+
+            DOTween.Play(currentCanvas);
         }
         else
         {
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
-            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
+            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 3.5f;
             currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z),1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
@@ -295,28 +317,36 @@ public class UI_Interaction : MonoBehaviour
     {
 
         SetControllerType(Controller.Rotation);
-
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
     }
     public void Scake()
     {
 
         SetControllerType(Controller.Scale);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
     }
     public void Texture1()
     {
 
         SetControllerType(Controller.Texture);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
     }
 
     public void Destroy1()
     {
-     
+        SetControllerType(Controller.None);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+
         Destroy(gameobject);
         Destroy(currentCanvas);
     }
     private void Texture()
     {
-        Transform childTransform = currentCanvas.transform.GetChild(2); 
+        Transform childTransform = currentCanvas.transform.GetChild(3); 
         GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
 
         colorPicker.onColorChanged += OnColorChanged;

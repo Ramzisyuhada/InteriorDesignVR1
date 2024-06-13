@@ -26,28 +26,24 @@ public class OutierObject : MonoBehaviour
             highlight = null;
         }
 
-        // Raycasting with left controller
-        if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit)  )
+        if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
         }
 
-        // Raycasting with right controller
-        if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit) )
+        if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
         }
 
-        // Handle selection with left controller
         if (inputActionSelectLeft.action.WasPressedThisFrame())
         {
-            HandleSelection();
+            HandleSelection(rayLeft);
         }
 
-        // Handle selection with right controller
         if (inputActionSelectRight.action.WasPressedThisFrame())
         {
-            HandleSelection();
+            HandleSelection(rayRight);
         }
     }
 
@@ -96,11 +92,11 @@ public class OutierObject : MonoBehaviour
         {
             raycaster.Raycast(eventData, results);
             return results.Count > 0;
-        }
+        }   
         return false;
     }
 
-    private void HandleSelection()
+    private void HandleSelection(XRRayInteractor rayInteractor)
     {
         if (highlight)
         {

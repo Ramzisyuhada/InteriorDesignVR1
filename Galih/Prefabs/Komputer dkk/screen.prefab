@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5781269086578792926}
   - component: {fileID: 5781269086577662750}
   - component: {fileID: 5781269086585189918}
+  - component: {fileID: 6047316454321269536}
   m_Layer: 0
   m_Name: screen
   m_TagString: Untagged
@@ -27,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5781269086575658462}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000007375124, y: 0.9958932, z: 0.000000081125805, w: 0.09053638}
+  m_LocalRotation: {x: 0, y: 0.9958931, z: 0, w: 0.09053717}
   m_LocalPosition: {x: -8.79707, y: -0.001253572, z: -13.978549}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 169.611, z: 0}
@@ -105,3 +106,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &6047316454321269536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781269086575658462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1319795, y: 0.83427465, z: 0.4040102}
+  m_Center: {x: -1.486423e-15, y: 0.41839087, z: -0.026065929}

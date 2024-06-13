@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6751832589806667431}
   - component: {fileID: 6751832589805569127}
   - component: {fileID: 6751832589817325927}
+  - component: {fileID: 4227557873634211705}
   m_Layer: 0
   m_Name: speaker
   m_TagString: Untagged
@@ -27,10 +28,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6751832589807835815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000004583515, y: 0.9777621, z: 0.000000021369667, w: 0.2097172}
+  m_LocalRotation: {x: 0, y: 0.9777613, z: 0, w: 0.20972104}
   m_LocalPosition: {x: -10.28256, y: 0.37179402, z: -15.122247}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.21, y: 0.21, z: 0.21}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 155.788, z: 0}
@@ -105,3 +106,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &4227557873634211705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6751832589807835815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5851949, y: 0.93380564, z: 0.8550171}
+  m_Center: {x: -0.0009043516, y: 0.09510884, z: 0.0058261757}
