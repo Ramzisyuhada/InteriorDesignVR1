@@ -114,8 +114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389273809458405375}
-  - component: {fileID: -9073352265437650992}
-  - component: {fileID: -2066617421318625122}
+  - component: {fileID: -538062238593720289}
+  - component: {fileID: -1656365273751595307}
   m_Layer: 0
   m_Name: (Prb)DocumentHolder
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 5167191538656871798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-9073352265437650992
+--- !u!54 &-538062238593720289
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-2066617421318625122
+--- !u!114 &-1656365273751595307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

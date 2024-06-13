@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4851876656669836}
   - component: {fileID: 4984636429834494186}
-  - component: {fileID: -4788446702708680091}
-  - component: {fileID: -451387574079421968}
+  - component: {fileID: 739372048928886359}
+  - component: {fileID: -5448984293134356304}
   m_Layer: 0
   m_Name: Plant 2 prefab
   m_TagString: Untagged
@@ -56,7 +56,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.33, y: 1.29, z: 0.47}
   m_Center: {x: -0.05, y: 0.65, z: 0}
---- !u!54 &-4788446702708680091
+--- !u!54 &739372048928886359
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +83,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-451387574079421968
+--- !u!114 &-5448984293134356304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -119,8 +119,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6294119381259285752}
-  - component: {fileID: -3182948850063400630}
-  - component: {fileID: -3514905381687650485}
+  - component: {fileID: -235321053015943043}
+  - component: {fileID: 6195738095151832885}
   m_Layer: 0
   m_Name: (Prb)DeskPrinter
   m_TagString: Untagged
@@ -144,7 +144,7 @@ Transform:
   - {fileID: 2411026206401313230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 77.923, z: -13.752}
---- !u!54 &-3182948850063400630
+--- !u!54 &-235321053015943043
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +171,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-3514905381687650485
+--- !u!114 &6195738095151832885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

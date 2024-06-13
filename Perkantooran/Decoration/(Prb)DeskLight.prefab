@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068398726653781473}
-  - component: {fileID: 3409527730133456683}
-  - component: {fileID: -9142740402962379180}
+  - component: {fileID: 2947896284282657480}
+  - component: {fileID: 6998472405131291581}
   m_Layer: 0
   m_Name: (Prb)DeskLight
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 5588734616251921829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3409527730133456683
+--- !u!54 &2947896284282657480
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-9142740402962379180
+--- !u!114 &6998472405131291581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

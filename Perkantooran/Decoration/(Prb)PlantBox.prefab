@@ -117,8 +117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2743037689681575029}
   - component: {fileID: 5092101399154515798}
-  - component: {fileID: 4691817533679320038}
-  - component: {fileID: -1222686303852940445}
+  - component: {fileID: 8576815113748095115}
+  - component: {fileID: -78075312992157439}
   m_Layer: 0
   m_Name: (Prb)PlantBox
   m_TagString: Untagged
@@ -163,7 +163,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3832679, y: 0.4861974, z: 1.019163}
   m_Center: {x: -0.005143404, y: 0.2430987, z: 0.01310894}
---- !u!54 &4691817533679320038
+--- !u!54 &8576815113748095115
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-1222686303852940445
+--- !u!114 &-78075312992157439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4814192360174942}
-  - component: {fileID: 1911554734831189846}
-  - component: {fileID: 1392396616645837479}
+  - component: {fileID: 8466214225386799481}
+  - component: {fileID: 3300060916542291799}
   m_Layer: 0
   m_Name: Computer Prefab
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4279256341464602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 166.518, z: 0}
---- !u!54 &1911554734831189846
+--- !u!54 &8466214225386799481
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1392396616645837479
+--- !u!114 &3300060916542291799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

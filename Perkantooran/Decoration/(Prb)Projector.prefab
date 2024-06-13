@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2275576742671869916}
-  - component: {fileID: -4525529198309807445}
-  - component: {fileID: -7563619707897644963}
+  - component: {fileID: -2034350062079038627}
+  - component: {fileID: 41349011083381512}
   m_Layer: 0
   m_Name: (Prb)Projector
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 2800703447525816841}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-4525529198309807445
+--- !u!54 &-2034350062079038627
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-7563619707897644963
+--- !u!114 &41349011083381512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4602582864933004}
-  - component: {fileID: 3739034654135331441}
-  - component: {fileID: 7573090856374896885}
+  - component: {fileID: 3267083768566292626}
+  - component: {fileID: -4361801436050430111}
   m_Layer: 0
   m_Name: phone Prefab
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4404560821105356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -26.083, y: -79.647, z: 53.479}
---- !u!54 &3739034654135331441
+--- !u!54 &3267083768566292626
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &7573090856374896885
+--- !u!114 &-4361801436050430111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

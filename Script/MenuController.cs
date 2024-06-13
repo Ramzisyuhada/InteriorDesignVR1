@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private InputActionProperty inputAction;
     [SerializeField] private InputActionProperty inputActionClose;
 
-    
+
     [SerializeField]
     private GameObject canvas;
     GameObject instantiatedObject;
@@ -47,10 +47,59 @@ public class MenuController : MonoBehaviour
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
     }
-     void Update()
+    void Update()
     {
         buttonn();
-        if (Input.GetKeyDown(KeyCode.B) )
+
+        /*
+                    var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
+                    UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+
+                    if (leftHandDevices.Count == 1)
+
+                    {
+                        UnityEngine.XR.InputDevice device = leftHandDevices[0];
+                        bool triggerValue;
+                        if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
+                        {
+                            if (menucanvas == null)
+                            {
+                                GameObject currentCanvas = Instantiate(canvas);
+                                menucanvas = currentCanvas;
+                                Vector3 cameraPosition = Camera.main.transform.position;
+                                Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                                menucanvas.transform.DORestart();
+
+                                DOTween.Play(menucanvas);
+
+                            }
+                            else
+                            {
+                                Vector3 cameraPosition = Camera.main.transform.position;
+                                Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                                menucanvas.transform.DORestart();
+
+                                DOTween.Play(menucanvas);
+                            }
+                        }
+
+                        Destroy(GameObject.Find("Canvas(Clone)"));
+
+                    }*/
+
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (menucanvas == null)
             {
@@ -67,7 +116,7 @@ public class MenuController : MonoBehaviour
                 menucanvas.transform.DORestart();
 
                 DOTween.Play(menucanvas);
-                
+
             }
             else
             {
@@ -88,7 +137,15 @@ public class MenuController : MonoBehaviour
 
         }
 
+
+
+
+
+
+
+
     }
+
     public void Close()
     {
         Destroy(menucanvas);
@@ -114,7 +171,7 @@ public class MenuController : MonoBehaviour
         float leftValue = inputAction.action.ReadValue<float>();
         float rightValue = inputActionClose.action.ReadValue<float>();
 
-       
+
     }
 
     public void Furniture()
@@ -126,7 +183,7 @@ public class MenuController : MonoBehaviour
         Sprite.Clear();
 
         Inventory("Furniture");
-    
+
     }
     public void Decorationt()
     {
@@ -137,7 +194,7 @@ public class MenuController : MonoBehaviour
         Sprite.Clear();
 
         Inventory("Decoration");
-     
+
     }
 
     public void Ceiling()
@@ -167,7 +224,7 @@ public class MenuController : MonoBehaviour
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
 
-  
+
         Transform ListObject = Content.GetChild(0);
 
         Transform ListObject1 = ListObject.GetChild(0);
@@ -181,10 +238,10 @@ public class MenuController : MonoBehaviour
 
     }
 
-    private void Item(GameObject item, GameObject Inventory1, string jenis,GameObject content)
+    private void Item(GameObject item, GameObject Inventory1, string jenis, GameObject content)
 
     {
-        
+
         btn.Clear();
         foreach (var data in database1.objectsData)
         {
@@ -193,14 +250,14 @@ public class MenuController : MonoBehaviour
                 Debug.Log(jenis);
                 listgameobject.Add(data.prefab);
                 Sprite.Add(data.SourceImage);
-                
+
             }
         }
 
-        CreateButton(item, Inventory1, listgameobject, content,Sprite); 
+        CreateButton(item, Inventory1, listgameobject, content, Sprite);
     }
 
-    private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content,List<Sprite> img) 
+    private void CreateButton(GameObject item, GameObject Inventory1, List<GameObject> objects, GameObject content, List<Sprite> img)
     {
         /*foreach (Transform data in content.transform)
         {
@@ -209,12 +266,12 @@ public class MenuController : MonoBehaviour
         Inventory1.SetActive(true);
 
         GameObject currentParent = Instantiate(Inventory1, content.transform);
-        
+
         for (int i = 0; i < objects.Count; i++)
         {
             if (currentParent.transform.childCount >= 4)
             {
-               
+
 
                 currentParent = Instantiate(Inventory1, content.transform);
             }
@@ -263,11 +320,13 @@ public class MenuController : MonoBehaviour
 
 
         GameObject menuBarang = GameObject.Find("MenuItem(Clone)");
-    
+
 
         if (menuBarang != null)
         {
-             Destroy(menuBarang.gameObject);
+            Destroy(menuBarang.gameObject);
         }
     }
 }
+
+

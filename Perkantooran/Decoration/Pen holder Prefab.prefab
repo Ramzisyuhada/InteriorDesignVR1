@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4389762939504278}
-  - component: {fileID: -927439976385547844}
-  - component: {fileID: -3633959421102646766}
+  - component: {fileID: 6377498220664715316}
+  - component: {fileID: -8149656495924322846}
   m_Layer: 0
   m_Name: Pen holder Prefab
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4685704646796554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-927439976385547844
+--- !u!54 &6377498220664715316
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-3633959421102646766
+--- !u!114 &-8149656495924322846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7692636920190884178}
-  - component: {fileID: 1369382592150984658}
-  - component: {fileID: -125699221330661984}
+  - component: {fileID: -2015809728126494975}
+  - component: {fileID: -2571672766778304402}
   m_Layer: 0
   m_Name: (Prb)DeskPlant
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 8913166054766841756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1369382592150984658
+--- !u!54 &-2015809728126494975
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-125699221330661984
+--- !u!114 &-2571672766778304402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

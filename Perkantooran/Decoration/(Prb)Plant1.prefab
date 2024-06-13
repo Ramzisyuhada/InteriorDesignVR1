@@ -116,8 +116,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7329490288198629178}
-  - component: {fileID: -790879009770993836}
-  - component: {fileID: -7553558176962766970}
+  - component: {fileID: -7779637223846058427}
+  - component: {fileID: 1956991700500382262}
   m_Layer: 0
   m_Name: (Prb)Plant1
   m_TagString: Untagged
@@ -141,7 +141,7 @@ Transform:
   - {fileID: 1439887666516116650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-790879009770993836
+--- !u!54 &-7779637223846058427
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-7553558176962766970
+--- !u!114 &1956991700500382262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

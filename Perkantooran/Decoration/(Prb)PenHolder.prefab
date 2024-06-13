@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 697422240011838758}
-  - component: {fileID: -7061732521937477047}
-  - component: {fileID: -5025040800422947623}
+  - component: {fileID: 3473707518220640524}
+  - component: {fileID: -1008159171084066445}
   m_Layer: 0
   m_Name: (Prb)PenHolder
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 5653690427253510351}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &-7061732521937477047
+--- !u!54 &3473707518220640524
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-5025040800422947623
+--- !u!114 &-1008159171084066445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

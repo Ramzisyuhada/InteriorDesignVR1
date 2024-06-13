@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4825763632709048}
-  - component: {fileID: 7915392902101205530}
-  - component: {fileID: 8072153269170711688}
+  - component: {fileID: 7317893739482573}
+  - component: {fileID: 7972465360460987259}
   m_Layer: 0
   m_Name: computer screen Prefab
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 4893150446542198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -13.922, z: 0}
---- !u!54 &7915392902101205530
+--- !u!54 &7317893739482573
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8072153269170711688
+--- !u!114 &7972465360460987259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

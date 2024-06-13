@@ -114,8 +114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4385045335696490}
-  - component: {fileID: -1016496379766972609}
-  - component: {fileID: 5329742087369021001}
+  - component: {fileID: 7738934672097471259}
+  - component: {fileID: -2516586049302616750}
   m_Layer: 0
   m_Name: Phone B Prefab
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 4596796453450962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 61.4, y: -205.419, z: 0}
---- !u!54 &-1016496379766972609
+--- !u!54 &7738934672097471259
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5329742087369021001
+--- !u!114 &-2516586049302616750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

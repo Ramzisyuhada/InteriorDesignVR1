@@ -222,8 +222,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1110166751322874430}
   - component: {fileID: 7490002464427295587}
-  - component: {fileID: 8087444157676645692}
-  - component: {fileID: 5376415157078304256}
+  - component: {fileID: -9160180516114625281}
+  - component: {fileID: 263891830442267880}
   m_Layer: 0
   m_Name: (Prb)BookPile3
   m_TagString: Untagged
@@ -269,7 +269,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!54 &8087444157676645692
+--- !u!54 &-9160180516114625281
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,7 +296,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5376415157078304256
+--- !u!114 &263891830442267880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

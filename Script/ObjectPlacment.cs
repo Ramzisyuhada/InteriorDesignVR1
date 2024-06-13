@@ -51,6 +51,7 @@ public class ObjectPlacment : XRGrabInteractable
         objectRenderer = GetComponent<Renderer>();
         if (objectRenderer != null )
         {
+
             _transformY = objectRenderer.transform.position.y;
             _quaternion = objectRenderer.transform.rotation;
 
@@ -60,6 +61,17 @@ public class ObjectPlacment : XRGrabInteractable
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
         
+
+            _currentmaterial = objectRenderer.material;
+
+            _transformY = objectRenderer.transform.position.y;
+            _quaternion = objectRenderer.transform.rotation;
+        
+  
+        _rigidbody = GetComponent<Rigidbody>();
+        _collider = GetComponent<Collider>();
+
+
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)

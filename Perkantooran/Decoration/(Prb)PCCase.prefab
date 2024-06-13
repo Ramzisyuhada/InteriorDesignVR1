@@ -116,8 +116,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8230088851002256163}
-  - component: {fileID: 6575190631726957165}
-  - component: {fileID: -3129116033529574514}
+  - component: {fileID: -1256786306036795896}
+  - component: {fileID: -7491776610704459293}
   m_Layer: 0
   m_Name: (Prb)PCCase
   m_TagString: Untagged
@@ -141,7 +141,7 @@ Transform:
   - {fileID: 3759141573351954940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45.853, z: 0}
---- !u!54 &6575190631726957165
+--- !u!54 &-1256786306036795896
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-3129116033529574514
+--- !u!114 &-7491776610704459293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

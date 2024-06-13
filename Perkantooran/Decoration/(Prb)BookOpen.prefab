@@ -115,8 +115,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7450665450781781327}
+<<<<<<< HEAD
   - component: {fileID: 2340074917077856765}
   - component: {fileID: -930735550172080475}
+=======
+  - component: {fileID: -233704426748980284}
+  - component: {fileID: 6384847591674260952}
+>>>>>>> dd97bda57dc5bd9ea840dfdd4a02f674ac2aad90
   m_Layer: 0
   m_Name: (Prb)BookOpen
   m_TagString: Untagged
@@ -140,7 +145,11 @@ Transform:
   - {fileID: 5574763857520826246}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!54 &2340074917077856765
+=======
+--- !u!54 &-233704426748980284
+>>>>>>> dd97bda57dc5bd9ea840dfdd4a02f674ac2aad90
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,11 +172,19 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
+<<<<<<< HEAD
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-930735550172080475
+=======
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6384847591674260952
+>>>>>>> dd97bda57dc5bd9ea840dfdd4a02f674ac2aad90
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

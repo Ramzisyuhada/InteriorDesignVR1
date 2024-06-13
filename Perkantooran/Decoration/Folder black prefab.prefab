@@ -114,8 +114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098579331880524}
-  - component: {fileID: -7223225675177476280}
-  - component: {fileID: 6352034454015887127}
+  - component: {fileID: -6365597775472686948}
+  - component: {fileID: 3016722184285092385}
   m_Layer: 0
   m_Name: Folder black prefab
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 4915679963019578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -32.913, z: 0}
---- !u!54 &-7223225675177476280
+--- !u!54 &-6365597775472686948
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6352034454015887127
+--- !u!114 &3016722184285092385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
