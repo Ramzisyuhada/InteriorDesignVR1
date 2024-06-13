@@ -49,12 +49,17 @@ public class ObjectPlacment : XRGrabInteractable
 
         base.Awake();
         objectRenderer = GetComponent<Renderer>();
-        if (objectRenderer != null ) 
+        if (objectRenderer != null )
+        {
             _currentmaterial = objectRenderer.material;
+
+            _transformY = objectRenderer.transform.position.y;
+            _quaternion = objectRenderer.transform.rotation;
+        }
+  
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
-        _transformY = objectRenderer.transform.position.y;
-        _quaternion = objectRenderer.transform.rotation;
+
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)

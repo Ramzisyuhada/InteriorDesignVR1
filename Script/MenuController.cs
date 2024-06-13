@@ -45,44 +45,56 @@ public class MenuController : MonoBehaviour
      void Update()
     {
         buttonn();
-        if (Input.GetKeyDown(KeyCode.B))
+        var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+
+        if (leftHandDevices.Count == 1)
         {
-            if (menucanvas == null)
+            UnityEngine.XR.InputDevice device = leftHandDevices[0];
+            bool triggerValue;
+            if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
             {
-                GameObject currentCanvas = Instantiate(canvas);
-                menucanvas = currentCanvas;
-                Vector3 cameraPosition = Camera.main.transform.position;
-                Quaternion cameraRotation = Camera.main.transform.rotation;
+                if (menucanvas == null)
+                {
+                    GameObject currentCanvas = Instantiate(canvas);
+                    menucanvas = currentCanvas;
+                    Vector3 cameraPosition = Camera.main.transform.position;
+                    Quaternion cameraRotation = Camera.main.transform.rotation;
 
-                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                    Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                    menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
-                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+                    menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
-                menucanvas.transform.DORestart();
+                    menucanvas.transform.DORestart();
 
-                DOTween.Play(menucanvas);
-                
+                    DOTween.Play(menucanvas);
+
+                }
+                else
+                {
+                    Vector3 cameraPosition = Camera.main.transform.position;
+                    Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                    Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                    menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                    menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                    menucanvas.transform.DORestart();
+
+                    DOTween.Play(menucanvas);
+                }
             }
-            else
-            {
-                Vector3 cameraPosition = Camera.main.transform.position;
-                Quaternion cameraRotation = Camera.main.transform.rotation;
-
-                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
-
-                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
-
-                menucanvas.transform.DORestart();
-
-                DOTween.Play(menucanvas);
-            }
+        }
+         /*   if (Input.GetKeyDown(KeyCode.B))
+        {
+         
 
 
 
         }
-
+*/
     }
 
     private void buttonn()
