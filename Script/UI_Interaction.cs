@@ -67,7 +67,6 @@ public class UI_Interaction : MonoBehaviour
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
         _currentController = Controller.None;
-   ;
 
 
     }
@@ -121,16 +120,20 @@ public class UI_Interaction : MonoBehaviour
         float leftValue = inputActionLeft.action.ReadValue<float>();
         float rightValue = inputActionRight.action.ReadValue<float>();
         bool inputActive = leftValue != 0 || rightValue != 0;
+        
+        Debug.Log(inputActive);
         if (inputActive)
         {
             UpdateControllerActiveState();
 
             int layerMaskUI = 1 << LayerMask.NameToLayer("UI");
             int layerMaskPlayer = 1 << LayerMask.NameToLayer("Floor");
-            int combinedLayerMask = layerMaskUI | layerMaskPlayer;
+            int combinedLayerMask = layerMaskUI ;
 
-            if (Physics.Raycast(ray, out hit, 30, ~combinedLayerMask))
+            if (Physics.Raycast(ray, out hit,Mathf.Infinity))
             {
+                                    Debug.Log(hit.collider.name);
+
                 if (hit.collider != null)
                 {
                     GameObject hitObject = hit.collider.gameObject;
@@ -160,19 +163,17 @@ public class UI_Interaction : MonoBehaviour
     {
         SetControllerType(Controller.None);
 
-        Destroy(currentCanvas);
+        Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
     }
     private bool IsPointerOverUIElement()
     {
-        // Check using EventSystem
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return true;
         }
 
-        // Additional check using GraphicRaycaster
         PointerEventData eventData = new PointerEventData(EventSystem.current)
         {
             position = Input.mousePosition
@@ -206,17 +207,22 @@ public class UI_Interaction : MonoBehaviour
         return false;
     }
     private void ShowCanvas(GameObject hitObject)
+
     {
+       
+        
         if (currentCanvas == null)
         {
+
             currentCanvas = Instantiate(_canvas);
+            Debug.Log(currentCanvas.gameObject.name);
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 3.5f;
             currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
-            currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+            currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 0.5f);
 
             currentCanvas.transform.DORestart();
 

@@ -19,7 +19,6 @@ public class OutierObject : MonoBehaviour
 
     void Update()
     {
-        // Reset highlight
         if (highlight != null)
         {
             highlight.gameObject.GetComponent<Outline>().enabled = false;
@@ -36,7 +35,7 @@ public class OutierObject : MonoBehaviour
             HandleRaycastHit(raycastHit);
         }
 
-        if (inputActionSelectLeft.action.WasPressedThisFrame())
+        /*if (inputActionSelectLeft.action.WasPressedThisFrame())
         {
             HandleSelection(rayLeft);
         }
@@ -44,7 +43,7 @@ public class OutierObject : MonoBehaviour
         if (inputActionSelectRight.action.WasPressedThisFrame())
         {
             HandleSelection(rayRight);
-        }
+        }*/
     }
 
     private void HandleRaycastHit(RaycastHit hit)

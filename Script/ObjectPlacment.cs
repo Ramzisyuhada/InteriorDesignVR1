@@ -62,14 +62,8 @@ public class ObjectPlacment : XRGrabInteractable
         _collider = GetComponent<Collider>();
         
 
-            _currentmaterial = objectRenderer.material;
-
-            _transformY = objectRenderer.transform.position.y;
-            _quaternion = objectRenderer.transform.rotation;
+       
         
-  
-        _rigidbody = GetComponent<Rigidbody>();
-        _collider = GetComponent<Collider>();
 
 
     }

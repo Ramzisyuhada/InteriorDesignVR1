@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1784301321}
   m_OriginBaseGameObject: {fileID: 229861497}
   m_CameraFloorOffsetObject: {fileID: 1203543202}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
 --- !u!4 &229861500
 Transform:
@@ -1290,7 +1290,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 700146424}
-  - component: {fileID: 700146425}
   m_Layer: 0
   m_Name: ControllerDevice
   m_TagString: Untagged
@@ -1313,20 +1312,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117499875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &700146425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700146423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c753dc44a4b9c946b738818f3b62a59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Left: {fileID: 2092701770}
-  Right: {fileID: 1540411292}
 --- !u!1 &722996895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1787,7 +1772,7 @@ GameObject:
   - component: {fileID: 1139939810}
   - component: {fileID: 1139939809}
   - component: {fileID: 1139939813}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2115,7 +2100,7 @@ PrefabInstance:
     - target: {fileID: 4355470243685451542, guid: b235c805f008f6f4da469f7364846b10,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4355470243685451542, guid: b235c805f008f6f4da469f7364846b10,
         type: 3}
@@ -2135,7 +2120,7 @@ PrefabInstance:
     - target: {fileID: 4869539996879210257, guid: b235c805f008f6f4da469f7364846b10,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4869539996879210257, guid: b235c805f008f6f4da469f7364846b10,
         type: 3}
@@ -2460,8 +2445,7 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 8748868027195207512, guid: 893219773891c784ab469a39151879b4,
-    type: 3}
+  m_Reticle: {fileID: 0}
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
@@ -3134,7 +3118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659005418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
   m_Name: 
@@ -3578,7 +3562,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3599823989380923159, guid: 0be0028c24f2a4c14a96b6aa39055933,
+    m_Reference: {fileID: -5469779502570545813, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   inputActionClose:
     m_UseReference: 1
@@ -3591,7 +3575,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8069514856583376848, guid: 0be0028c24f2a4c14a96b6aa39055933,
+    m_Reference: {fileID: 9168686443847010946, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   canvas: {fileID: 4497703370842192572, guid: e5eeb73a36069e24fbb174bf7ff8ca63, type: 3}
 --- !u!1 &1936064123
@@ -3935,8 +3919,7 @@ MonoBehaviour:
   m_SmoothMovement: 0
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 8748868027195207512, guid: 893219773891c784ab469a39151879b4,
-    type: 3}
+  m_Reticle: {fileID: 0}
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
