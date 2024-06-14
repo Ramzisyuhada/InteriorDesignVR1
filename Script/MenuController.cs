@@ -49,87 +49,87 @@ public class MenuController : MonoBehaviour
     }
     void Update()
     {
-        buttonn();
-        float leftValue = inputAction.action.ReadValue<float>();
-        float rightValue = inputActionClose.action.ReadValue<float>();
-        
-            if (leftValue != 0 || rightValue != 0)
+        /* buttonn();
+         float leftValue = inputAction.action.ReadValue<float>();
+         float rightValue = inputActionClose.action.ReadValue<float>();
+
+             if (leftValue != 0 || rightValue != 0)
+             {
+                 if (menucanvas == null)
+                 {
+                     GameObject currentCanvas = Instantiate(canvas);
+                     menucanvas = currentCanvas;
+                     Vector3 cameraPosition = Camera.main.transform.position;
+                     Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                     Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                     menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                     menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                     menucanvas.transform.DORestart();
+
+                     DOTween.Play(menucanvas);
+
+                 }
+                 else
+                 {
+                     Vector3 cameraPosition = Camera.main.transform.position;
+                     Quaternion cameraRotation = Camera.main.transform.rotation;
+
+                     Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                     menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+
+                     menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+
+                     menucanvas.transform.DORestart();
+
+                     DOTween.Play(menucanvas);
+                 }
+             Destroy(GameObject.Find("Canvas(Clone)"));
+
+         }*/
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (menucanvas == null)
             {
-                if (menucanvas == null)
-                {
-                    GameObject currentCanvas = Instantiate(canvas);
-                    menucanvas = currentCanvas;
-                    Vector3 cameraPosition = Camera.main.transform.position;
-                    Quaternion cameraRotation = Camera.main.transform.rotation;
+                GameObject currentCanvas = Instantiate(canvas);
+                menucanvas = currentCanvas;
+                Vector3 cameraPosition = Camera.main.transform.position;
+                Quaternion cameraRotation = Camera.main.transform.rotation;
 
-                    Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                    menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
-                    menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
-                    menucanvas.transform.DORestart();
+                menucanvas.transform.DORestart();
 
-                    DOTween.Play(menucanvas);
+                DOTween.Play(menucanvas);
 
-                }
-                else
-                {
-                    Vector3 cameraPosition = Camera.main.transform.position;
-                    Quaternion cameraRotation = Camera.main.transform.rotation;
+            }
+            else
+            {
+                Vector3 cameraPosition = Camera.main.transform.position;
+                Quaternion cameraRotation = Camera.main.transform.rotation;
 
-                    Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                    menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
-                    menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
+                menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
-                    menucanvas.transform.DORestart();
+                menucanvas.transform.DORestart();
 
-                    DOTween.Play(menucanvas);
-                }
+                DOTween.Play(menucanvas);
+            }
             Destroy(GameObject.Find("Canvas(Clone)"));
 
+
         }
-
-
-
-
-        /*  if (Input.GetKeyDown(KeyCode.B))
-          {
-              if (menucanvas == null)
-              {
-                  GameObject currentCanvas = Instantiate(canvas);
-                  menucanvas = currentCanvas;
-                  Vector3 cameraPosition = Camera.main.transform.position;
-                  Quaternion cameraRotation = Camera.main.transform.rotation;
-
-                  Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                  menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
-
-                  menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
-
-                  menucanvas.transform.DORestart();
-
-                  DOTween.Play(menucanvas);
-
-              }
-              else
-              {
-                  Vector3 cameraPosition = Camera.main.transform.position;
-                  Quaternion cameraRotation = Camera.main.transform.rotation;
-
-                  Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                  menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
-
-                  menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
-
-                  menucanvas.transform.DORestart();
-
-                  DOTween.Play(menucanvas);
-              }
-              Destroy(GameObject.Find("Canvas(Clone)"));
-
-
-          }*/
 
 
 
