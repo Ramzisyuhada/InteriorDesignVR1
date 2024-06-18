@@ -58,8 +58,20 @@ public class UI_Interaction : MonoBehaviour
         Rotation,
         Scale,
         Texture,
+        Color,
         None
     };
+
+    public void setController(Controller newController)
+    {
+        _currentController = newController;
+    }
+
+    public Controller getCurrentController()
+    {
+        return _currentController;
+    }
+
     public static Controller _currentController;  
     void Start()
     {
@@ -106,8 +118,16 @@ public class UI_Interaction : MonoBehaviour
 
         float rotationSpeed = 100f;
         float rotationAmount = (leftValue.x - rightValue.x) * rotationSpeed * Time.deltaTime;
+        if (barang.transform.parent != null)
+        {
+            barang.transform.parent.transform.Rotate(0, rotationAmount, 0, Space.Self);
 
-        barang.transform.Rotate(Vector3.up, rotationAmount);
+        }
+        else
+        {
+            barang.transform.transform.Rotate(0, rotationAmount, 0, Space.Self);
+
+        }
 
     }
     private void getobject()
@@ -137,19 +157,18 @@ public class UI_Interaction : MonoBehaviour
                 if (hit.collider != null)
                 {
                     GameObject hitObject = hit.collider.gameObject;
-                    if (hitObject != barang)
-                    {
-                        barang = hitObject;
+                   
                         if (hitObject != null && !HasChildCanvas(hitObject))
                         {
                             gameobject = hitObject.gameObject;
                             static_player = player;
+                            barang = hitObject;
 
                             ShowCanvas(hitObject);
-                            Destroy(GameObject.Find("MenuItem(Clone)"));
+                            Destroy(GameObject.Find("MenuItem_part1(Clone)"));
 
                         }
-                    }
+                    
                     if (hitObject.GetComponent<Canvas>() != null)
                     {
                         return;
@@ -219,8 +238,8 @@ public class UI_Interaction : MonoBehaviour
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
-            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 3.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 0.5f);
 
@@ -368,12 +387,33 @@ public class UI_Interaction : MonoBehaviour
             colorPicker.onColorChanged -= OnColorChanged;
         }
 
-        if (gameobject != null)
+        if (gameobject != null && existingColorPicker != null)
         {
-            ColorPicker cp = existingColorPicker.GetComponent<ColorPicker>();
-            if (cp != null)
+            existingColorPicker.GetComponent<ColorPicker>();
+            if (existingColorPicker.TryGetComponent<ColorPicker>(out var cp))
             {
-                gameobject.GetComponent<Renderer>().material.color = cp.color;
+                if (gameobject.GetComponent<Renderer>() != null)
+                {
+                    gameobject.GetComponent<Renderer>().material.color = cp.color;
+                }
+                else
+                {
+                    if (gameobject.transform.childCount != 0)
+                    {
+
+                        for (int i = 0; i < gameobject.transform.childCount; i++)
+                        {
+                           
+                            if(gameobject.transform.GetChild(i).GetComponent<Renderer>() != null)
+                            {
+                                gameobject.transform.GetChild(i).GetComponent<Renderer>().material.color = cp.color;
+
+                            }
+
+                        }
+                    }
+                }
+                
             }
             else
             {

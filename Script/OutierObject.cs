@@ -24,7 +24,7 @@ public class OutierObject : MonoBehaviour
             highlight.gameObject.GetComponent<Outline>().enabled = false;
             highlight = null;
         }
-
+/*
         if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
@@ -33,7 +33,7 @@ public class OutierObject : MonoBehaviour
         if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
-        }
+        }*/
 
         /*if (inputActionSelectLeft.action.WasPressedThisFrame())
         {

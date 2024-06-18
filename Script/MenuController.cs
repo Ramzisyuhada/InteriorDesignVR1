@@ -2,11 +2,13 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
+using static UI_Interaction;
 
 public class MenuController : MonoBehaviour
 {
@@ -47,7 +49,7 @@ public class MenuController : MonoBehaviour
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
     }
-    void Update()
+    void Update()                                                                 
     {
         /* buttonn();
          float leftValue = inputAction.action.ReadValue<float>();
@@ -97,13 +99,21 @@ public class MenuController : MonoBehaviour
         {
             if (menucanvas == null)
             {
+                UI_Interaction ui = new UI_Interaction();
+                Controller currentController = UI_Interaction._currentController;
+                currentController = Controller.None;
+                GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+                gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+
+
+                ui.setController(currentController);
                 GameObject currentCanvas = Instantiate(canvas);
                 menucanvas = currentCanvas;
                 Vector3 cameraPosition = Camera.main.transform.position;
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
-                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
@@ -117,7 +127,7 @@ public class MenuController : MonoBehaviour
                 Vector3 cameraPosition = Camera.main.transform.position;
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
-                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
+                Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
                 menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
@@ -143,10 +153,11 @@ public class MenuController : MonoBehaviour
     public void Close()
     {
         Destroy(menucanvas);
+
     }
     private void ResetUI()
     {
-        Transform content = menucanvas.transform.GetChild(2).GetChild(1).GetChild(0).GetChild(0);
+        Transform content = menucanvas.transform.GetChild(2).GetChild(0).GetChild(0).GetChild(0);
         Debug.Log(content.gameObject.name);
         for (int i = content.childCount - 1; i >= 0; i--)
         {
@@ -168,7 +179,7 @@ public class MenuController : MonoBehaviour
         Debug.Log(leftValue + " " + rightValue);
     }
 
-    public void Furniture()
+    public void Tanaman()
     {
         ResetUI();
 
@@ -176,10 +187,10 @@ public class MenuController : MonoBehaviour
         btn.Clear();
         Sprite.Clear();
 
-        Inventory("Furniture");
+        Inventory("Tanaman");
 
     }
-    public void Decorationt()
+    public void Dekorasi()
     {
         ResetUI();
 
@@ -187,11 +198,11 @@ public class MenuController : MonoBehaviour
         btn.Clear();
         Sprite.Clear();
 
-        Inventory("Decoration");
+        Inventory("Dekorasi");
 
     }
 
-    public void Ceiling()
+    public void Lampu()
     {
         ResetUI();
 
@@ -199,22 +210,141 @@ public class MenuController : MonoBehaviour
         btn.Clear();
         Sprite.Clear();
 
-        Inventory("Ceiling Light");
+        Inventory("Lampu");
     }
 
-    public void Walldecor()
+    public void Jendela()
     {
         ResetUI();
 
         listgameobject.Clear();
         btn.Clear();
         Sprite.Clear();
-        Inventory("WallDecor");
+        Inventory("Jendela");
+    }
+
+    public void Karpet()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Karpet");
+    }
+
+    public void Kursi()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Kursi & Sofa");
+
+    }
+
+    public void Lemari()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Lemari & Rak");
+
+    }
+
+    public void Lukisan()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Lukisan");
+
+    }
+
+    public void Meja()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Meja");
+    }
+
+    public void partisi()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Partisi");
+
+    }
+
+    public void Pintu()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Pintu");
+
+    }
+
+    public void Plants()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Plants");
+
+    }
+
+    public void Sampah()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Tempat Sampah");
+
+    }
+
+    public void Toilet()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Toilet");
+
+    }
+
+    public void Elektronik()
+    {
+        ResetUI();
+
+        listgameobject.Clear();
+        btn.Clear();
+        Sprite.Clear();
+        Inventory("Elektronik");
+
     }
     private void Inventory(string jenis)
     {
         Transform Background = menucanvas.transform.GetChild(2);
-        Transform ListoObjectItem = Background.GetChild(1);
+        Transform ListoObjectItem = Background.GetChild(0);
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
 
@@ -258,7 +388,6 @@ public class MenuController : MonoBehaviour
             Destroy(data.gameObject);
         }*/
         Inventory1.SetActive(true);
-
         GameObject currentParent = Instantiate(Inventory1, content.transform);
 
         for (int i = 0; i < objects.Count; i++)
@@ -268,7 +397,11 @@ public class MenuController : MonoBehaviour
 
 
                 currentParent = Instantiate(Inventory1, content.transform);
+
+
+
             }
+
             GameObject inventory = Instantiate(item);
             inventory.GetComponent<Image>().sprite = img[i];
             inventory.transform.SetParent(currentParent.transform);
@@ -305,15 +438,35 @@ public class MenuController : MonoBehaviour
     private void EquipObject(GameObject selectedObject)
     {
 
+        Vector3 cameraPosition = Camera.main.transform.position ;
+        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward * 2f;
 
-        Vector3 cameraPosition = Camera.main.transform.position;
-        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward * 4f;
-        Quaternion rotation = Quaternion.LookRotation(cameraPosition - objectPosition);
+     
+        float rotasiYSumbuKamera = Camera.main.transform.rotation.eulerAngles.y;
 
-        GameObject instantiatedItem = Instantiate(selectedObject, objectPosition, Quaternion.identity);
+        float rotasiYSumbuTerdekat = Mathf.Round(rotasiYSumbuKamera / 90f) * 90f;
+
+        Vector3 rotasiObjekTerpilih = selectedObject.transform.rotation.eulerAngles;
+
+        // Membuat rotasi target
+        Quaternion rotasiTarget = Quaternion.Euler(rotasiObjekTerpilih.x, rotasiYSumbuTerdekat, rotasiObjekTerpilih.z);
+
+       
 
 
-        GameObject menuBarang = GameObject.Find("MenuItem(Clone)");
+
+        GameObject instantiatedItem = Instantiate(selectedObject, objectPosition, rotasiTarget);
+
+
+
+        if (instantiatedItem.GetComponent<Rigidbody>() != null)
+        {
+            instantiatedItem.GetComponent<Rigidbody>().isKinematic = true;
+
+        }
+  
+
+        GameObject menuBarang = GameObject.Find("MenuItem_part1(Clone)");
 
 
         if (menuBarang != null)
