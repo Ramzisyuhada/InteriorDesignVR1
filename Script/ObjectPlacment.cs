@@ -6,6 +6,7 @@
     using static ObjectPlacment;
     using LibCSG;
     using static UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction;
+using static UI_Interaction;
 
     public class ObjectPlacment : XRGrabInteractable
     {
@@ -80,9 +81,16 @@
               GetComponent<MeshCollider>().convex = true;
           }*/
 
-            rotasi = transform.rotation;
+      
+        rotasi = transform.rotation;
         base.OnSelectEntered(args);
-            GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        UI_Interaction ui = new UI_Interaction();
+
+        Controller currentController = UI_Interaction._currentController;
+        currentController = Controller.None;
+        ui.setController(currentController);
+
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
             gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
 
             originalPosition = transform.position;
@@ -203,35 +211,37 @@
                 int layerMask = LayerMask.GetMask("Floor"); 
 
 
-                if (Physics.Raycast(transform.position, Vector3.down, out hit,1f))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit,Mathf.Infinity))
                 {
 
                     if (hit.collider.CompareTag("Floor"))
                         {
                             Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
                             transform.position = newPosition;
-                           /* Debug.Log("ehllo1");
 
-                
-                                Debug.Log("ehllo");
-                            if (transform.tag == "Partisi")
-                            {
-                                RaycastHit hit1;
+                            RaycastHit hit1;
+                    /* Debug.Log("ehllo1");
 
-                                foreach (Vector3 direction in directions)
-                                {
-                                    Debug.DrawRay(transform.position, direction , Color.red, 1f);
-                                    if (Physics.Raycast(transform.position, direction, out hit1, 0.2f))
-                                    {
-                                        Vector3 newPosition1 = new Vector3(Mathf.Round(hit1.transform.position.x), transform.position.y, transform.position.z);
 
-                                        hit1.transform.position = newPosition1;
+                         Debug.Log("ehllo");
+                     if (transform.tag == "Partisi")
+                     {
+                         RaycastHit hit1;
 
-                                        return true;
-                                    }
-                                }
-                            }*/
-                            return true;
+                         foreach (Vector3 direction in directions)
+                         {
+                             Debug.DrawRay(transform.position, direction , Color.red, 1f);
+                             if (Physics.Raycast(transform.position, direction, out hit1, 0.2f))
+                             {
+                                 Vector3 newPosition1 = new Vector3(Mathf.Round(hit1.transform.position.x), transform.position.y, transform.position.z);
+
+                                 hit1.transform.position = newPosition1;
+
+                                 return true;
+                             }
+                         }
+                     }*/
+                    return true;
                         }
                         else {
                             Collider objectCollider = GetComponent<Collider>();
@@ -268,7 +278,7 @@
 
         foreach (var direction in raycastDirections)
         {
-            hits = Physics.RaycastAll(transform.position, direction, 1f);
+            hits = Physics.RaycastAll(transform.position, direction, Mathf.Infinity);
 
             foreach (var hit in hits)
             {
