@@ -435,7 +435,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &8697472060302202590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,6 +591,7 @@ MonoBehaviour:
   objectType: 0
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
+  snapThreshold: 1
 --- !u!1 &7676261460997369691
 GameObject:
   m_ObjectHideFlags: 0

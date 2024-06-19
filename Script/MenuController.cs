@@ -101,7 +101,7 @@ public class MenuController : MonoBehaviour
 
 
 
-        /*if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (menucanvas == null)
             {
@@ -119,7 +119,7 @@ public class MenuController : MonoBehaviour
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
                 Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
@@ -145,7 +145,7 @@ public class MenuController : MonoBehaviour
             Destroy(GameObject.Find("Canvas(Clone)"));
 
 
-        }*/
+        }
 
 
 

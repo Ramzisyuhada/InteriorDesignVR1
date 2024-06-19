@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4442701530802736}
   - component: {fileID: 33389202527353202}
   - component: {fileID: 23183435840291832}
+  - component: {fileID: 6280913441835914902}
   m_Layer: 0
   m_Name: water dispenser.001
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6280913441835914902
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206751434992424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 784faa44222aa9b45a5eed45c625c729, type: 3}
 --- !u!1 &1334076978321804
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +191,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2408028071001949220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +347,7 @@ MonoBehaviour:
   objectType: 3
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
+  snapThreshold: 1
 --- !u!1 &1338053409734416
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +359,7 @@ GameObject:
   - component: {fileID: 4441380889281296}
   - component: {fileID: 33278034714042850}
   - component: {fileID: 23267453965331500}
+  - component: {fileID: 887966193159726455}
   m_Layer: 0
   m_Name: water dispenser bin
   m_TagString: Untagged
@@ -407,6 +432,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &887966193159726455
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338053409734416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 784faa44222aa9b45a5eed45c625c729, type: 3}
 --- !u!1 &1990273713866970
 GameObject:
   m_ObjectHideFlags: 0

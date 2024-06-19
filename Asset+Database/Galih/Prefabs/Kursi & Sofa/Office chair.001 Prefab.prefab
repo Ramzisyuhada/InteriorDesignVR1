@@ -167,7 +167,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-4971603162522679938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +323,7 @@ MonoBehaviour:
   objectType: 0
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
+  snapThreshold: 1
 --- !u!1001 &5190604117175092476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,6 +332,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4614347105096556}
     m_Modifications:
+    - target: {fileID: -5112061335744689586, guid: c1e5af2ff42787c4da9691a81d25269e,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1829941066630950, guid: c1e5af2ff42787c4da9691a81d25269e, type: 3}
       propertyPath: m_Name
       value: Office chair Prefab
