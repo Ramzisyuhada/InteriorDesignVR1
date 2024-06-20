@@ -311,7 +311,7 @@ public class MenuController : MonoBehaviour
         listgameobject.Clear();
         btn.Clear();
         Sprite.Clear();
-        Inventory("Plants");
+        Inventory("Tanaman");
 
     }
 

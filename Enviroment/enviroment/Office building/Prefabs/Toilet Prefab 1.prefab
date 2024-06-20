@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 4898081687902082}
   - component: {fileID: 1616622224108566466}
   m_Layer: 0
-  m_Name: Toilet Prefab
+  m_Name: Toilet Prefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

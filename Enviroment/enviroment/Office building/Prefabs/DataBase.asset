@@ -1,0 +1,1521 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ad3e00105b25c4db2ff8252643468b, type: 3}
+  m_Name: DataBase
+  m_EditorClassIdentifier: 
+  objectsData:
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman1
+    <id>k__BackingField: 0
+    <prefab>k__BackingField: {fileID: 7028549092296360936, guid: c02a999a44edfa048a0420775c83cf3d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 6d06a4b83775afe47bbe706dc71f08c9, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman2
+    <id>k__BackingField: 1
+    <prefab>k__BackingField: {fileID: 5500661605437975082, guid: 2db51a3ce7d7fe34a934d68f0c488f54, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 97434b32247ae90469903463f5680172, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman3
+    <id>k__BackingField: 2
+    <prefab>k__BackingField: {fileID: 7997342053907393920, guid: 09786b2145094304f8e76c50e272040f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ac2a534d8fca00a48bfa5a9f68720a29, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman4
+    <id>k__BackingField: 3
+    <prefab>k__BackingField: {fileID: 3268182393475442383, guid: a2e6444451e398844bfa41ba8f0ebfb2, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f90355ee23592ec49b6a2f145d12e782, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman4
+    <id>k__BackingField: 4
+    <prefab>k__BackingField: {fileID: 1874277770291940, guid: ebb3fb0024366fa48b1a54ce15e27f7e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 41fb902dfc8dc104d8e6a41ab4ae4df6, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman5
+    <id>k__BackingField: 5
+    <prefab>k__BackingField: {fileID: 1325865075932708, guid: c7e13309d6fe92b44aeae0c3ce40fab7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ce2f48e75410184192003d20645c27a, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman6
+    <id>k__BackingField: 6
+    <prefab>k__BackingField: {fileID: 1953379348484848, guid: bb4ac9382c724a74b9dd82d157a42bbc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f50afb7dbe58aff48aa5c4ceb374533e, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman7
+    <id>k__BackingField: 7
+    <prefab>k__BackingField: {fileID: 6596188501261139118, guid: 2d772816752fe404d815665c126bf358, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0a955f1a34a2f764db7082019f2a1dc4, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman8
+    <id>k__BackingField: 8
+    <prefab>k__BackingField: {fileID: 1537901680001054807, guid: 9d7172ef9304c014286d757d5e6436c2, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 566a802582760fc41963dd31e5b8df0e, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman9
+    <id>k__BackingField: 9
+    <prefab>k__BackingField: {fileID: 4143664204994331989, guid: 0cd6613eb8793674aa4e0ce35ad5c6e7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ef69824f43551848b6a981e62e41716, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman10
+    <id>k__BackingField: 10
+    <prefab>k__BackingField: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ef69824f43551848b6a981e62e41716, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman11
+    <id>k__BackingField: 11
+    <prefab>k__BackingField: {fileID: 2748040355479484232, guid: aaea4f4bdb1fcce478ff2a13af904c2b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 750a2ca649c0b6a4b9e408ceee2d23f4, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: JamDigital
+    <id>k__BackingField: 12
+    <prefab>k__BackingField: {fileID: 7362636585400467613, guid: 2ac7746fb8c73dc479b9838cc920a13a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2b3233b7cd2826d43b1b453d6eae6444, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Buku1
+    <id>k__BackingField: 13
+    <prefab>k__BackingField: {fileID: 3413711846715311720, guid: 7695c0d2e92da0e4f8d08c7909230b47, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: da6f1410319367e4fa9e5dd277eff906, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Buku2
+    <id>k__BackingField: 14
+    <prefab>k__BackingField: {fileID: 3447407846402289519, guid: 009ac3bc89a8c994aaa64e90fed60ab2, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2531de927809c6c4fa9984baca63dd77, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Buku3
+    <id>k__BackingField: 15
+    <prefab>k__BackingField: {fileID: 298304564950268036, guid: 20fb32c38fa4cf14c98f0e754db93073, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 79840c5e83b1b6a4c9c0181aa6f2cba2, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Buku4
+    <id>k__BackingField: 16
+    <prefab>k__BackingField: {fileID: 9186298254406481068, guid: 26a2420e41111fa4384c8adc35b250b1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d646ea9a0004c664ea980e2e3bd12ee1, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Buku5
+    <id>k__BackingField: 17
+    <prefab>k__BackingField: {fileID: 4372837166587407497, guid: 91c8c6751f26bcc4a9425c9fc23fd227, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f0bc69c9194f7474a9ac59904400142e, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Cangkir1
+    <id>k__BackingField: 18
+    <prefab>k__BackingField: {fileID: 4476808827924231168, guid: 7c525024ae8431e45b357520bb8407a6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 22a4042fdaaff5942b74f81fe9fefc88, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Cangkir2
+    <id>k__BackingField: 19
+    <prefab>k__BackingField: {fileID: 4101112173780443809, guid: 494d1072afe81fe449dc0c5b43fb5099, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f0bc69c9194f7474a9ac59904400142e, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: TempatPensil
+    <id>k__BackingField: 20
+    <prefab>k__BackingField: {fileID: 208974801609211804, guid: 0177ee00efab698438288ebb753747ce, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b7e95d96967563d4c9a20bd38553b2c7, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: KumpulanKertas
+    <id>k__BackingField: 21
+    <prefab>k__BackingField: {fileID: 1074799350035452, guid: ff8234404b4936646a8c285cafb4e648, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b7e95d96967563d4c9a20bd38553b2c7, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: TanamanKaktus
+    <id>k__BackingField: 22
+    <prefab>k__BackingField: {fileID: 1645969296633762, guid: 2ff73ca776b2c2241834c15caef9521d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 925d9673110b34d458e12a11b8024582, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: TanamanKaktus2
+    <id>k__BackingField: 23
+    <prefab>k__BackingField: {fileID: 1229932584214924, guid: f05a2931e2234bf479d07b46f2cc0284, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 925d9673110b34d458e12a11b8024582, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuMeja1
+    <id>k__BackingField: 24
+    <prefab>k__BackingField: {fileID: 8225997399151032839, guid: ecb24a012f746d6409d95f15b8c5edba, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9fb18edcb9f62b94ea3586fd7345eb59, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuMeja2
+    <id>k__BackingField: 25
+    <prefab>k__BackingField: {fileID: 117895243694500892, guid: 958f252a66fe7c84eb9cf8e1dcbe50f4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: aa44ffc34d66a924e99bb8d2e84bb5dc, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuMeja2
+    <id>k__BackingField: 26
+    <prefab>k__BackingField: {fileID: 244819704277008725, guid: 30f988e060caa3540ba523322c05009c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 93c21c8c289c4d741860e9ac9d0473a8, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuMeja3
+    <id>k__BackingField: 27
+    <prefab>k__BackingField: {fileID: 1729308599406165851, guid: e0a309163f5d1ef4e81367371dba0804, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4ab554da8eeedba4a9320ad88c9c1b46, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: KumpulanMap
+    <id>k__BackingField: 28
+    <prefab>k__BackingField: {fileID: 1239072006101694, guid: fac4ae714c286054c82c1f4e68a3e641, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: cd1c9116a4cecc04cb99d3b54402c7f7, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: HolderBerkas
+    <id>k__BackingField: 29
+    <prefab>k__BackingField: {fileID: 7908366908966946117, guid: 6f7b9206e8634ed49be22ce24b106709, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ff2bd683b38f33b41ae0aa1bab7dd0e1, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: DocumentTray
+    <id>k__BackingField: 30
+    <prefab>k__BackingField: {fileID: 1804089141208262, guid: 4404196afc4773241bfaf2f07b50abb6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8bab3a3402c44be4288b0ab1ebe0153f, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Pot1
+    <id>k__BackingField: 31
+    <prefab>k__BackingField: {fileID: 1031147494, guid: 6c11793d682e6e3448a328bab44eaebb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f7022388846cb68448f34de831e10a26, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Pot2
+    <id>k__BackingField: 32
+    <prefab>k__BackingField: {fileID: 1031143677, guid: e5546bd082d70874da6b8856e3f180ed, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 86c3d7062b860e040aaf3a6f1f420539, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman(HanyaDaun)
+    <id>k__BackingField: 33
+    <prefab>k__BackingField: {fileID: 1031141193, guid: 0587b6093a9eea54299525b31876bf3d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 109bccd27c5d92641892286b7169d066, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuMeja4
+    <id>k__BackingField: 34
+    <prefab>k__BackingField: {fileID: 7936599477366098658, guid: cae454b93f8334e42a44e50bc086b8cd, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b2f77ec546977dd4d846699634ae6534, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Map
+    <id>k__BackingField: 35
+    <prefab>k__BackingField: {fileID: 1398788530390132, guid: 9b19a44036ac44243a6c69a62bcfdbdf, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b2f77ec546977dd4d846699634ae6534, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Phone
+    <id>k__BackingField: 36
+    <prefab>k__BackingField: {fileID: 1198268020971968, guid: 8b26c8f91a9e9924198c42094bd268fb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ac3c2859c19a9c44afe2221ceb20348, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Phone
+    <id>k__BackingField: 37
+    <prefab>k__BackingField: {fileID: 1263835571957392, guid: 9c87ff614b3962b4baebe14ed39cde94, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5dee5636cae723e419bf976818529ccc, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: TempatBerkas1
+    <id>k__BackingField: 38
+    <prefab>k__BackingField: {fileID: 1002371792554442, guid: 2d613286f37c7964b8998d01106aad6a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 659a4323c2b1e0a499ed605e4f591c0c, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Stapler
+    <id>k__BackingField: 39
+    <prefab>k__BackingField: {fileID: 2074894252628855407, guid: 39ce2aae8ff6f9148acb0e82db36ee1d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4f031e0f1ef23a342a195ecd83beeddb, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Speaker
+    <id>k__BackingField: 40
+    <prefab>k__BackingField: {fileID: 6751832589807835815, guid: 6b3d3918a49e54040abf01a0e27b7aa4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0ea15dc6c3386a740b261d7235cdee59, type: 3}
+  - <Jenis>k__BackingField: Tanaman
+    <name>k__BackingField: Tanaman(HanyaDaun)2
+    <id>k__BackingField: 41
+    <prefab>k__BackingField: {fileID: 1031145018, guid: 5ceb95693bb26d546b9a620747e48f59, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: baf6c304cf7a90241830c5d3ad044010, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Pendeteksi Asap
+    <id>k__BackingField: 42
+    <prefab>k__BackingField: {fileID: 4763749918957636779, guid: 76a7e6c2e588e024d85efa115fe688c2, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8aff2dd1376496d4c909449f9610d3a0, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap1
+    <id>k__BackingField: 43
+    <prefab>k__BackingField: {fileID: 4388711389979429264, guid: b2d179560d514f044adbfa7af8511ed9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5e3ace8403df0494d934a6f75ee7419e, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap2
+    <id>k__BackingField: 44
+    <prefab>k__BackingField: {fileID: 8913750980977116659, guid: 792c09b4e59326445adc9dc578291460, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 125d538ec7cd3ce43979fa9e011dcacd, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap3
+    <id>k__BackingField: 45
+    <prefab>k__BackingField: {fileID: 2596148168777197119, guid: 0f1c229d219f5514d95dbee94d8bb24e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 04fdbf3289466c842b318d3c3dae31a2, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap4
+    <id>k__BackingField: 46
+    <prefab>k__BackingField: {fileID: 4741806517751454857, guid: 4385fbaf3a86c68469843fe553c749bf, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 6a21177c3cd8d6c4e8d316293a53398a, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap5
+    <id>k__BackingField: 47
+    <prefab>k__BackingField: {fileID: 1423227120265244, guid: 4f2f0fdda31a14e4283f1712495f8b96, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 499d6609b5a18114a9014dbc55f77064, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap6
+    <id>k__BackingField: 48
+    <prefab>k__BackingField: {fileID: 1423227120265244, guid: 4f2f0fdda31a14e4283f1712495f8b96, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 499d6609b5a18114a9014dbc55f77064, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap7
+    <id>k__BackingField: 49
+    <prefab>k__BackingField: {fileID: 1938521857057578, guid: 879cb87e1d568e0468212a4ef47d7ae3, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 433ba1c57d9624b4c9b58ad3e39464dd, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap8
+    <id>k__BackingField: 50
+    <prefab>k__BackingField: {fileID: 1752127709972806, guid: 68ded745d66b56e47a0d9f8bab900b1b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f440263a211aaef46beb7df753eaabc6, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap9
+    <id>k__BackingField: 51
+    <prefab>k__BackingField: {fileID: 915728595342024619, guid: 361b82c1bb8d1574cb160063d451d81a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4a3513708b4d9bc4aa614e6a84afae62, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: TandaKeluar
+    <id>k__BackingField: 52
+    <prefab>k__BackingField: {fileID: 1124677066532276, guid: 2df4114bb280d25418ca52939e84b23f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ce59b30e29027724ba2abc997ef7ef81, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: lampu+kipas
+    <id>k__BackingField: 53
+    <prefab>k__BackingField: {fileID: 292275607453869481, guid: 7df07a42d42030b49a881233f734958a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 98f9388c25381de4f99e4bce6499ada4, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap10
+    <id>k__BackingField: 54
+    <prefab>k__BackingField: {fileID: 5152450172770615854, guid: fded68c2f01d3804bafe7088315aba3f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 274b9dba183d28c43abb6a8da1da1911, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap10
+    <id>k__BackingField: 55
+    <prefab>k__BackingField: {fileID: 5519110550617707107, guid: 0b7123567dcb2a14e931f2bfcecef8ff, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 077bdc2e63a85e740b753aab0ff1b0b6, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuAtap11
+    <id>k__BackingField: 56
+    <prefab>k__BackingField: {fileID: 6870633464449920090, guid: fc0dfbc5d3b0784439b0dd1fb69c4b12, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 22f8edae3085f2a41a7d4060ad77892b, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: RakDinding1
+    <id>k__BackingField: 57
+    <prefab>k__BackingField: {fileID: 5850357395676157494, guid: 3ee34a9a35d6ab74183b4b1aff5b740d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 55284628fa66cdd4186a3ea54ff9c87c, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Rakdinding2
+    <id>k__BackingField: 58
+    <prefab>k__BackingField: {fileID: 7278383590123664122, guid: 18e678e0d8ef4254da6f17efc522b1ad, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 71f6a83b2b266fb4081f94ed3fdd841a, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan1
+    <id>k__BackingField: 59
+    <prefab>k__BackingField: {fileID: 2671456082134650352, guid: dfee72f6a03de90409d75cd38a2d8867, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3d989d6c66fcb4645bc484221c340ee6, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan2
+    <id>k__BackingField: 60
+    <prefab>k__BackingField: {fileID: 8152480898045812425, guid: 4d535d472c992be4d9e9fc3f4cbb258c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e3fa5d27697bb1748bd5e9de3c1bf7b0, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan3
+    <id>k__BackingField: 61
+    <prefab>k__BackingField: {fileID: 8198272116638378021, guid: 37c19644e3f32c54ca69dfd07dc7cb6c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: dd677bdcab3f3bd4ebb8222b2b1a9607, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan4
+    <id>k__BackingField: 62
+    <prefab>k__BackingField: {fileID: 9001441060891839777, guid: 74203060fb0556f4780f3b32f6b1d854, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2dd25dc4c97df7044a4770e882816533, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: PenandaToilet
+    <id>k__BackingField: 63
+    <prefab>k__BackingField: {fileID: 1500948800940416, guid: 60703c96bc9c6524ab54de501c41d6a1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: a795b8720fd400a48a197e2bd7ec8d96, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Tanda Tempat Simpan
+    <id>k__BackingField: 64
+    <prefab>k__BackingField: {fileID: 1999101617881280, guid: 731e7a769243e0e438355e5d96f2b365, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: eee8dc048128bfb46af512ad3c4f6bdc, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Penanda Security
+    <id>k__BackingField: 65
+    <prefab>k__BackingField: {fileID: 1769953744756366, guid: 2e78930ef070a334990dba032ebe04a1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c28998b79e9e2d240972233006304cdb, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: RakDinding3
+    <id>k__BackingField: 66
+    <prefab>k__BackingField: {fileID: 1242614526293340, guid: d2464993f38f7ac40a02cb1033fa6cc0, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9db577ac4a176e446b7b3276232943ed, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuDinding1
+    <id>k__BackingField: 67
+    <prefab>k__BackingField: {fileID: 5796306477278337937, guid: d1f8f4b28bed11d4f8a4455a2a4b27ac, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8aa094ed0e76e7642aad988dd683838b, type: 3}
+  - <Jenis>k__BackingField: Jendela
+    <name>k__BackingField: TiraiJendela
+    <id>k__BackingField: 68
+    <prefab>k__BackingField: {fileID: 1255291659422360, guid: f67ff9d455ede6d448bdf23bc838c236, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d341df5d693a2934cb55f2828aaad15d, type: 3}
+  - <Jenis>k__BackingField: Jendela
+    <name>k__BackingField: Jendela1
+    <id>k__BackingField: 69
+    <prefab>k__BackingField: {fileID: 8050769435677208664, guid: 89cfaf2600805bd4f9562f6e545966f7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 01cfc92832b64bf468a15dd673147661, type: 3}
+  - <Jenis>k__BackingField: Jendela
+    <name>k__BackingField: Jendela2
+    <id>k__BackingField: 70
+    <prefab>k__BackingField: {fileID: 3524024904577399924, guid: 66b1c575f2ee0254a9ff47cf937f2e21, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c9eada94ec6107f4c9eeb223c6cb1890, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: JamDinding1
+    <id>k__BackingField: 71
+    <prefab>k__BackingField: {fileID: 1499506908776084, guid: f95eb02e4b4e8cc42938637d6ff3c02b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b1d4831b15006ef4ba9e83176786cdfd, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: JamDinding2
+    <id>k__BackingField: 72
+    <prefab>k__BackingField: {fileID: 7653966420844915478, guid: 1c8a85eb9ef6ec746b7f9a077fb79ff1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: fc9fcdb9e117e184e8716dbde8b481bd, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: JamDinding3
+    <id>k__BackingField: 73
+    <prefab>k__BackingField: {fileID: 7905967547564436280, guid: b2baa11c7e87fe941afe32f3c50cc082, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2dd51f560baf55149b49133bd27d9814, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan5
+    <id>k__BackingField: 74
+    <prefab>k__BackingField: {fileID: 1929367146843536, guid: 974d85b4722054c4a87a1af60421d8f7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0bf5007d1d8b3fd469f769574ff75f81, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan6
+    <id>k__BackingField: 75
+    <prefab>k__BackingField: {fileID: 7553561069349034837, guid: 73e371414c1410b42b129c1a2e0faa88, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 1f347c9ee3766024ba3b23c69b51a227, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan7
+    <id>k__BackingField: 76
+    <prefab>k__BackingField: {fileID: 5089054311861836106, guid: 142a5f9263fdc5f4595ad4070fc73d62, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9d6e566cbcd146042b604ec148c6c0d9, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan8
+    <id>k__BackingField: 77
+    <prefab>k__BackingField: {fileID: 368180073884319490, guid: b7cf52dece97f5d4bbb5b225b4febdf3, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d778e0e8873538b46aff3c861e7d0e13, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan9
+    <id>k__BackingField: 78
+    <prefab>k__BackingField: {fileID: 4316397287083026825, guid: 647e0510846bbdf4e9434b45fee6e377, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f1763a16fb21cab47a1a7f35a9a2a6b5, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan10
+    <id>k__BackingField: 79
+    <prefab>k__BackingField: {fileID: 6058877711084350357, guid: bba24a99d90ee5d4e9a9ef750111f0a5, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 86f9dd0294ecbd940bb82f7207c0d16c, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan11
+    <id>k__BackingField: 80
+    <prefab>k__BackingField: {fileID: 588642845303713487, guid: 369169137927f3248afe509ef61c33eb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 391c0f1c7e51ce543b3d592555f722b8, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan12
+    <id>k__BackingField: 81
+    <prefab>k__BackingField: {fileID: 7344289596221149521, guid: 0f727257952d5d541a4c01e97ae9d29c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c844d7c6a12d01c43a5ae1f272f30f93, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan13
+    <id>k__BackingField: 82
+    <prefab>k__BackingField: {fileID: 6242588949998114681, guid: 4ddbd3d5e66f9884aab343784845f035, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: cb967b3b8b76b5043af19781445e2d82, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan14
+    <id>k__BackingField: 83
+    <prefab>k__BackingField: {fileID: 3529715222844787653, guid: a973e73f7585b964d92ce18b95208191, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b6c670ffdb4f67f498d3653beb07001e, type: 3}
+  - <Jenis>k__BackingField: Lukisan
+    <name>k__BackingField: Lukisan15
+    <id>k__BackingField: 84
+    <prefab>k__BackingField: {fileID: 5828997711346961650, guid: 17c0122474ad3ac438d0cbc06218f689, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 19286c914eeab3746b4bcca254892692, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: PapanPin
+    <id>k__BackingField: 85
+    <prefab>k__BackingField: {fileID: 8819110661602970734, guid: e9b08a9384c07594e8fb6a93035efc80, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 490ed8c18f47d2149803be25b5ef76e7, type: 3}
+  - <Jenis>k__BackingField: Kursi
+    <name>k__BackingField: KursiKecil
+    <id>k__BackingField: 86
+    <prefab>k__BackingField: {fileID: 1578530219999206, guid: 5a652a60006d6ec46980e623412396f9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c65b9fc2ced804b448bec9a6c706262a, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: MejaKayu1
+    <id>k__BackingField: 87
+    <prefab>k__BackingField: {fileID: 4509613768403488414, guid: 900432286b70dd3448b0884c911e1f6d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7ba88d032efaf5545aa31ad1b7e6cfeb, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakCoklat
+    <id>k__BackingField: 88
+    <prefab>k__BackingField: {fileID: 6175574215640251783, guid: 37af4a509c0fc0242adbed484c715017, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 26245640e02266040be50e6c36bbcc16, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakPutih
+    <id>k__BackingField: 89
+    <prefab>k__BackingField: {fileID: 1098578538402304, guid: 382313487c565f14a87f1d0eb5501713, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 77c5963b46266ce41a1d4cb87de0f023, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakCoklat
+    <id>k__BackingField: 90
+    <prefab>k__BackingField: {fileID: 4625451447329328828, guid: 169d35fa7af46554d82ff528057c493a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ee0f2b616ee3604ab94e06cef044cd4, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakKayu1
+    <id>k__BackingField: 91
+    <prefab>k__BackingField: {fileID: 8000984335201133822, guid: 9743061e7053d5e46a3391b5cdc5cc32, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 96f891fbe08f39c4b8998646911430a5, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakKayu2
+    <id>k__BackingField: 92
+    <prefab>k__BackingField: {fileID: 8919745230117170049, guid: ea37052d3f80f9842a6169b32129921a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c78f91f7b0087f743ab478d037ee5a4d, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: LemariRakKayu3
+    <id>k__BackingField: 93
+    <prefab>k__BackingField: {fileID: 2124532145571123032, guid: ed097709fffbe46488ab5df91f69939c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9104e70b62aa02e4f96a5353c1c8f74f, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja+Lampu
+    <id>k__BackingField: 94
+    <prefab>k__BackingField: {fileID: 6732812361099169020, guid: 3dd3c150131f27640b1caf4756afb056, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d346c155e8c1bf044b5db8a0f05c5448, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Laci1
+    <id>k__BackingField: 95
+    <prefab>k__BackingField: {fileID: 1274134842473906, guid: 54b07283592fc8e45a857de30c6fac3f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 31e4845e00dee5d4e811b169c43e1bbf, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja L 1
+    <id>k__BackingField: 96
+    <prefab>k__BackingField: {fileID: 1996866575841564, guid: 003f91c8f9aa7d84fa7a00b552f9144a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d1c2bc77262337a409b6a4349d57ac75, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Laci2
+    <id>k__BackingField: 97
+    <prefab>k__BackingField: {fileID: 4162566305189541030, guid: 067fb86e8e4f5744a82f28c508805f86, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 16cc1c6fc4b39cc43a69239c27020172, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kopi
+    <id>k__BackingField: 98
+    <prefab>k__BackingField: {fileID: 4869539996879210257, guid: b235c805f008f6f4da469f7364846b10, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 50c7c0bcc811a7845b2d34298bd6ee5c, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Komputer Kantor
+    <id>k__BackingField: 99
+    <prefab>k__BackingField: {fileID: 6681132841128990391, guid: dc880007a1e485e418a6a0f4cf0cd001, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 64d0dbc74475fba4f87e6e2795a37846, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Metal
+    <id>k__BackingField: 100
+    <prefab>k__BackingField: {fileID: 1445448328200292, guid: 807f5c2ba3781b842bf272cf8b1939ae, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: dcecbff1d85011b44a706f5608675a7b, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: MejaKopi3
+    <id>k__BackingField: 101
+    <prefab>k__BackingField: {fileID: 5052278468339351742, guid: 5ff273d4de59c4b41a0cc0901be78395, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e352621c49dc9a145bca50fc85dc922c, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Toy2
+    <id>k__BackingField: 102
+    <prefab>k__BackingField: {fileID: 1355281140056533860, guid: 52bc1b8ddcbbc0441a97dc11ab56f820, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7171d330b1fdef946b228faf6b8d26ed, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Rak2
+    <id>k__BackingField: 103
+    <prefab>k__BackingField: {fileID: 5562547097784741879, guid: 5c3e1f6875120eb49a705fe9d38e51e9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9c4aa2d161e75d24bb84b74e5198b770, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Rak1
+    <id>k__BackingField: 104
+    <prefab>k__BackingField: {fileID: 5874005380896654649, guid: fa8eb2eb998ad8c489fe86794b62dfe1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 55f2ee0dc1f02414db53585eb66943d5, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: Lampu Lantai1
+    <id>k__BackingField: 105
+    <prefab>k__BackingField: {fileID: 739002101152073099, guid: 8edb31f3e75ee494f87808fabb13ea79, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4c40ff1ee70015e4ba1582975a132dd5, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: Lampu Lantai2
+    <id>k__BackingField: 106
+    <prefab>k__BackingField: {fileID: 7170374348065476132, guid: 51e330a9345aee9488c7e71a70a9e002, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ed6e4b64970316a4f8f4da412c202acd, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: Lampu002
+    <id>k__BackingField: 107
+    <prefab>k__BackingField: {fileID: 2513341517135006344, guid: d22be176d4019144ca4ac0fcbd4e10bd, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 30c2a009fd11ea248a3153110d9c9cd8, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Kulkas2Pintu
+    <id>k__BackingField: 108
+    <prefab>k__BackingField: {fileID: 1505153307955398, guid: a9601c421be01af42bdaca1eec89db93, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b816724336b5140429c3871eb1c39916, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Kecil Coklat
+    <id>k__BackingField: 109
+    <prefab>k__BackingField: {fileID: 6701537745073358240, guid: 49cd2cc7ce6d9ed4aa683349d88a6274, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7b9baffbe9423a442943084f626aa1a3, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu1
+    <id>k__BackingField: 110
+    <prefab>k__BackingField: {fileID: 9090885670013408196, guid: a66b6e8e31f06fa40b672c44c3572ff3, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 421ccbc675ff0a64cae5ddffc63a1a55, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu2
+    <id>k__BackingField: 111
+    <prefab>k__BackingField: {fileID: 2170178008488602006, guid: f4d5e9416c210964088db4528d2bc60f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7efdbb7932156ae40912979b8e7ab9fd, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Hitam1
+    <id>k__BackingField: 112
+    <prefab>k__BackingField: {fileID: 1831504449878450, guid: 09e934849f7028c45bb17c3078f98c76, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9221cb18c373f2542823a41c96db1842, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Putih1
+    <id>k__BackingField: 113
+    <prefab>k__BackingField: {fileID: 1949671195395142, guid: 58da3cc45ce31a449a52ffb1cc83acb7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 05188acc3bce3d543b017fba2f3a745d, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Coklat1
+    <id>k__BackingField: 114
+    <prefab>k__BackingField: {fileID: 1202036086350856, guid: 9799f8f417d21a94782b39349b68528e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 88a1ef980bba1a24d924495a162ade9c, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Krem1
+    <id>k__BackingField: 115
+    <prefab>k__BackingField: {fileID: 1208035809094850, guid: 43b8c455684f91f4ca6359dbb120c1d5, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e9b93e1100c61924199590b2645ecf6c, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Loker1
+    <id>k__BackingField: 116
+    <prefab>k__BackingField: {fileID: 5862214619906347925, guid: 1c1c93ecbb6a9704cb713e5ab8b1db64, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c8e03146df8497b40ad353b90eb58b3f, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Rak Buku1
+    <id>k__BackingField: 117
+    <prefab>k__BackingField: {fileID: 1742064889662300, guid: 4737cade184983e44b580bdebbea33a6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d89f8ce821f53b541a662f20d4d7bdbf, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Ganda
+    <id>k__BackingField: 118
+    <prefab>k__BackingField: {fileID: 1457838970446620, guid: 54fc4a62ccb7e304f910c5444e778f6b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4fe7f8bc4a0bfae4dbaa257ba255e3a3, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Wastafel
+    <id>k__BackingField: 119
+    <prefab>k__BackingField: {fileID: 1099115644982046, guid: b1295682df892f4458bfeed5b1cc271f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3a9c8f33520ed7245afedc0a7d3d7ca8, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Monitor Sekuriti
+    <id>k__BackingField: 120
+    <prefab>k__BackingField: {fileID: 1364316748305232, guid: 4d201199ac968b44084b76f5fa59d1fb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 1b79e070f7022784c8042612ebdb73b4, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Tv Tembok1
+    <id>k__BackingField: 121
+    <prefab>k__BackingField: {fileID: 1000012576842408, guid: 465aef85895ef654fb4858d8408d2c53, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c0b5945a896cae44a806ac3ac8dbbc19, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: TV+Stand
+    <id>k__BackingField: 122
+    <prefab>k__BackingField: {fileID: 4176299199054678370, guid: d0abe856add86264bb02456f3f0aed39, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: a3c114d878af9634ab79f60d16692d43, type: 3}
+  - <Jenis>k__BackingField: Tempat Sampah
+    <name>k__BackingField: Tempat Sampah1
+    <id>k__BackingField: 123
+    <prefab>k__BackingField: {fileID: 3658920609045190322, guid: 1a1c1a210343c304a80abd4636b89a8c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ec32269cf5d7cd946a754bb49abb6e10, type: 3}
+  - <Jenis>k__BackingField: Tempat Sampah
+    <name>k__BackingField: Tempat Sampah2
+    <id>k__BackingField: 124
+    <prefab>k__BackingField: {fileID: 3613027941541337088, guid: bad595b04e2d8fb4c815693ac773714b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c956a3c0a11ac554c9fb9aebd9673523, type: 3}
+  - <Jenis>k__BackingField: Tempat Sampah
+    <name>k__BackingField: Tempat Sampah3
+    <id>k__BackingField: 125
+    <prefab>k__BackingField: {fileID: 1683499507197182, guid: cb8df2c98f82f2348957686081199aa6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f79c09f5135fa234a97623337e3c5869, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Coklat
+    <id>k__BackingField: 126
+    <prefab>k__BackingField: {fileID: 9063128926208519524, guid: 08166a87efc0f7d4fbc83b29381aa836, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 05b8fd215ac313d4cb83915850e2402f, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Rak Besar
+    <id>k__BackingField: 127
+    <prefab>k__BackingField: {fileID: 148150099722166873, guid: f149402989451fe4ab69bfd1ceb5124f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5e7464b7a78fad64c98af2039834155a, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Rak Segitiga
+    <id>k__BackingField: 128
+    <prefab>k__BackingField: {fileID: 6430291554787735348, guid: db23b473998b5f84c9dec024851e29aa, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0b75401258dae444f8f255f919afa589, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kantor1
+    <id>k__BackingField: 129
+    <prefab>k__BackingField: {fileID: 1949368341988676, guid: 4b4f09798bc92114e8a7b2feb68396fa, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 354643ca578ee644baf2e6b9451ff0a0, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Gaming1
+    <id>k__BackingField: 130
+    <prefab>k__BackingField: {fileID: 1829941066630950, guid: c1e5af2ff42787c4da9691a81d25269e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0ba87fcf27436ed4cae659c064e2208e, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Gaming1
+    <id>k__BackingField: 131
+    <prefab>k__BackingField: {fileID: 1743156886038142, guid: ef47a1c558992174ea86c7f7702cdd69, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 08383777078f9bd44910e06af22b4d8b, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Laci Berkas1
+    <id>k__BackingField: 132
+    <prefab>k__BackingField: {fileID: 1781408456071732, guid: 915dd1cfab33f5842802f4774a95100c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 60d38d95acb48ca4f85fbad58255bb37, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: PintuKrem2
+    <id>k__BackingField: 133
+    <prefab>k__BackingField: {fileID: 1781408456071732, guid: 915dd1cfab33f5842802f4774a95100c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 78d54c3e2bb3ea54686db0ec2097694f, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: PintuCoklat2
+    <id>k__BackingField: 134
+    <prefab>k__BackingField: {fileID: 1202036086350856, guid: fb21c2677f6de9b41b800858634f37f9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d414ca2d966be574fa82e9ac01179e6f, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: PintuHitam2
+    <id>k__BackingField: 135
+    <prefab>k__BackingField: {fileID: 1781408456071732, guid: 915dd1cfab33f5842802f4774a95100c, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0aad25dc3348fb24ca46860bf15473a0, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: PintuKuning1
+    <id>k__BackingField: 136
+    <prefab>k__BackingField: {fileID: 1965528337302418, guid: c46afe706fb2cde4883f7afaeaa67a78, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4227bcbeadab0af43a5353f151e4bb7f, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kantor 1
+    <id>k__BackingField: 137
+    <prefab>k__BackingField: {fileID: 6848563262574193425, guid: 8cb3626c00c9e5044a8777d57a476ccb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f14074997c1d67b4d93b018347334063, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Lobi
+    <id>k__BackingField: 138
+    <prefab>k__BackingField: {fileID: 1209055744572080, guid: fa09ba391c7201c49b534ca1e0e4a7c1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8849eaf548031a6479fcd40c5406014d, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Dapur Bundar
+    <id>k__BackingField: 140
+    <prefab>k__BackingField: {fileID: 1624229394241114, guid: 089237fd08f11db42ab1767dcdf3b0b8, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3bd32b8dcb30b6c458401c28b14e7009, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Dapur
+    <id>k__BackingField: 141
+    <prefab>k__BackingField: {fileID: 1749705783954364, guid: b608e409deb58b64ab5822eb261da609, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4df79c201cdcecb48b2a74a2f0efed36, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Dapur2
+    <id>k__BackingField: 142
+    <prefab>k__BackingField: {fileID: 1643630621853554, guid: 9625900181000eb44ac38b70b0b4dfbc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 162f4d63b9c2a98488d9b96b12a66f14, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Dapur2
+    <id>k__BackingField: 143
+    <prefab>k__BackingField: {fileID: 1643630621853554, guid: 9625900181000eb44ac38b70b0b4dfbc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 162f4d63b9c2a98488d9b96b12a66f14, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Dapur3
+    <id>k__BackingField: 144
+    <prefab>k__BackingField: {fileID: 1315046484004318, guid: b37815e008a205f44944d74b1fb1a477, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 00020fe5e0b92bb4ab9f7bed293ae902, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Aula
+    <id>k__BackingField: 145
+    <prefab>k__BackingField: {fileID: 7837998195094263446, guid: 120a437bc29570c48bdfe0590426cae9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 78531df8774844d4fb90bc2fa1884252, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Kayu Kecil1
+    <id>k__BackingField: 146
+    <prefab>k__BackingField: {fileID: 8104494005479090266, guid: bd7430a0c5b28274b9c32e1bef1d6a95, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b4095f9b4d7e0af4daf7efce0a4cda3b, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja L 2
+    <id>k__BackingField: 147
+    <prefab>k__BackingField: {fileID: 945827435321317595, guid: 50813ef95eb4df34fbb0df2648c791b4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3dfe9fc2db5681e4a9f6a0ce62c4c8b6, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja L 3
+    <id>k__BackingField: 148
+    <prefab>k__BackingField: {fileID: 2948633970280972825, guid: 91f7f68d913fa164cac7ecf6bcb030dc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9a5ecd7a55c88fb4bb967a33498c12ad, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kayu terang
+    <id>k__BackingField: 149
+    <prefab>k__BackingField: {fileID: 1245626856691816754, guid: eeeb2eccd6dd3e244a853d57a5fb1ef3, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: deb13859b3609764c8a756e24c62f13c, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kayu Gelap
+    <id>k__BackingField: 150
+    <prefab>k__BackingField: {fileID: 11377046948089756, guid: e61baf4e5632a384db3521f032736c6f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: bc6a03f7fc00a3840a0b4a64e9c74d60, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Rapat
+    <id>k__BackingField: 151
+    <prefab>k__BackingField: {fileID: 1651985292988388, guid: 89f109fde965876458c9ca5b3563f1e7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c0d6bdd649fdede43b24237964235037, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Dispenser1
+    <id>k__BackingField: 152
+    <prefab>k__BackingField: {fileID: 1334076978321804, guid: aa937497f8053b449b8c7563868401e1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: a746cea27e52fbe4194ea54cb7500340, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Rak + Laci
+    <id>k__BackingField: 153
+    <prefab>k__BackingField: {fileID: 8570958667229454703, guid: 2d6f9ba03842e494b9c0e21aa7a3d9dc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0d481f7ac79fe4747b455fc29735c026, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Dispenser1
+    <id>k__BackingField: 154
+    <prefab>k__BackingField: {fileID: 8570958667229454703, guid: 2d6f9ba03842e494b9c0e21aa7a3d9dc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0d481f7ac79fe4747b455fc29735c026, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Tempat Pensil2
+    <id>k__BackingField: 155
+    <prefab>k__BackingField: {fileID: 1128141900546128, guid: 91ca78bf8be64314ab883fa8eda91dcf, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: a78d61a0a324ed141b6f6c8a00143dae, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Loker2
+    <id>k__BackingField: 156
+    <prefab>k__BackingField: {fileID: 1553475708589566, guid: 4af7da65169b48c47b3b86e7d6323744, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 07946a7b8f1b11d4f865c8555ee02377, type: 3}
+  - <Jenis>k__BackingField: Lampu
+    <name>k__BackingField: LampuLantaiPutih
+    <id>k__BackingField: 157
+    <prefab>k__BackingField: {fileID: 1573117774132190, guid: 040a706ba65e0644d9a5de4e14160795, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 28c0c14079396904281126cc0c6d3e8e, type: 3}
+  - <Jenis>k__BackingField: Lemari & rak
+    <name>k__BackingField: Locker3
+    <id>k__BackingField: 158
+    <prefab>k__BackingField: {fileID: 1048841485201202, guid: 389090492d551b942b78aac876151bf4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 79426ff0cfda2f24b8b4a0f55911c566, type: 3}
+  - <Jenis>k__BackingField: Lemari & rak
+    <name>k__BackingField: Kumpulan Rak
+    <id>k__BackingField: 159
+    <prefab>k__BackingField: {fileID: 1479060715714000, guid: da44c91f93b60e34d892f29da8410ff7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5fc6c8a457af9194fa8043dd1d069ca4, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Map hitam
+    <id>k__BackingField: 160
+    <prefab>k__BackingField: {fileID: 1036161138226500, guid: 0d02ca7916ae6944a8fd275d889a8ee7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5b9db7856e2b8af44abf40427d111475, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Kecil Putih
+    <id>k__BackingField: 161
+    <prefab>k__BackingField: {fileID: 7043932511323071429, guid: 9e2c5ba747fbc2347972ee040d373cb8, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 6ec5a67f0594ef24c89f02bfb7ed580f, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Kecil Putih1
+    <id>k__BackingField: 162
+    <prefab>k__BackingField: {fileID: 424111012734188173, guid: 676edecf7cf6d7645a15b3550dce3e70, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b51e9ffb1b8b61e4c92ecf339885659f, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Putih 4
+    <id>k__BackingField: 163
+    <prefab>k__BackingField: {fileID: 1949671195395142, guid: c05c94cc604246b41b0a8968028b89a2, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 99fa5d508fd68554293bd5c5eb730ece, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Hitam 4
+    <id>k__BackingField: 164
+    <prefab>k__BackingField: {fileID: 1831504449878450, guid: 09e934849f7028c45bb17c3078f98c76, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 904118bd251015b4dbe81c10b45238e9, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Coklat 4
+    <id>k__BackingField: 165
+    <prefab>k__BackingField: {fileID: 1202036086350856, guid: f5c10722fcf449344b4583f9adb8558d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c4d5654fe5dd9a04792dd617bbdfb8f8, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Lemari Tv
+    <id>k__BackingField: 166
+    <prefab>k__BackingField: {fileID: 9198732267505218595, guid: c53fe300edecc524f9f511dc58792d47, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 70e595ea1f5e79f4bb4716c7f9f0ec20, type: 3}
+  - <Jenis>k__BackingField: Lemari & Rak
+    <name>k__BackingField: Pintu Krem 4
+    <id>k__BackingField: 167
+    <prefab>k__BackingField: {fileID: 1457971339235080, guid: 4f9d36e206efd9c408c4487f1d8c65af, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 65ea5893471084745aa0ed9d82aa5f22, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Sekat Urinal
+    <id>k__BackingField: 168
+    <prefab>k__BackingField: {fileID: 1812272219568296, guid: b980d31c849c0eb4089769e93017a643, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: a18796057e9b14a4caeebb3bd78707ee, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Urinal
+    <id>k__BackingField: 169
+    <prefab>k__BackingField: {fileID: 1517266105618894, guid: 10c87984ebe07d049b0c3e98d260e17b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 926fe303608f93d47bf63703d8373fdb, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: TV Besar
+    <id>k__BackingField: 170
+    <prefab>k__BackingField: {fileID: 8890821166399119553, guid: f4d7002baeaf1e949bacaefa7a444af6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 05e33c338c48f5b4384a2381091d2eee, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Tisu Toilet
+    <id>k__BackingField: 171
+    <prefab>k__BackingField: {fileID: 1858983553645158, guid: 76d25017ebdd9e34e95ab02752c7b1ad, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3b8409799fa0b644897e42be068b0a93, type: 3}
+  - <Jenis>k__BackingField: Tempat Sampah
+    <name>k__BackingField: Ember Tempat Sampah
+    <id>k__BackingField: 172
+    <prefab>k__BackingField: {fileID: 1510751820801460, guid: 4e0bc8274a648084d99f2c41d46f9a52, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: bdee8e88f98cc844da92616718a35a4c, type: 3}
+  - <Jenis>k__BackingField: Tempat Sampah
+    <name>k__BackingField: Tempat Sampah Besi
+    <id>k__BackingField: 173
+    <prefab>k__BackingField: {fileID: 3346180838843828983, guid: 7d248a494a44a78499b863112fa1bce3, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c6437694b88a0d145a90dc710afea9ab, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa 2 tempat
+    <id>k__BackingField: 174
+    <prefab>k__BackingField: {fileID: 5188719395589297662, guid: c5f8699b1175786409c2aebc5ae253f4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: fd6bcd830d196dc45b8112a1903967bf, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa 1 Tempat
+    <id>k__BackingField: 175
+    <prefab>k__BackingField: {fileID: 456115914855725087, guid: 751feaaa2074ad5489ed8f2e0bb3fbe8, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c769323de752ab949820d5e04ba228da, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Sekat Kaca
+    <id>k__BackingField: 176
+    <prefab>k__BackingField: {fileID: 6652267181519566806, guid: fd9a0b6c96158cf4291ea793dcd09c5e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9105247496a1c49449273a24c52c6728, type: 3}
+  - <Jenis>k__BackingField: Partisi
+    <name>k__BackingField: Sekat Kaca
+    <id>k__BackingField: 177
+    <prefab>k__BackingField: {fileID: 3983790868604066892, guid: 00054b7f105fdce479315a0b18b079e7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4881b57eb994f804580d5946655825b3, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kantor Krem
+    <id>k__BackingField: 178
+    <prefab>k__BackingField: {fileID: 186889521332780645, guid: 0a29a6c2fa3f00d4588b183f328bccfe, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 37b7933f13b45a546a0980d201ca90ff, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Bangku
+    <id>k__BackingField: 179
+    <prefab>k__BackingField: {fileID: 186889521332780645, guid: 0a29a6c2fa3f00d4588b183f328bccfe, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 514b9e2e59f2b4b4881c41752af5c85d, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kerja Jaring
+    <id>k__BackingField: 180
+    <prefab>k__BackingField: {fileID: 1361454359923718, guid: f9e7055c6d8701d419f91d08a8f1a41b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 351c52e5e04721d4fadbd37c0fa848d5, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Coklat Tua1
+    <id>k__BackingField: 181
+    <prefab>k__BackingField: {fileID: 1371647732391088, guid: d8ad690ee6d9ec64f97446124ed8e016, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 515a0851b81a3474388f57ce78f07e6d, type: 3}
+  - <Jenis>k__BackingField: Pintu
+    <name>k__BackingField: Pintu Coklat Muda1
+    <id>k__BackingField: 182
+    <prefab>k__BackingField: {fileID: 1202036086350856, guid: fb21c2677f6de9b41b800858634f37f9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 05fc56e66a693374197ce3a8b7e426b8, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Vending Mesin
+    <id>k__BackingField: 183
+    <prefab>k__BackingField: {fileID: 1956597881070382525, guid: 5fab3d9a08a16ed429bbc510962997d8, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 759f2089e123ff64c9b0fb6ad7aa1b40, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Dispenser2
+    <id>k__BackingField: 184
+    <prefab>k__BackingField: {fileID: 3281542857924279648, guid: 135f561a417209449aa3f0e15225613e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3b0ef529109dbe34796da412ec25e0ef, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Dispenser2
+    <id>k__BackingField: 185
+    <prefab>k__BackingField: {fileID: 3281542857924279648, guid: 135f561a417209449aa3f0e15225613e, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c482eedf05208394292f0cef714527ef, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Biru
+    <id>k__BackingField: 186
+    <prefab>k__BackingField: {fileID: 8775740971403266423, guid: 6c2bf6052127e934e9458b9ce6bbe7a5, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: c482eedf05208394292f0cef714527ef, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Putih
+    <id>k__BackingField: 187
+    <prefab>k__BackingField: {fileID: 7592977215538603244, guid: 302076e25a418954fb6acadb8434b8f6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ecf543b0de131d140a68b8ea78b05a92, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: bangku panjang
+    <id>k__BackingField: 188
+    <prefab>k__BackingField: {fileID: 7592977215538603244, guid: 302076e25a418954fb6acadb8434b8f6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7127a0288ebbb9f43a4b594df6f49fe0, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Coklat
+    <id>k__BackingField: 189
+    <prefab>k__BackingField: {fileID: 7183334375508279003, guid: d02edce5f6d1d5b4dbe158c81709127d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 09c27a461be68484aae6c82c572b4925, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Biru2
+    <id>k__BackingField: 190
+    <prefab>k__BackingField: {fileID: 7394840610518358446, guid: 3783d381d13e23d4d8c6755b41408fd6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 956695f045e1a8f40997448614ac4525, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Kulit Panjang
+    <id>k__BackingField: 191
+    <prefab>k__BackingField: {fileID: 8710159877783034348, guid: 8a541924bf40c1e4483b47f362dcbac4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d823cb309416f834cbe3d8a26390a3a0, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Krem
+    <id>k__BackingField: 192
+    <prefab>k__BackingField: {fileID: 2696183153033968488, guid: 4c2b4033ea200a340bdf5dd2b0145174, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 745c4adf0c2c99248937c823057eadf4, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Krem1
+    <id>k__BackingField: 193
+    <prefab>k__BackingField: {fileID: 2330439250971987755, guid: 9cf94939f3dfab54eb62e181bdc60594, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 08aa03fc24ffe4e4fa83d76db387b88d, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Krem2
+    <id>k__BackingField: 194
+    <prefab>k__BackingField: {fileID: 889681684003750072, guid: 744fdfc5e08624943b22ba3c3e353e07, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d21e362b1a8b901479a985c52a7cfac5, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Merah1
+    <id>k__BackingField: 195
+    <prefab>k__BackingField: {fileID: 1644163621392936, guid: 91444dc871111a940989750e692b239f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 1df8784a9a1097d4abe69941f0432e0e, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Sofa Merah2
+    <id>k__BackingField: 196
+    <prefab>k__BackingField: {fileID: 1298271930350214, guid: c928f883aa7cdcf41a6faa362ed971bc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 6c9d6c736987c4240bdba64259e5265b, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: proyektor
+    <id>k__BackingField: 197
+    <prefab>k__BackingField: {fileID: 1504105867294326118, guid: c4769332a3574e543a8455feae3cc05d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 54c99359d91932841bb5c97fd5046157, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer
+    <id>k__BackingField: 198
+    <prefab>k__BackingField: {fileID: 1649482374922732, guid: 79a5b937093a5864d91d9a3a836ff1d7, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e9bb521d5ab16e8468c7c74ce8520a05, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer2
+    <id>k__BackingField: 199
+    <prefab>k__BackingField: {fileID: 100000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e87e3bd21d4b88f44b55320d0ee4f05f, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer2
+    <id>k__BackingField: 200
+    <prefab>k__BackingField: {fileID: 1034583188881600, guid: 376d9b5720043db4e869a7ef729a88a0, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e87e3bd21d4b88f44b55320d0ee4f05f, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer3
+    <id>k__BackingField: 201
+    <prefab>k__BackingField: {fileID: 186199100150105718, guid: 4030b729481fc0242b05239bc9fa959b, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f8526d315e773ba4db24d577ab8d48f9, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer4
+    <id>k__BackingField: 202
+    <prefab>k__BackingField: {fileID: 924301326717782217, guid: aae064ec06860f04787f3ee19de1c0c1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e26089ae31b9f5d498451dbad03b8dc9, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: PC1
+    <id>k__BackingField: 203
+    <prefab>k__BackingField: {fileID: 1152768899851928, guid: f92a252e273fcb349b88813895ab0264, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 4ae561b38d200ae4a9674817d3c1e1e3, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kantor Merah
+    <id>k__BackingField: 204
+    <prefab>k__BackingField: {fileID: 2824801679941595952, guid: 3713613c4ffcd6945900432c53af79b8, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 87e0b2d139d98e34b83b60879523713e, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Mouse
+    <id>k__BackingField: 205
+    <prefab>k__BackingField: {fileID: 8254621867992190529, guid: f3b2a9b8d8e36024dbf22af90d0d8cf1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: fbbd72b19a60e0a4da2ca656ff3a7f85, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Monitor1
+    <id>k__BackingField: 206
+    <prefab>k__BackingField: {fileID: 1202430806766458, guid: edf16aa46c0e0f24f8df62f74474f268, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 795c331b08d2b1541b17743f52d750fc, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Monitor2
+    <id>k__BackingField: 207
+    <prefab>k__BackingField: {fileID: 1167177008488376570, guid: a602a26372e0f304386cb1079dc1528a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b05e450eabee56b4da38bc1e83b1dab4, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Monitor3
+    <id>k__BackingField: 208
+    <prefab>k__BackingField: {fileID: 7284361983174035625, guid: b97a6108f0685fa4e9e7ade950bed8b4, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d273a429a41a67145b495e9719e47423, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: PC 1 paket
+    <id>k__BackingField: 209
+    <prefab>k__BackingField: {fileID: 3397794668357964319, guid: a5ac041b79f79364ca8481b503332787, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 5e05117c1483e244c8403ee9b9074f15, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Microwave2
+    <id>k__BackingField: 210
+    <prefab>k__BackingField: {fileID: 4206398156042274559, guid: 52d6dcae9530f6f4e9af1bb2b9a6c1fc, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 93e8c770a1db80d4791f222578310397, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Bangku Besar
+    <id>k__BackingField: 211
+    <prefab>k__BackingField: {fileID: 434481962578730576, guid: 5e77307e883855c40bfbf730391aa880, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 37bdcdb6d6ab8904fa6a9e60790695cf, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: KursiBiruTua
+    <id>k__BackingField: 212
+    <prefab>k__BackingField: {fileID: 4134415438953675538, guid: 3461c8d14bc13bb4384505ad2b8b974f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 284aabf13d66bed478db44e2b2d79dd7, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Laptop
+    <id>k__BackingField: 213
+    <prefab>k__BackingField: {fileID: 7719318277014954638, guid: aef7e4fb0fe33184e9004223fc91f827, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 1dbe5143fd9da6b408a1b80a63fbdaa4, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Aula
+    <id>k__BackingField: 214
+    <prefab>k__BackingField: {fileID: 8142453941544647283, guid: d471bfbb17179b741aa0628bece7a374, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ab4975ce8a5db2e42b8bd3a644f8a02a, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kantor Biru Tua
+    <id>k__BackingField: 215
+    <prefab>k__BackingField: {fileID: 6600000107543854912, guid: 1f1a08a56a9c158499ae89123bb9cd31, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 402f3897c46c3f142ad6aeaf48451e50, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Kecil Coklat
+    <id>k__BackingField: 216
+    <prefab>k__BackingField: {fileID: 4237530767371831047, guid: 5958774f45c9daf4e873787b11ccf454, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 90f89d60b51a40940add12ebc6908963, type: 3}
+  - <Jenis>k__BackingField: Kursi & Sofa
+    <name>k__BackingField: Kursi Coklat Tua
+    <id>k__BackingField: 217
+    <prefab>k__BackingField: {fileID: 1717429913565124302, guid: 99fc35312deca6848af5d56ba5f00097, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 87305c410512b0841aa75f9b08421edd, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Keyboard1
+    <id>k__BackingField: 218
+    <prefab>k__BackingField: {fileID: 4443423073891277567, guid: 6594be28351c9424b8945d136bada71f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 209356c825191e14d9bc3217d5ef1d14, type: 3}
+  - <Jenis>k__BackingField: Karpet
+    <name>k__BackingField: Carpet Bundar
+    <id>k__BackingField: 219
+    <prefab>k__BackingField: {fileID: 8671328227652953959, guid: fe3258417e0f7fd46b88100cd9894473, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: ce79b2fae13950f4d9591c1876964074, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Bilik Toilet
+    <id>k__BackingField: 220
+    <prefab>k__BackingField: {fileID: 1910999532234760, guid: 14f4f8b01b4d437489dd51800622e198, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2f745014a7db449458f78c8ce186d3da, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Server
+    <id>k__BackingField: 221
+    <prefab>k__BackingField: {fileID: 1871308075890106, guid: e25d9c5ca2c4d0b4fb0affe0be480238, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 346a6c4a1b092854b8c38df74edf4502, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer Universal
+    <id>k__BackingField: 222
+    <prefab>k__BackingField: {fileID: 4179282339668605383, guid: c15801a610b777d479425263ffb597d6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: cd7b66ce25e5b7c419f5523976dd27d9, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: Printer Putih Kecil
+    <id>k__BackingField: 223
+    <prefab>k__BackingField: {fileID: 6634616535567314498, guid: cc05ee3ee5dd90e47863e933663f5eba, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9cfe72eca62ad5e4294492893e91cd6e, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: PC Abu
+    <id>k__BackingField: 224
+    <prefab>k__BackingField: {fileID: 1334436412249498, guid: aa8c32ebce8c36744ba55c97b8513148, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e1edef8cd9b4a4a488c2c857d5728c38, type: 3}
+  - <Jenis>k__BackingField: Elektronik
+    <name>k__BackingField: PC Abu
+    <id>k__BackingField: 225
+    <prefab>k__BackingField: {fileID: 8754142908855366041, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: f309887d857387346962ee34b9d5e597, type: 3}
+  - <Jenis>k__BackingField: Partisi
+    <name>k__BackingField: Partisi Meja
+    <id>k__BackingField: 226
+    <prefab>k__BackingField: {fileID: 1200750484453948, guid: 5df6ef8249eb44e43a04db3cf2824564, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: bd047033a8f4e3d439d6b62247f15ce1, type: 3}
+  - <Jenis>k__BackingField: 'Elektronik '
+    <name>k__BackingField: Mouse
+    <id>k__BackingField: 227
+    <prefab>k__BackingField: {fileID: 1438232022804576366, guid: 4576270a2e5a62441b2cdb5577bb3245, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: dc6f3d6062490bc4b998509c4e3d170b, type: 3}
+  - <Jenis>k__BackingField: 'Elektronik '
+    <name>k__BackingField: Layar Monitor
+    <id>k__BackingField: 228
+    <prefab>k__BackingField: {fileID: 5781269086575658462, guid: 086e584c0b6f51e4881d24afa49df791, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 090334a070ef23c45bedbffc648919e3, type: 3}
+  - <Jenis>k__BackingField: 'Elektronik '
+    <name>k__BackingField: Keyboard universal
+    <id>k__BackingField: 229
+    <prefab>k__BackingField: {fileID: 7449525393318543417, guid: e5349049440dd6140a9ad7c91d82385f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d0ad316efdd74d243ae0d23b63509895, type: 3}
+  - <Jenis>k__BackingField: Karpet
+    <name>k__BackingField: 'Keset '
+    <id>k__BackingField: 230
+    <prefab>k__BackingField: {fileID: 4228638966643171970, guid: 429c71e7039b1924482f45bcb58a06ed, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8542e1a5bd9ecd04eb39ecf1531afbfd, type: 3}
+  - <Jenis>k__BackingField: Karpet
+    <name>k__BackingField: Karpet Persegi
+    <id>k__BackingField: 231
+    <prefab>k__BackingField: {fileID: 5871847615224283292, guid: df81a3f87610d044f9f4a12b81d55f36, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3b437176727b42942aeea131c18b7987, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Laci kayu
+    <id>k__BackingField: 232
+    <prefab>k__BackingField: {fileID: 5626706108481955418, guid: c094f5e9c0901874c9a46df517d2ecdf, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: d2192a5231bcb5b42a457f51f7a4c37a, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kantor Kayu
+    <id>k__BackingField: 233
+    <prefab>k__BackingField: {fileID: 2846571002937308804, guid: 8e9406616cc3a1e4faa334554af0542d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 396b1e95c61af594494ae9619de03489, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja + Laci-laci
+    <id>k__BackingField: 234
+    <prefab>k__BackingField: {fileID: 4569856451172614560, guid: 7c9e592ce65435d4bb9588a7c6ca4565, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 962f670d047956f41917952f60e85bd3, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Laci putih
+    <id>k__BackingField: 235
+    <prefab>k__BackingField: {fileID: 8077500856034940088, guid: e1c76a2dc0f65454eb017c80176cf3eb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9e38aa36092d77342ba731a3d6e8b402, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Laci Coklat
+    <id>k__BackingField: 236
+    <prefab>k__BackingField: {fileID: 5018950055216721061, guid: 3b35755f3c0743b4aa40134fe6579331, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: bd34657107c33bd43b36f93089a8a8b5, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: 'Meja Batu '
+    <id>k__BackingField: 237
+    <prefab>k__BackingField: {fileID: 8228670744583830499, guid: 8c456276030d9174b938df1fd409d33a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e7bb560bfd352c34dbecbeece973a7fc, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja Kopi Kecil
+    <id>k__BackingField: 238
+    <prefab>k__BackingField: {fileID: 8667673312399118122, guid: f06e2ee8ffb10f245b2c46603836b48d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 9ed25cf9b63f7fa4c8f00f8638b67860, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: 'Meja Kayu biasa  '
+    <id>k__BackingField: 239
+    <prefab>k__BackingField: {fileID: 1729782501303860, guid: 6d513e3e97508a3429bc5eac2b8b7145, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7b47eacacc2c68a4e93e8e27fc693c4e, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja tanpa laci1
+    <id>k__BackingField: 240
+    <prefab>k__BackingField: {fileID: 1419304511031966, guid: 522b38699cfba0647824ba6d7d12884a, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 79d055a046dbcff42b4c24298d856968, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja tanpa laci2
+    <id>k__BackingField: 241
+    <prefab>k__BackingField: {fileID: 3113310409292583045, guid: 1e6bab2470174bd4eb23c884a6e9df1f, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 95221a7d155384146b301bc68d13102f, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja tanpa laci3
+    <id>k__BackingField: 242
+    <prefab>k__BackingField: {fileID: 5835211177665344659, guid: eba40b33cd75dfc4e86e9604170d19f9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 23de27d5a495f3d47a61b913716ee532, type: 3}
+  - <Jenis>k__BackingField: Meja
+    <name>k__BackingField: Meja tanpa laci4
+    <id>k__BackingField: 243
+    <prefab>k__BackingField: {fileID: 4509613768403488414, guid: 900432286b70dd3448b0884c911e1f6d, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3ff0fec616f5bcc4ba9ad1b6de830c95, type: 3}
+  - <Jenis>k__BackingField: Toilet
+    <name>k__BackingField: Toilet Duduk
+    <id>k__BackingField: 244
+    <prefab>k__BackingField: {fileID: 1641472540346944, guid: d5b80a7f12599104087095e8c5f6baf1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: b1dfe0c936cec8e48801844621c8c48b, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Foto Presiden
+    <id>k__BackingField: 245
+    <prefab>k__BackingField: {fileID: 703483162195701842, guid: ec65785ad1a80e242a10e8935fd810fb, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 244ba93e75b969b42b7eba74e30968c0, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Foto Wapres
+    <id>k__BackingField: 246
+    <prefab>k__BackingField: {fileID: 8172583374120057598, guid: 6d33da2f1fea1bc42b1fb1d117740254, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 145ab9584c32c8845bee106bf631124a, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: R.Simulasi 1
+    <id>k__BackingField: 247
+    <prefab>k__BackingField: {fileID: 1055018998192349279, guid: f89be08cf1ff5e14bbdbd6b3f3a4c0e9, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2ee1e7b1ca9ea904a82dd494cd4e21b7, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: R.Simulasi 2
+    <id>k__BackingField: 248
+    <prefab>k__BackingField: {fileID: 3717819666736570888, guid: de0a9a242cca71643962fed0e10b34a1, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0fe6782329b419e4b9276576c0366523, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: R.Simulasi 3
+    <id>k__BackingField: 249
+    <prefab>k__BackingField: {fileID: 8735306563014532023, guid: 50eeda78b43418b4796bf0f20a5686d6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 28c497558abe92f409187e50bf5e5d1f, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: R.Simulasi 3
+    <id>k__BackingField: 249
+    <prefab>k__BackingField: {fileID: 8735306563014532023, guid: 50eeda78b43418b4796bf0f20a5686d6, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 28c497558abe92f409187e50bf5e5d1f, type: 3}
+  - <Jenis>k__BackingField: Dekorasi
+    <name>k__BackingField: Foto Garuda
+    <id>k__BackingField: 250
+    <prefab>k__BackingField: {fileID: 8639985632715705860, guid: ec1d74ecc5304c34fbd02f66e6835d82, type: 3}
+    <materials>k__BackingField: []
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: e88866dc7adfa4445b3cb648831789f1, type: 3}

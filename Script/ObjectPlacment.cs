@@ -164,13 +164,13 @@ using static UI_Interaction;
            {
                objectRenderer.material = _currentmaterial;
            }*/
-        if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
+       /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
         {
             Vector3 newPosition = transform.position;
             newPosition.y = _transformY;
             transform.position = originalPosition;
 
-        }
+        }*/
         /*    if (GetComponent<MeshCollider>() != null)
             {
 
@@ -278,7 +278,7 @@ using static UI_Interaction;
 
         foreach (var direction in raycastDirections)
         {
-            hits = Physics.RaycastAll(transform.position, direction, Mathf.Infinity);
+            hits = Physics.RaycastAll(transform.position, direction, 1f);
 
             foreach (var hit in hits)
             {
@@ -326,7 +326,6 @@ using static UI_Interaction;
                 }
             }
 
-            // Position in between two walls
             if (forwardWall && backwardWall)
             {
                 Vector3 midpoint = (forwardPoint + backwardPoint) / 2f;
