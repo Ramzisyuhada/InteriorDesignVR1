@@ -139,7 +139,7 @@ public class UI_Interaction : MonoBehaviour
 
         float leftValue = inputActionLeft.action.ReadValue<float>();
         float rightValue = inputActionRight.action.ReadValue<float>();
-        bool inputActive = leftValue != 0 || rightValue != 0;
+        bool inputActive = leftValue == 1f || rightValue == 1f;
         
         Debug.Log(inputActive);
         if (inputActive)
@@ -147,8 +147,8 @@ public class UI_Interaction : MonoBehaviour
             UpdateControllerActiveState();
 
             int layerMaskUI = 1 << LayerMask.NameToLayer("UI");
-            int layerMaskPlayer = 1 << LayerMask.NameToLayer("Floor");
-            int combinedLayerMask = layerMaskUI ;
+            int layerMaskPlayer = 1 << LayerMask.NameToLayer("Player"); // Example: Layer for player
+            int combinedLayerMask = layerMaskUI | layerMaskPlayer;
 
             if (Physics.Raycast(ray, out hit,Mathf.Infinity))
             {
@@ -165,10 +165,10 @@ public class UI_Interaction : MonoBehaviour
                             barang = hitObject;
 
                             ShowCanvas(hitObject);
-                            Destroy(GameObject.Find("MenuItem_part1(Clone)"));
+                        Destroy(GameObject.Find("MenuItem_part1(Clone)"));
 
-                        }
-                    
+                    }
+
                     if (hitObject.GetComponent<Canvas>() != null)
                     {
                         return;
@@ -180,11 +180,13 @@ public class UI_Interaction : MonoBehaviour
 
     public void Close()
     {
+
         SetControllerType(Controller.None);
 
-        Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+        Destroy(currentCanvas);
+
     }
     private bool IsPointerOverUIElement()
     {

@@ -299,7 +299,6 @@ using static UI_Interaction;
 
         if (wallFound)
         {
-            // Determine the position in between two walls if two walls are detected
             RaycastHit[] hitsForward = Physics.RaycastAll(closestPoint + closestNormal * 0.01f, transform.forward, 1f);
             RaycastHit[] hitsBackward = Physics.RaycastAll(closestPoint - closestNormal * 0.01f, -transform.forward, 1f);
 
