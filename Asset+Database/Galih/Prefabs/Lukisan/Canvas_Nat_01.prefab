@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6596053481075076635}
   - component: {fileID: 7874879531813148028}
   - component: {fileID: 267829319051005270}
+  - component: {fileID: 1558114309865874942}
   m_Layer: 0
   m_Name: Canvas_Nat_01
   m_TagString: Untagged
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3529715222844787653}
-  m_Mesh: {fileID: 1323780595026131598, guid: f62947abd10e69a4b9bd64bf53b01107, type: 3}
+  m_Mesh: {fileID: 1323780595026131598, guid: 51590c13ac63d594a9f176cc98309948, type: 3}
 --- !u!23 &410312811841329146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -290,3 +291,25 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
+--- !u!64 &1558114309865874942
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529715222844787653}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1323780595026131598, guid: 51590c13ac63d594a9f176cc98309948, type: 3}

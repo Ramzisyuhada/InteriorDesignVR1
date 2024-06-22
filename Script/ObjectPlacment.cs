@@ -7,8 +7,10 @@
     using LibCSG;
     using static UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction;
 using static UI_Interaction;
+using UnityEditor.AssetImporters;
+using System;
 
-    public class ObjectPlacment : XRGrabInteractable
+public class ObjectPlacment : XRGrabInteractable
     {
 
         public enum ObjectType
@@ -215,7 +217,7 @@ using static UI_Interaction;
                 {
 
                     if (hit.collider.CompareTag("Floor"))
-                        {
+                    {
                             Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
                             transform.position = newPosition;
 
@@ -242,8 +244,9 @@ using static UI_Interaction;
                          }
                      }*/
                     return true;
-                        }
+                    }
                         else {
+
                             Collider objectCollider = GetComponent<Collider>();
                              transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
 
@@ -260,27 +263,26 @@ using static UI_Interaction;
 
 
                 }
-
+/*        Debug.DrawRay(transform.position, Vector3.right, Color.red);
+*/
 
         return false;
         }
 
     private bool PlaceOnWall()
     {
-        RaycastHit[] hits;
-
+        RaycastHit hit;
         Vector3[] raycastDirections = { transform.forward, transform.right, -transform.right };
 
         bool wallFound = false;
         float closestDistance = Mathf.Infinity;
         Vector3 closestNormal = Vector3.zero;
         Vector3 closestPoint = Vector3.zero;
-
+        
         foreach (var direction in raycastDirections)
         {
-            hits = Physics.RaycastAll(transform.position, direction, 1f);
-
-            foreach (var hit in hits)
+            
+            if (Physics.Raycast(transform.position, direction, out hit,2F))
             {
                 if (hit.collider.CompareTag("Wall"))
                 {
@@ -295,40 +297,23 @@ using static UI_Interaction;
                     }
                 }
             }
+            else
+            {
+                Debug.DrawRay(transform.position, direction, Color.red);
+            }
         }
 
         if (wallFound)
         {
-            // Determine the position in between two walls if two walls are detected
-            RaycastHit[] hitsForward = Physics.RaycastAll(closestPoint + closestNormal * 0.01f, transform.forward, 1f);
-            RaycastHit[] hitsBackward = Physics.RaycastAll(closestPoint - closestNormal * 0.01f, -transform.forward, 1f);
+            RaycastHit hitForward;
+            RaycastHit hitBackward;
 
-            bool forwardWall = false;
-            bool backwardWall = false;
-            Vector3 forwardPoint = closestPoint + closestNormal * 0.01f;
-            Vector3 backwardPoint = closestPoint - closestNormal * 0.01f;
-
-            foreach (var hit in hitsForward)
-            {
-                if (hit.collider.CompareTag("Wall"))
-                {
-                    forwardWall = true;
-                    break;
-                }
-            }
-
-            foreach (var hit in hitsBackward)
-            {
-                if (hit.collider.CompareTag("Wall"))
-                {
-                    backwardWall = true;
-                    break;
-                }
-            }
+            bool forwardWall = Physics.Raycast(closestPoint + closestNormal * 0.01f, transform.forward, out hitForward, 1f) && hitForward.collider.CompareTag("Wall");
+            bool backwardWall = Physics.Raycast(closestPoint - closestNormal * 0.01f, -transform.forward, out hitBackward, 1f) && hitBackward.collider.CompareTag("Wall");
 
             if (forwardWall && backwardWall)
             {
-                Vector3 midpoint = (forwardPoint + backwardPoint) / 2f;
+                Vector3 midpoint = (hitForward.point + hitBackward.point) / 2f;
                 transform.position = midpoint;
             }
             else
@@ -347,6 +332,7 @@ using static UI_Interaction;
 
         return false;
     }
+
 
     private bool PlaceOnCeiling()
         {
