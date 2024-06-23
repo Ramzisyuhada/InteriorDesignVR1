@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using static UnityEditorInternal.ReorderableList;
 
 public class UI_Interaction : MonoBehaviour
 {
@@ -59,7 +60,8 @@ public class UI_Interaction : MonoBehaviour
         Scale,
         Texture,
         Color,
-        None
+        None,
+        Default,
     };
 
     public void setController(Controller newController)
@@ -78,10 +80,11 @@ public class UI_Interaction : MonoBehaviour
         database1 = database;
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
-        _currentController = Controller.None;
+        _currentController = Controller.Default;
+            ;
 
 
-    }
+        }
 
     void Update()
     {
@@ -91,7 +94,6 @@ public class UI_Interaction : MonoBehaviour
     }
     void Action()
     {
-
         switch (_currentController)
         {
             case Controller.Rotation:
@@ -104,20 +106,71 @@ public class UI_Interaction : MonoBehaviour
                 Texture();
                 CheckButtonPress();
                 break;
+            case Controller.None:
+                if (barang != null)
+                {
+                    SetRigidbodyKinematic(barang);
+                    SetMeshColliderConvex(barang);
+                }
+                break;
             default:
                 break;
         }
 
     }
 
+    void SetRigidbodyKinematic(GameObject obj)
+    {
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        if (rb != null && !rb.isKinematic)
+        {
+            rb.isKinematic = true;
+        }
+
+        Rigidbody rbChild = obj.GetComponentInChildren<Rigidbody>();
+        if (rbChild != null && !rbChild.isKinematic)
+        {
+            rbChild.isKinematic = true;
+        }
+
+        Rigidbody rbParent = obj.GetComponentInParent<Rigidbody>();
+        if (rbParent != null && !rbParent.isKinematic)
+        {
+            rbParent.isKinematic = true;
+        }
+    }
+
+    void SetMeshColliderConvex(GameObject obj)
+    {
+        MeshCollider mc = obj.GetComponent<MeshCollider>();
+        if (mc != null && !mc.convex)
+        {
+            mc.convex = true;
+        }
+
+        MeshCollider mcChild = obj.GetComponentInChildren<MeshCollider>();
+        if (mcChild != null && !mcChild.convex)
+        {
+            mcChild.convex = true;
+        }
+
+        MeshCollider mcParent = obj.GetComponentInParent<MeshCollider>();
+        if (mcParent != null && !mcParent.convex)
+        {
+            mcParent.convex = true;
+        }
+    }
 
     void _actionrotate()
     {
+        
         Vector2 leftValue = inputActionLeftrotate.action.ReadValue<Vector2>();
         Vector2 rightValue = inputActionRightrotate.action.ReadValue<Vector2>();
 
         float rotationSpeed = 100f;
         float rotationAmount = (leftValue.x - rightValue.x) * rotationSpeed * Time.deltaTime;
+
+       
         if (barang.transform.parent != null)
         {
             barang.transform.parent.transform.Rotate(0, rotationAmount, 0, Space.Self);
@@ -157,12 +210,13 @@ public class UI_Interaction : MonoBehaviour
                 if (hit.collider != null)
                 {
                     GameObject hitObject = hit.collider.gameObject;
-                   
-                        if (hitObject != null && !HasChildCanvas(hitObject))
+/*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
+*/                        if (hitObject != null && !HasChildCanvas(hitObject))
                         {
-                            gameobject = hitObject.gameObject;
                             static_player = player;
                             barang = hitObject;
+
+
 
                             ShowCanvas(hitObject);
                             Destroy(GameObject.Find("MenuItem_part1(Clone)"));
@@ -181,7 +235,24 @@ public class UI_Interaction : MonoBehaviour
     public void Close()
     {
         SetControllerType(Controller.None);
-
+       /* if (barang.GetComponent<Rigidbody>() != null && barang.GetComponent<Rigidbody>().isKinematic != false)
+        {
+            barang.GetComponent<Rigidbody>().isKinematic = true;
+        }
+        if (barang.GetComponentInChildren<Rigidbody>() != null && barang.GetComponentInChildren<Rigidbody>().isKinematic != false)
+        {
+            barang.GetComponentInChildren<Rigidbody>().isKinematic = true;
+        }
+        if (barang.GetComponentInParent<Rigidbody>() != null && barang.GetComponentInParent<Rigidbody>().isKinematic != false)
+        {
+            barang.GetComponentInParent<Rigidbody>().isKinematic = true;
+        }*/
+        if (barang.GetComponentInChildren<MeshCollider>() != null)
+            barang.GetComponentInChildren<MeshCollider>().convex = true;
+        if (barang.GetComponent<MeshCollider>() != null)
+            barang.GetComponent<MeshCollider>().convex = true;
+        if (barang.GetComponentInParent<MeshCollider>() != null)
+            barang.GetComponentInParent<MeshCollider>().convex = true;
         Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
@@ -282,6 +353,11 @@ public class UI_Interaction : MonoBehaviour
     }
     void _actionscale()
     {
+        if (barang.GetComponent<Rigidbody>() != null) {
+            barang.GetComponent<Rigidbody>().isKinematic = false;
+            
+        }
+
         Vector2 leftValue = inputActionLeftrotate.action.ReadValue<Vector2>();
         Vector2 rightValue = inputActionRightrotate.action.ReadValue<Vector2>();
 
@@ -341,13 +417,37 @@ public class UI_Interaction : MonoBehaviour
     public void Rotate()
     {
 
+        if (barang.GetComponentInChildren<MeshCollider>() != null)
+            barang.GetComponentInChildren<MeshCollider>().convex = true;
+        if (barang.GetComponent<MeshCollider>() != null)
+            barang.GetComponent<MeshCollider>().convex = true;
+        if (barang.GetComponentInParent<MeshCollider>() != null)
+            barang.GetComponentInParent<MeshCollider>().convex = true;
+
+        if (barang.GetComponentInParent<Rigidbody>() != null)
+        {
+            barang.GetComponentInParent<Rigidbody>().isKinematic = false;
+        }
+        if (barang.GetComponent<Rigidbody>() != null)
+        {
+            barang.GetComponent<Rigidbody>().isKinematic = false;
+        }
+        if (barang.GetComponentInChildren<Rigidbody>() != null)
+        {
+            barang.GetComponentInChildren<Rigidbody>().isKinematic = false;
+        }
         SetControllerType(Controller.Rotation);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
     }
     public void Scake()
     {
+        if (barang.GetComponent<Rigidbody>() != null)
+        {
+            Debug.Log("Rigid Body ada");
+            barang.GetComponent<Rigidbody>().isKinematic = false;
 
+        }
         SetControllerType(Controller.Scale);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
@@ -366,6 +466,9 @@ public class UI_Interaction : MonoBehaviour
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
 
+
+
+        Destroy(barang);
         Destroy(gameobject);
         Destroy(currentCanvas);
     }

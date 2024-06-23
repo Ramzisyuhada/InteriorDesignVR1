@@ -1,26 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.XR;
+using UnityEngine.XR;
 
 namespace SojaExiles
 
 {
-	public class opencloseDoor : MonoBehaviour
-	{
 
-		public Animator openandclose;
+    public class opencloseDoor : MonoBehaviour
+	{
+        InputDevice LeftController;
+
+        public Animator openandclose;
 		public bool open;
 		public Transform Player;
 
 		void Start()
 		{
-			open = false;
+            List<InputDevice> deviceR = new List<InputDevice>();
+            InputDevices.GetDevicesAtXRNode(XRNode.LeftHand, deviceR);
+
+            if (deviceR.Count == 1)
+            {
+                LeftController = deviceR[0];
+            }
+            else if (deviceR.Count > 1)
+            {
+                Debug.Log("Left Controlelr Ada ");
+            }
+            else
+            {
+                Debug.Log("Controller Left Tidak ditemukan");
+            }
+
+            open = false;
 		}
 
 		void OnMouseOver()
 		{
 			{
-				if (Player)
+
+                
+
+                if (Player)
 				{
 					float dist = Vector3.Distance(Player.position, transform.position);
 					if (dist < 15)
@@ -46,7 +70,8 @@ namespace SojaExiles
 
 					}
 				}
-
+/*				if(devicesleft)
+*/
 			}
 
 		}

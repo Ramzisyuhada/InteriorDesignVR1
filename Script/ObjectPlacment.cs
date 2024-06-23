@@ -77,11 +77,7 @@ public class ObjectPlacment : XRGrabInteractable
         protected override void OnSelectEntered(SelectEnterEventArgs args)
         {
 
-        /*  if (GetComponent<MeshCollider>() != null)
-          {
-
-              GetComponent<MeshCollider>().convex = true;
-          }*/
+       
 
       
         rotasi = transform.rotation;
@@ -89,19 +85,36 @@ public class ObjectPlacment : XRGrabInteractable
         UI_Interaction ui = new UI_Interaction();
 
         Controller currentController = UI_Interaction._currentController;
-        currentController = Controller.None;
-        ui.setController(currentController);
+        if (GetComponent<MeshCollider>() != null)
+
+            GetComponent<MeshCollider>().convex = true;
+        if (GetComponentInParent<MeshCollider>() != null)
+
+            GetComponentInParent<MeshCollider>().convex = true;
+        if (GetComponentInChildren<MeshCollider>() != null)
+
+            GetComponentInChildren<MeshCollider>().convex = true;
+       
+
+        Debug.Log(ui.getCurrentController());
+        currentController = Controller.Default;
+        GetComponent<Rigidbody>().isKinematic = false;
+
+        if (ui.getCurrentController() != Controller.Default)
+        {
+            ui.setController(currentController);
+
+        }
 
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-            gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
+                gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
 
-            originalPosition = transform.position;
-            /*   if (_material != null)
-               {
-                   objectRenderer.material = _material;
-               }*/
-          GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
-           GetComponent<Rigidbody>().isKinematic = false;
+                originalPosition = transform.position;
+                /*   if (_material != null)
+                   {
+                       objectRenderer.material = _material;
+                   }*/
+              GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
         }
         public void CreateBrush(GameObject obj,GameObject hasil)
         {
@@ -157,22 +170,41 @@ public class ObjectPlacment : XRGrabInteractable
  
         }
 
-        protected override void OnSelectExited(SelectExitEventArgs args)
-        {
-            base.OnSelectExited(args);
-            GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-            gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        base.OnSelectExited(args);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+        if (GetComponent<MeshCollider>() != null)
+            GetComponent<MeshCollider>().convex = false;
+        if (GetComponentInParent<MeshCollider>() != null)
+            GetComponentInParent<MeshCollider>().convex = false;
+        if (GetComponentInChildren<MeshCollider>() != null)
+            GetComponentInChildren<MeshCollider>().convex = false;
+
+        /*if (transform.childCount > 0)
+            {
+
+                if (GetComponentInChildren<MeshCollider>() != null)
+                    GetComponentInChildren<MeshCollider>().convex = false;
+            }
+            else
+            { */
+
+    
+
+            
         /*   if (_material != null)
            {
                objectRenderer.material = _currentmaterial;
            }*/
-       /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = _transformY;
-            transform.position = originalPosition;
+        /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
+         {
+             Vector3 newPosition = transform.position;
+             newPosition.y = _transformY;
+             transform.position = originalPosition;
 
-        }*/
+         }*/
         /*    if (GetComponent<MeshCollider>() != null)
             {
 
