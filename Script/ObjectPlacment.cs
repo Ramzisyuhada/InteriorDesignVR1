@@ -9,6 +9,8 @@
 using static UI_Interaction;
 using UnityEditor.AssetImporters;
 using System;
+using UnityEngine.UIElements;
+using System.Xml.Linq;
 
 public class ObjectPlacment : XRGrabInteractable
     {
@@ -22,6 +24,8 @@ public class ObjectPlacment : XRGrabInteractable
         }
 
 
+        
+
         public ObjectType objectType;
         private Renderer objectRenderer;
 
@@ -34,9 +38,10 @@ public class ObjectPlacment : XRGrabInteractable
         private Quaternion _quaternion;
         private float _transformY;
 
-        
+    private bool isBeingHeld = false;
 
-        static CSGBrush cube;
+
+    static CSGBrush cube;
         static CSGBrush sphere;
         static CSGBrush cylinder;
         static CSGBrushOperation CSGOp = new CSGBrushOperation();
@@ -48,7 +53,7 @@ public class ObjectPlacment : XRGrabInteractable
         private GameObject _hasil;
 
 
-
+        private Vector3 _preposisiiton;
         private static Quaternion rotasi;
         protected override void Awake()
         {
@@ -66,7 +71,7 @@ public class ObjectPlacment : XRGrabInteractable
             }
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
-        
+            
 
        
         
@@ -77,13 +82,14 @@ public class ObjectPlacment : XRGrabInteractable
         protected override void OnSelectEntered(SelectEnterEventArgs args)
         {
 
-       
 
-      
+        isBeingHeld = true;
+
+
         rotasi = transform.rotation;
         base.OnSelectEntered(args);
         UI_Interaction ui = new UI_Interaction();
-
+        _preposisiiton = transform.position;
         Controller currentController = UI_Interaction._currentController;
         if (GetComponent<MeshCollider>() != null)
 
@@ -105,7 +111,6 @@ public class ObjectPlacment : XRGrabInteractable
             ui.setController(currentController);
 
         }
-
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
                 gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
 
@@ -115,63 +120,52 @@ public class ObjectPlacment : XRGrabInteractable
                        objectRenderer.material = _material;
                    }*/
               GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
-        }
-        public void CreateBrush(GameObject obj,GameObject hasil)
+
+        Debug.Log(IsAboveOtherObject());
+
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (isBeingHeld && collision.transform.tag == "Floor")
         {
-            cube = new CSGBrush(hasil);
-            cube.build_from_mesh(hasil.GetComponent<MeshFilter>().mesh);
-
-
-            cylinder = new CSGBrush(obj);
-            cylinder.build_from_mesh(obj.GetComponent<MeshFilter>().mesh);
+            floorcheck = true;
         }
+    }
 
-        public void CreateObjet(GameObject obj, GameObject hasil)
+    private void OnCollisionExit(Collision collision)
+    {
+        if (isBeingHeld && collision.transform.tag == "Floor")
         {
-            Vector3 originalScale = hasil.transform.localScale;
-            Bounds originalBounds = hasil.GetComponent<MeshFilter>().mesh.bounds;
+            floorcheck = false;
+        }
+    }
+    private bool IsAboveOtherObject()
+    {
+        Vector3 rayOrigin = transform.position;
+        Vector3 rayDirection = Vector3.down;
 
-            BoxCollider originalCubeCollider = hasil.GetComponent<BoxCollider>();
-            Vector3 originalCubeColliderCenter = originalCubeCollider.center;
-            Vector3 originalCubeColliderSize = originalCubeCollider.size;
-            Debug.Log(originalScale.z);
+        float rayLength = 1.0f;
 
+        Debug.DrawRay(rayOrigin, rayDirection * rayLength, Color.red, 0.1f);
 
-            CSGOp.merge_brushes(Operation.OPERATION_SUBTRACTION, cube, cylinder, ref finalres);
-
-            hasil.GetComponent<MeshFilter>().mesh.Clear();
-            finalres.getMesh(hasil.GetComponent<MeshFilter>().mesh);
-            Bounds newBounds = hasil.GetComponent<MeshFilter>().mesh.bounds;
-
-
-            if (originalBounds.size != newBounds.size)
+        if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit))
+        {
+            if (hit.collider.CompareTag("Floor"))
             {
-                Debug.Log("Ukuran mesh berubah, menyesuaikan kembali ke ukuran asli.");
-
-                Vector3 scaleFactor = new Vector3(
-                    originalBounds.size.x,
-                    originalBounds.size.y,
-                    originalBounds.size.z
-                );
-
-                hasil.transform.localScale = scaleFactor;
-
-
-                originalCubeCollider.size = new Vector3(newBounds.size.x, newBounds.size.y, originalScale.z);
-
-                originalCubeCollider.center = new Vector3(newBounds.center.x, newBounds.center.y, 0f);
-
-
+                
+                    return true;
+                
             }
-            else
-            {
-                Debug.Log("Ukuran mesh tetap sama.");
-            }
- 
         }
 
+        // Jika tidak mengenai apapun atau tidak mengenai "Floor", objek tidak berada di atas objek lain
+        return false;
+    }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
+        isBeingHeld = false;
+
         base.OnSelectExited(args);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
@@ -191,20 +185,25 @@ public class ObjectPlacment : XRGrabInteractable
             else
             { */
 
-    
 
-            
+
+
         /*   if (_material != null)
            {
                objectRenderer.material = _currentmaterial;
            }*/
-        /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
-         {
-             Vector3 newPosition = transform.position;
-             newPosition.y = _transformY;
-             transform.position = originalPosition;
+        if (!floorcheck && objectType == ObjectType.Furniture)
+        {
+            transform.position = _preposisiiton;
 
-         }*/
+        }
+        Debug.Log(IsAboveOtherObject());
+      /*  if (!floorcheck && objectType == ObjectType.Furniture)
+        {
+
+            transform.position = _preposisiiton;
+
+        }*/
         /*    if (GetComponent<MeshCollider>() != null)
             {
 
@@ -238,14 +237,14 @@ public class ObjectPlacment : XRGrabInteractable
             return validPlacement;
         }
         public float snapThreshold = 1.0f; // Jarak maksimal untuk snap
-
+        
         private bool PlaceOnFloor()
         {
                 RaycastHit hit;
                 int layerMask = LayerMask.GetMask("Floor"); 
 
 
-                if (Physics.Raycast(transform.position, Vector3.down, out hit,Mathf.Infinity))
+                if (Physics.Raycast(transform.position, Vector3.down, out hit,1f))
                 {
 
                     if (hit.collider.CompareTag("Floor"))
@@ -253,29 +252,7 @@ public class ObjectPlacment : XRGrabInteractable
                             Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
                             transform.position = newPosition;
 
-                            RaycastHit hit1;
-                    /* Debug.Log("ehllo1");
-
-
-                         Debug.Log("ehllo");
-                     if (transform.tag == "Partisi")
-                     {
-                         RaycastHit hit1;
-
-                         foreach (Vector3 direction in directions)
-                         {
-                             Debug.DrawRay(transform.position, direction , Color.red, 1f);
-                             if (Physics.Raycast(transform.position, direction, out hit1, 0.2f))
-                             {
-                                 Vector3 newPosition1 = new Vector3(Mathf.Round(hit1.transform.position.x), transform.position.y, transform.position.z);
-
-                                 hit1.transform.position = newPosition1;
-
-                                 return true;
-                             }
-                         }
-                     }*/
-                    return true;
+                return true;
                     }
                         else {
 
@@ -388,7 +365,25 @@ public class ObjectPlacment : XRGrabInteractable
         
             return false;
         }
-        private bool PlaceOnSurface()
+        public static bool floorcheck;
+/*     public void OnTriggerEnter(Collider collider)
+     {
+        if (collider.gameObject.tag == "Floor")
+        {
+            Debug.Log("Sedang di floor");
+           floorcheck = true;
+        }
+     }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Floor")
+        {
+            floorcheck = false;
+        }
+    }*/
+
+    private bool PlaceOnSurface()
         {
             RaycastHit hit;
             HashSet<float> Jarak = new HashSet<float>();
@@ -399,7 +394,6 @@ public class ObjectPlacment : XRGrabInteractable
                 if (hit.collider.CompareTag("Surface"))
                 {
                     transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-     
                 
                     return true;
                 }

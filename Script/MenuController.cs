@@ -107,7 +107,7 @@ public class MenuController : MonoBehaviour
             {
                 UI_Interaction ui = new UI_Interaction();
                 Controller currentController = UI_Interaction._currentController;
-                currentController = Controller.None;
+                currentController = Controller.Default;
                 GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
                 gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
 
@@ -133,7 +133,7 @@ public class MenuController : MonoBehaviour
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
                 Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
