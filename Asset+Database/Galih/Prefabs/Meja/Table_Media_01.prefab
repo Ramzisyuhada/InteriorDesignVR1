@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8954947500908908447}
   m_Layer: 0
   m_Name: Table_Media_01
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,6 +1015,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionLeft:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Input Action Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: db9a1c7c-e9dd-4491-a8da-f23a74db924e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  inputActionRight:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Input Action Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4e55321f-a82e-474b-b230-d1dc0c45bbe1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   openandclose: {fileID: 5545287590895851206}
   open: 0
   Player: {fileID: 0}

@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6898729584726109903}
   m_Layer: 0
   m_Name: Office table Prefab
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

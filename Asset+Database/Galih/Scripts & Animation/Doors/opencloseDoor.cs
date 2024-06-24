@@ -1,33 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.XR;
+using UnityEngine.XR;
 
-namespace SojaExiles
 
-{
-	public class opencloseDoor : MonoBehaviour
+    public class opencloseDoor : MonoBehaviour
 	{
-
-		public Animator openandclose;
+        [SerializeField] private InputActionProperty inputActionLeft;
+        [SerializeField] private InputActionProperty inputActionRight;
+        public Animator openandclose;
 		public bool open;
 		public Transform Player;
 
-		void Start()
-		{
-			open = false;
-		}
+    private void Start()
+    {
+        open = false;
 
-		void OnMouseOver()
+    }
+
+    private void Update()
+        {
+			OnMouseOver1();
+        }
+        void OnMouseOver1()
 		{
 			{
-				if (Player)
+                float leftValue = inputActionLeft.action.ReadValue<float>();
+                float rightValue = inputActionRight.action.ReadValue<float>();
+                bool inputActive = leftValue > 0.5f || rightValue > 0.5f;
+
+
+                if (Player)
 				{
 					float dist = Vector3.Distance(Player.position, transform.position);
 					if (dist < 15)
 					{
 						if (open == false)
 						{
-							if (Input.GetMouseButtonDown(0))
+							if (inputActive)
 							{
 								StartCoroutine(opening());
 							}
@@ -36,7 +49,7 @@ namespace SojaExiles
 						{
 							if (open == true)
 							{
-								if (Input.GetMouseButtonDown(0))
+								if (inputActive)
 								{
 									StartCoroutine(closing());
 								}
@@ -46,14 +59,14 @@ namespace SojaExiles
 
 					}
 				}
-
+/*				if(devicesleft)
+*/
 			}
 
 		}
 
 		IEnumerator opening()
 		{
-			print("you are opening the door");
 			openandclose.Play("Opening");
 			open = true;
 			yield return new WaitForSeconds(.5f);
@@ -69,4 +82,3 @@ namespace SojaExiles
 
 
 	}
-}

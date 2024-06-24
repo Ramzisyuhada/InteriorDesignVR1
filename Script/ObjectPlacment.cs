@@ -7,8 +7,10 @@
     using LibCSG;
     using static UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction;
 using static UI_Interaction;
+using UnityEditor.AssetImporters;
+using System;
 
-    public class ObjectPlacment : XRGrabInteractable
+public class ObjectPlacment : XRGrabInteractable
     {
 
         public enum ObjectType
@@ -75,11 +77,7 @@ using static UI_Interaction;
         protected override void OnSelectEntered(SelectEnterEventArgs args)
         {
 
-        /*  if (GetComponent<MeshCollider>() != null)
-          {
-
-              GetComponent<MeshCollider>().convex = true;
-          }*/
+       
 
       
         rotasi = transform.rotation;
@@ -87,19 +85,36 @@ using static UI_Interaction;
         UI_Interaction ui = new UI_Interaction();
 
         Controller currentController = UI_Interaction._currentController;
-        currentController = Controller.None;
-        ui.setController(currentController);
+        if (GetComponent<MeshCollider>() != null)
+
+            GetComponent<MeshCollider>().convex = true;
+        if (GetComponentInParent<MeshCollider>() != null)
+
+            GetComponentInParent<MeshCollider>().convex = true;
+        if (GetComponentInChildren<MeshCollider>() != null)
+
+            GetComponentInChildren<MeshCollider>().convex = true;
+       
+
+        Debug.Log(ui.getCurrentController());
+        currentController = Controller.Default;
+        GetComponent<Rigidbody>().isKinematic = false;
+
+        if (ui.getCurrentController() != Controller.Default)
+        {
+            ui.setController(currentController);
+
+        }
 
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-            gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
+                gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
 
-            originalPosition = transform.position;
-            /*   if (_material != null)
-               {
-                   objectRenderer.material = _material;
-               }*/
-          GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
-           GetComponent<Rigidbody>().isKinematic = false;
+                originalPosition = transform.position;
+                /*   if (_material != null)
+                   {
+                       objectRenderer.material = _material;
+                   }*/
+              GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
         }
         public void CreateBrush(GameObject obj,GameObject hasil)
         {
@@ -155,22 +170,41 @@ using static UI_Interaction;
  
         }
 
-        protected override void OnSelectExited(SelectExitEventArgs args)
-        {
-            base.OnSelectExited(args);
-            GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-            gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        base.OnSelectExited(args);
+        GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
+        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+        if (GetComponent<MeshCollider>() != null)
+            GetComponent<MeshCollider>().convex = false;
+        if (GetComponentInParent<MeshCollider>() != null)
+            GetComponentInParent<MeshCollider>().convex = false;
+        if (GetComponentInChildren<MeshCollider>() != null)
+            GetComponentInChildren<MeshCollider>().convex = false;
+
+        /*if (transform.childCount > 0)
+            {
+
+                if (GetComponentInChildren<MeshCollider>() != null)
+                    GetComponentInChildren<MeshCollider>().convex = false;
+            }
+            else
+            { */
+
+    
+
+            
         /*   if (_material != null)
            {
                objectRenderer.material = _currentmaterial;
            }*/
-       /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = _transformY;
-            transform.position = originalPosition;
+        /* if (transform.position.y > _transformY && objectType == ObjectType.Furniture)
+         {
+             Vector3 newPosition = transform.position;
+             newPosition.y = _transformY;
+             transform.position = originalPosition;
 
-        }*/
+         }*/
         /*    if (GetComponent<MeshCollider>() != null)
             {
 
@@ -215,7 +249,7 @@ using static UI_Interaction;
                 {
 
                     if (hit.collider.CompareTag("Floor"))
-                        {
+                    {
                             Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
                             transform.position = newPosition;
 
@@ -242,8 +276,9 @@ using static UI_Interaction;
                          }
                      }*/
                     return true;
-                        }
+                    }
                         else {
+
                             Collider objectCollider = GetComponent<Collider>();
                              transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
 
@@ -260,27 +295,26 @@ using static UI_Interaction;
 
 
                 }
-
+/*        Debug.DrawRay(transform.position, Vector3.right, Color.red);
+*/
 
         return false;
         }
 
     private bool PlaceOnWall()
     {
-        RaycastHit[] hits;
-
+        RaycastHit hit;
         Vector3[] raycastDirections = { transform.forward, transform.right, -transform.right };
 
         bool wallFound = false;
         float closestDistance = Mathf.Infinity;
         Vector3 closestNormal = Vector3.zero;
         Vector3 closestPoint = Vector3.zero;
-
+        
         foreach (var direction in raycastDirections)
         {
-            hits = Physics.RaycastAll(transform.position, direction, 1f);
-
-            foreach (var hit in hits)
+            
+            if (Physics.Raycast(transform.position, direction, out hit,2F))
             {
                 if (hit.collider.CompareTag("Wall"))
                 {
@@ -295,6 +329,10 @@ using static UI_Interaction;
                     }
                 }
             }
+            else
+            {
+                Debug.DrawRay(transform.position, direction, Color.red);
+            }
         }
 
         if (wallFound)
@@ -302,32 +340,16 @@ using static UI_Interaction;
             RaycastHit[] hitsForward = Physics.RaycastAll(closestPoint + closestNormal * 0.01f, transform.forward, 1f);
             RaycastHit[] hitsBackward = Physics.RaycastAll(closestPoint - closestNormal * 0.01f, -transform.forward, 1f);
 
-            bool forwardWall = false;
-            bool backwardWall = false;
-            Vector3 forwardPoint = closestPoint + closestNormal * 0.01f;
-            Vector3 backwardPoint = closestPoint - closestNormal * 0.01f;
+            RaycastHit hitForward;
+            RaycastHit hitBackward;
 
-            foreach (var hit in hitsForward)
-            {
-                if (hit.collider.CompareTag("Wall"))
-                {
-                    forwardWall = true;
-                    break;
-                }
-            }
 
-            foreach (var hit in hitsBackward)
-            {
-                if (hit.collider.CompareTag("Wall"))
-                {
-                    backwardWall = true;
-                    break;
-                }
-            }
+            bool forwardWall = Physics.Raycast(closestPoint + closestNormal * 0.01f, transform.forward, out hitForward, 1f) && hitForward.collider.CompareTag("Wall");
+            bool backwardWall = Physics.Raycast(closestPoint - closestNormal * 0.01f, -transform.forward, out hitBackward, 1f) && hitBackward.collider.CompareTag("Wall");
 
             if (forwardWall && backwardWall)
             {
-                Vector3 midpoint = (forwardPoint + backwardPoint) / 2f;
+                Vector3 midpoint = (hitForward.point + hitBackward.point) / 2f;
                 transform.position = midpoint;
             }
             else
@@ -346,6 +368,7 @@ using static UI_Interaction;
 
         return false;
     }
+
 
     private bool PlaceOnCeiling()
         {

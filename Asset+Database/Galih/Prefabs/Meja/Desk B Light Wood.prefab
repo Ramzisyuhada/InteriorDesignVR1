@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 121961632445136654}
   m_Layer: 0
   m_Name: Desk B Light Wood
-  m_TagString: Untagged
+  m_TagString: Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

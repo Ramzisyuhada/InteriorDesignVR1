@@ -117,7 +117,6 @@ public class MenuController : MonoBehaviour
                 menucanvas = currentCanvas;
                 Vector3 cameraPosition = Camera.main.transform.position;
                 Quaternion cameraRotation = Camera.main.transform.rotation;
-
                 Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
                 menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z), 1f);
 
