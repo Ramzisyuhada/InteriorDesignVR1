@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3756691087484006538}
   m_Layer: 0
   m_Name: Folder black prefab
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

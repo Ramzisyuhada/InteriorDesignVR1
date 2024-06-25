@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1895484220898990018}
   m_Layer: 0
   m_Name: Pres_edt
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +249,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 182561372785404648, guid: ec65785ad1a80e242a10e8935fd810fb,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 182561372785404648, guid: ec65785ad1a80e242a10e8935fd810fb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 182561372785404648, guid: ec65785ad1a80e242a10e8935fd810fb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 182561372785404648, guid: ec65785ad1a80e242a10e8935fd810fb,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -301,6 +316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PRES
+      objectReference: {fileID: 0}
+    - target: {fileID: 703483162195701842, guid: ec65785ad1a80e242a10e8935fd810fb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1352129119773200775, guid: ec65785ad1a80e242a10e8935fd810fb,
         type: 3}

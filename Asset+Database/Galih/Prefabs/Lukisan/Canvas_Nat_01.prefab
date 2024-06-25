@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1558114309865874942}
   m_Layer: 0
   m_Name: Canvas_Nat_01
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

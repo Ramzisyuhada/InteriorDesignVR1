@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6527802975633829119}
   m_Layer: 0
   m_Name: Garuda_edt
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,15 +252,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: GARUDA
       objectReference: {fileID: 0}
+    - target: {fileID: 8639985632715705860, guid: ec1d74ecc5304c34fbd02f66e6835d82,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983754937868473534, guid: ec1d74ecc5304c34fbd02f66e6835d82,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8983754937868473534, guid: ec1d74ecc5304c34fbd02f66e6835d82,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.050000004
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8983754937868473534, guid: ec1d74ecc5304c34fbd02f66e6835d82,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.050000004
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8983754937868473534, guid: ec1d74ecc5304c34fbd02f66e6835d82,
         type: 3}

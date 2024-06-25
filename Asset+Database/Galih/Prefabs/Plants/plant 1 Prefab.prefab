@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 3652879500097525523}
   m_Layer: 0
   m_Name: plant 1 Prefab
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7770400387579336953}
   m_Layer: 0
   m_Name: Printer A prefab
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

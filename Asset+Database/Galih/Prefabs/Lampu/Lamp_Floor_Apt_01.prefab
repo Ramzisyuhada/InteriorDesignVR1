@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1972425922758045280}
   m_Layer: 0
   m_Name: Lamp_Floor_Apt_01
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

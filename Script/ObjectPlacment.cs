@@ -23,6 +23,12 @@ public class ObjectPlacment : XRGrabInteractable
             Decoration
         }
 
+        public ObjectType GetType()
+        {
+
+        return objectType; 
+    
+        }
 
         
 
@@ -106,6 +112,11 @@ public class ObjectPlacment : XRGrabInteractable
         currentController = Controller.Default;
         GetComponent<Rigidbody>().isKinematic = false;
 
+        if (ui.getObjectprefent() != null && ui.getObjectprefent().name != transform.gameObject.name && ui.getObjectprefent().GetComponent<Rigidbody>() != null)
+        {
+            ui.getObjectprefent().GetComponent<Rigidbody>().isKinematic = true;
+
+        }
         if (ui.getCurrentController() != Controller.Default)
         {
             ui.setController(currentController);

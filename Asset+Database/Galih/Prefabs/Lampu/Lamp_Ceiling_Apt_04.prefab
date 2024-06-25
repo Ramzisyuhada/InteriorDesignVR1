@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: -2867801444798434079}
   m_Layer: 0
   m_Name: Lamp_Ceiling_Apt_04
-  m_TagString: Untagged
+  m_TagString: Ceiling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

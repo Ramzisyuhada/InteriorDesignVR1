@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6417548616307685787}
   m_Layer: 0
   m_Name: BlackPot 1
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -443,6 +443,10 @@ PrefabInstance:
     - target: {fileID: 1031141193, guid: 0587b6093a9eea54299525b31876bf3d, type: 3}
       propertyPath: m_Name
       value: BigEvergreenIvy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031141193, guid: 0587b6093a9eea54299525b31876bf3d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1031141194, guid: 0587b6093a9eea54299525b31876bf3d, type: 3}
       propertyPath: m_LocalPosition.x

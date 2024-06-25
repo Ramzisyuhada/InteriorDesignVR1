@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: -9190822807576527781}
   m_Layer: 0
   m_Name: Stool
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

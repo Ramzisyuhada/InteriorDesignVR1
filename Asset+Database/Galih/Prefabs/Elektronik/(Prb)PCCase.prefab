@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: -8481948345417286829}
   m_Layer: 0
   m_Name: (Prb)PCCase
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

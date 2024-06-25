@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 7316624453769705733}
   m_Layer: 0
   m_Name: Pin Board
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

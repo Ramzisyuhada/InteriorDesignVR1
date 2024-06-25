@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15410377, g: 0.17538826, b: 0.18640114, a: 1}
+  m_IndirectSpecularColor: {r: 0.15410405, g: 0.17538844, b: 0.18640159, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -231,6 +231,74 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.2571735
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850357395676157494, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_Name
+      value: WallShelf_Apt_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ee34a9a35d6ab74183b4b1aff5b740d, type: 3}
+--- !u!1001 &121461029
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6256726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.342
+      objectReference: {fileID: 0}
+    - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.2571735
       objectReference: {fileID: 0}
     - target: {fileID: 3108454442468392478, guid: 3ee34a9a35d6ab74183b4b1aff5b740d,
         type: 3}
@@ -584,7 +652,7 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 1.67
   m_Radius: 0.25712204
@@ -3550,6 +3618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 161255925793384018, guid: 253f3a6a89eb8b04cbe7b1b876649bce,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 306111091107276120, guid: 253f3a6a89eb8b04cbe7b1b876649bce,
         type: 3}
@@ -8603,3 +8676,4 @@ SceneRoots:
   - {fileID: 349692738}
   - {fileID: 2023160703}
   - {fileID: 2040332027}
+  - {fileID: 121461029}

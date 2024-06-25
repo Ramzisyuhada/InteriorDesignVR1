@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 4330189437814801570}
   - component: {fileID: 5069285476724100132}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 2371005064135142798}
   - component: {fileID: 920940806884736145}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Rotate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1222805626400645427}
   - component: {fileID: 8491690875841416006}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 7883637339166875059}
   - component: {fileID: 2337508434888639067}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Hapus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &405703784511480790
 MonoBehaviour:
   m_ObjectHideFlags: 0

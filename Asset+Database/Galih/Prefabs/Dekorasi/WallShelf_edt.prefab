@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8251682646507209804}
   m_Layer: 0
   m_Name: WallShelf_edt
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,6 +301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallShelf_Apt_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278383590123664122, guid: 18e678e0d8ef4254da6f17efc522b1ad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 611141894717341494, guid: 18e678e0d8ef4254da6f17efc522b1ad, type: 3}

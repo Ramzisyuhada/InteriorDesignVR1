@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2536278553565830366}
   m_Layer: 0
   m_Name: Canvas_Painting_01_edt
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,6 +251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas_Painting_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828997711346961650, guid: 17c0122474ad3ac438d0cbc06218f689,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6273954348158240993, guid: 17c0122474ad3ac438d0cbc06218f689,
         type: 3}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3790751639667467990}
   m_Layer: 0
   m_Name: board2_2 (1)
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

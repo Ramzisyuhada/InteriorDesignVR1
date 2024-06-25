@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4208205334952320644}
   m_Layer: 0
   m_Name: Wapres_edt
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,15 +252,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: WAPRES
       objectReference: {fileID: 0}
+    - target: {fileID: 8172583374120057598, guid: 6d33da2f1fea1bc42b1fb1d117740254,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800326055354179652, guid: 6d33da2f1fea1bc42b1fb1d117740254,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8800326055354179652, guid: 6d33da2f1fea1bc42b1fb1d117740254,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.050000004
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8800326055354179652, guid: 6d33da2f1fea1bc42b1fb1d117740254,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.050000004
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8800326055354179652, guid: 6d33da2f1fea1bc42b1fb1d117740254,
         type: 3}

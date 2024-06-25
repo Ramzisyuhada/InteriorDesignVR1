@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanging_Light_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bbaa277492156c949ac5479dc49d938c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

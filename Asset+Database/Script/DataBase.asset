@@ -472,7 +472,7 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Dekorasi
     <name>k__BackingField: RakDinding1
     <id>k__BackingField: 57
-    <prefab>k__BackingField: {fileID: 1536556963340369877, guid: ad729de222c7f2f4aa139997d6fd38f9,
+    <prefab>k__BackingField: {fileID: 5180236202471552131, guid: 3832ff239b56d9c46afdb2e2c6e5d5a9,
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 55284628fa66cdd4186a3ea54ff9c87c,

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5703300281080898798}
   m_Layer: 0
   m_Name: sheet
-  m_TagString: Untagged
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,3 +267,4 @@ MonoBehaviour:
   objectType: 3
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
+  snapThreshold: 1

@@ -3717,7 +3717,7 @@ GameObject:
   - component: {fileID: 6688430676475986289}
   m_Layer: 0
   m_Name: (Prb)VendingMachine
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

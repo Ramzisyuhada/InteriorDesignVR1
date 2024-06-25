@@ -9,6 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 using static UnityEditorInternal.ReorderableList;
+using static ObjectPlacment;
 
 public class UI_Interaction : MonoBehaviour
 {
@@ -68,7 +69,10 @@ public class UI_Interaction : MonoBehaviour
     {
         _currentController = newController;
     }
-
+    public GameObject getObjectprefent()
+    {
+        return barang;
+    }
     public Controller getCurrentController()
     {
         return _currentController;
@@ -218,8 +222,8 @@ public class UI_Interaction : MonoBehaviour
 
 
 
-                            ShowCanvas(hitObject);
-                        Destroy(GameObject.Find("MenuItem_part1(Clone)"));
+                            ShowCanvas(barang);
+                            Destroy(GameObject.Find("MenuItem_part1(Clone)"));
 
                     }
 
@@ -288,10 +292,25 @@ public class UI_Interaction : MonoBehaviour
         }
         return false;
     }
+
+    private void DeleteFeature(String name,GameObject canvas)
+    {
+        Transform feature = canvas.transform.GetChild(2);
+
+        if (name == "Wall Decoration")
+        {
+            feature.Find("Rotate").gameObject.SetActive(false);
+            feature.Find("Texture").gameObject.SetActive(false);
+        }else if(name == "Surface" || name == "Furniture" || name == "Decoration" || name == "Ceiling")
+        {
+            feature.Find("Rotate").gameObject.SetActive(true);
+            feature.Find("Texture").gameObject.SetActive(false);
+
+        }
+    }
     private void ShowCanvas(GameObject hitObject)
 
     {
-       
         
         if (currentCanvas == null)
         {
@@ -300,7 +319,6 @@ public class UI_Interaction : MonoBehaviour
             Debug.Log(currentCanvas.gameObject.name);
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
-
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
             currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
@@ -309,9 +327,14 @@ public class UI_Interaction : MonoBehaviour
             currentCanvas.transform.DORestart();
 
             DOTween.Play(currentCanvas);
+            DeleteFeature(hitObject.tag, currentCanvas);
+
         }
         else
         {
+
+            DeleteFeature(hitObject.tag, currentCanvas);
+
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
@@ -457,6 +480,8 @@ public class UI_Interaction : MonoBehaviour
         SetControllerType(Controller.None);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+
+
 
 
 
