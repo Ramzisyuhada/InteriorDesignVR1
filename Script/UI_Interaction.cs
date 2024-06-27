@@ -221,7 +221,7 @@ public class UI_Interaction : MonoBehaviour
                             barang = hitObject;
 
 
-
+                            gameobject = barang;
                             ShowCanvas(barang);
                             Destroy(GameObject.Find("MenuItem_part1(Clone)"));
 
@@ -301,11 +301,23 @@ public class UI_Interaction : MonoBehaviour
         {
             feature.Find("Rotate").gameObject.SetActive(false);
             feature.Find("Texture").gameObject.SetActive(false);
-        }else if(name == "Surface" || name == "Furniture" || name == "Decoration" || name == "Ceiling")
+            feature.Find("Scale").gameObject.SetActive(true);
+            feature.Find("Hapus").gameObject.SetActive(true);
+        }
+        else if(name == "Surface" || name == "Furniture" || name == "Decoration" || name == "Ceiling")
         {
             feature.Find("Rotate").gameObject.SetActive(true);
             feature.Find("Texture").gameObject.SetActive(false);
+            feature.Find("Scale").gameObject.SetActive(true);
+            feature.Find("Hapus").gameObject.SetActive(true);
 
+        }
+        else if(name == "Floor" || name == "Wall")
+        {
+            feature.Find("Rotate").gameObject.SetActive(false);
+            feature.Find("Texture").gameObject.SetActive(true);
+            feature.Find("Scale").gameObject.SetActive(false);
+            feature.Find("Hapus").gameObject.SetActive(false);
         }
     }
     private void ShowCanvas(GameObject hitObject)
@@ -327,13 +339,20 @@ public class UI_Interaction : MonoBehaviour
             currentCanvas.transform.DORestart();
 
             DOTween.Play(currentCanvas);
-            DeleteFeature(hitObject.tag, currentCanvas);
+            if(hitObject.transform.root.gameObject != null){
+                DeleteFeature(hitObject.transform.root.gameObject.tag, currentCanvas);
+
+            }
+            else
+            {
+                DeleteFeature(hitObject.gameObject.tag, currentCanvas);
+
+            }
 
         }
         else
         {
 
-            DeleteFeature(hitObject.tag, currentCanvas);
 
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
@@ -346,6 +365,16 @@ public class UI_Interaction : MonoBehaviour
             currentCanvas.transform.DORestart();
 
             DOTween.Play(currentCanvas);
+            if (hitObject.transform.root.gameObject != null)
+            {
+                DeleteFeature(hitObject.transform.root.gameObject.tag, currentCanvas);
+
+            }
+            else
+            {
+                DeleteFeature(hitObject.gameObject.tag, currentCanvas);
+
+            }
 
         }
 
@@ -478,14 +507,23 @@ public class UI_Interaction : MonoBehaviour
     public void Destroy1()
     {
         SetControllerType(Controller.None);
+
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
 
 
 
 
+        if (barang.transform.root.gameObject != null)
+        {
+            Destroy(barang.transform.root.gameObject);
 
-        Destroy(barang);
+        }
+        else
+        {
+            Destroy(barang);
+
+        }
         Destroy(gameobject);
         Destroy(currentCanvas);
     }

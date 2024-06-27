@@ -248,32 +248,62 @@ public class ObjectPlacment : XRGrabInteractable
             return validPlacement;
         }
         public float snapThreshold = 1.0f; // Jarak maksimal untuk snap
-        
-        private bool PlaceOnFloor()
+    private bool tembus = false;
+        private void OnTriggerEnter(Collider other)
+        {
+            
+                tembus = true;
+                Debug.Log("Object entered trigger with " + other.gameObject.name);
+
+        }
+    
+    private bool PlaceOnFloor()
         {
                 RaycastHit hit;
                 int layerMask = LayerMask.GetMask("Floor"); 
+               
 
-
-                if (Physics.Raycast(transform.position, Vector3.down, out hit,1f))
+        if (Physics.Raycast(transform.position, Vector3.down , out hit,1f))
                 {
 
                     if (hit.collider.CompareTag("Floor"))
                     {
-                            Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
-                            transform.position = newPosition;
+                    Collider objectCollider = GetComponent<Collider>();
+
+                    if (objectCollider == null)
+                    {
+                        objectCollider = GetComponentInChildren<Collider>();
+                    }
+
+                        if (objectCollider != null)
+                        {
+                            float objectHeight = objectCollider.bounds.size.y;
+
+                            if (transform.gameObject.name == "Desk A Light Wood(Clone)" || transform.gameObject.name == "Desk A Dark Wood(Clone)" || transform.gameObject.name == "Hall_Table_Light(Clone)")
+                            {
+                                
+                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + (objectHeight /2), transform.position.z);
+                                transform.position = newPosition;
+                            }
+                            else
+                            {
+                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+                                transform.position = newPosition;
+                            }
+
+                            return true;
+                        }
 
                 return true;
                     }
                         else {
-
+                        
                             Collider objectCollider = GetComponent<Collider>();
-                             transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
 
                             if (objectCollider != null)
                             {
                                 float objectHeight = objectCollider.bounds.size.y;
-                                transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+                                transform.position = new Vector3(transform.position.x, hit.point.y+ objectHeight, transform.position.z);
                             }
                             return true;
 
@@ -283,8 +313,13 @@ public class ObjectPlacment : XRGrabInteractable
 
 
                 }
-/*        Debug.DrawRay(transform.position, Vector3.right, Color.red);
-*/
+                else
+                {
+                    Debug.DrawRay(transform.position, Vector3.down * 2, Color.red);
+
+                }
+        /*        Debug.DrawRay(transform.position, Vector3.right, Color.red);
+        */
 
         return false;
         }
@@ -404,10 +439,16 @@ public class ObjectPlacment : XRGrabInteractable
             {
                 if (hit.collider.CompareTag("Surface"))
                 {
-                    transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                
-                    return true;
+                    Collider objectCollider = GetComponent<Collider>();
+                    if (objectCollider != null)
+                    {
+                        float objectHeight = objectCollider.bounds.size.y;
+
+                        transform.position = new Vector3(hit.point.x, hit.point.y + objectHeight, hit.point.z);
+                        return true;
+                    }
                 }
+               
 
 
             }
