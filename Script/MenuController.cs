@@ -162,7 +162,7 @@ public class MenuController : MonoBehaviour
     }
     private void ResetUI()
     {
-        Transform content = menucanvas.transform.GetChild(2).GetChild(0).GetChild(0).GetChild(0);
+        Transform content = menucanvas.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0);
         Debug.Log(content.gameObject.name);
         for (int i = content.childCount - 1; i >= 0; i--)
         {
@@ -348,7 +348,7 @@ public class MenuController : MonoBehaviour
     }
     private void Inventory(string jenis)
     {
-        Transform Background = menucanvas.transform.GetChild(2);
+        Transform Background = menucanvas.transform.GetChild(0);
         Transform ListoObjectItem = Background.GetChild(0);
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
@@ -471,7 +471,7 @@ public class MenuController : MonoBehaviour
         }
   
 
-        GameObject menuBarang = GameObject.Find("MenuItem_part1(Clone)");
+        GameObject menuBarang = GameObject.Find("MenuItem_part1_fix(Clone)");
 
 
         if (menuBarang != null)
