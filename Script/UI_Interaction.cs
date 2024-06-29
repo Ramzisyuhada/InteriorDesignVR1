@@ -540,7 +540,7 @@ public class UI_Interaction : MonoBehaviour
     }
     private void Texture()
     {
-        Transform childTransform = currentCanvas.transform.GetChild(2); 
+        Transform childTransform = currentCanvas.transform.GetChild(0); 
         GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
 
         colorPicker.onColorChanged += OnColorChanged;
