@@ -435,23 +435,42 @@ public class ObjectPlacment : XRGrabInteractable
             HashSet<float> Jarak = new HashSet<float>();
             float x;
         
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
             {
                 if (hit.collider.CompareTag("Surface"))
                 {
-                    Collider objectCollider = GetComponent<Collider>();
-                    if (objectCollider != null)
+                    float hitY = hit.point.y;
+                    float minY = hit.collider.bounds.min.y;
+                    float centerY = hit.collider.bounds.center.y;
+                    float maxY = hit.collider.bounds.max.y;
+
+                    if (Mathf.Approximately(hitY, minY))
                     {
-                        float objectHeight = objectCollider.bounds.size.y;
-
-                        transform.position = new Vector3(hit.point.x, hit.point.y + objectHeight, hit.point.z);
-                        return true;
+                        transform.position = new Vector3(hit.point.x, minY, hit.point.z);
+                        Debug.Log("Hit at the bottom");
                     }
+                    else if (Mathf.Approximately(hitY, centerY))
+                    {
+                        transform.position = new Vector3(hit.point.x, centerY, hit.point.z);
+                        Debug.Log("Hit at the center");
+                    }
+                    else if (Mathf.Approximately(hitY, maxY))
+                    {
+                        transform.position = new Vector3(hit.point.x, maxY, hit.point.z);
+                        Debug.Log("Hit at the top");
+                    }
+                    else
+                    {
+                        transform.position = new Vector3(hit.point.x, hitY, hit.point.z);
+                        Debug.Log("Hit somewhere in between");
+                    }
+                    return true;
+
                 }
-               
 
 
-            }
+
+        }
             return false;
         }
 

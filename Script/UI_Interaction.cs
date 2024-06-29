@@ -215,7 +215,7 @@ public class UI_Interaction : MonoBehaviour
                 {
                     GameObject hitObject = hit.collider.gameObject;
 /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
-*/                        if (hitObject != null && !HasChildCanvas(hitObject))
+*/                        if (hitObject != null)
                         {
                             static_player = player;
                             barang = hitObject;
@@ -223,7 +223,7 @@ public class UI_Interaction : MonoBehaviour
 
                             gameobject = barang;
                             ShowCanvas(barang);
-                            Destroy(GameObject.Find("MenuItem_part1(Clone)"));
+                            Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
 
                     }
 
@@ -295,7 +295,7 @@ public class UI_Interaction : MonoBehaviour
 
     private void DeleteFeature(String name,GameObject canvas)
     {
-        Transform feature = canvas.transform.GetChild(2);
+        Transform feature = canvas.transform.GetChild(1).GetChild(0);
 
         if (name == "Wall Decoration")
         {
@@ -353,7 +353,13 @@ public class UI_Interaction : MonoBehaviour
         else
         {
 
-
+            _currentController = Controller.Default;
+            Transform childTransform = currentCanvas.transform.GetChild(2);
+            GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
+            if (existingColorPicker != null)
+            {
+                Destroy(existingColorPicker);
+            }
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
@@ -471,14 +477,19 @@ public class UI_Interaction : MonoBehaviour
         if (barang.GetComponentInParent<Rigidbody>() != null)
         {
             barang.GetComponentInParent<Rigidbody>().isKinematic = false;
+            barang.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
         if (barang.GetComponent<Rigidbody>() != null)
         {
             barang.GetComponent<Rigidbody>().isKinematic = false;
+            barang.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
         }
         if (barang.GetComponentInChildren<Rigidbody>() != null)
         {
             barang.GetComponentInChildren<Rigidbody>().isKinematic = false;
+            barang.GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
         }
         SetControllerType(Controller.Rotation);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
@@ -529,7 +540,7 @@ public class UI_Interaction : MonoBehaviour
     }
     private void Texture()
     {
-        Transform childTransform = currentCanvas.transform.GetChild(3); 
+        Transform childTransform = currentCanvas.transform.GetChild(2); 
         GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
 
         colorPicker.onColorChanged += OnColorChanged;
@@ -547,6 +558,7 @@ public class UI_Interaction : MonoBehaviour
 
         if (gameobject != null && existingColorPicker != null)
         {
+            
             existingColorPicker.GetComponent<ColorPicker>();
             if (existingColorPicker.TryGetComponent<ColorPicker>(out var cp))
             {

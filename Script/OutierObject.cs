@@ -21,21 +21,25 @@ public class OutierObject : MonoBehaviour
     {
         if (highlight != null)
         {
-            highlight.gameObject.GetComponent<Outline>().enabled = false;
+            Outline outline = highlight.gameObject.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
             highlight = null;
         }
-/*
+
         if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
         }
 
-        if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
+        else if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
-        }*/
+        }
 
-        /*if (inputActionSelectLeft.action.WasPressedThisFrame())
+        if (inputActionSelectLeft.action.WasPressedThisFrame())
         {
             HandleSelection(rayLeft);
         }
@@ -43,7 +47,7 @@ public class OutierObject : MonoBehaviour
         if (inputActionSelectRight.action.WasPressedThisFrame())
         {
             HandleSelection(rayRight);
-        }*/
+        }
     }
 
     private void HandleRaycastHit(RaycastHit hit)
@@ -52,19 +56,16 @@ public class OutierObject : MonoBehaviour
             return;
 
         highlight = hit.transform;
-        if ((highlight.CompareTag("Surface") || highlight.CompareTag("Decoration")) && highlight != selection)
+        if ((highlight.CompareTag("Surface") || highlight.CompareTag("Decoration") || highlight.CompareTag("Wall") || highlight.CompareTag("Wall Decoration") || highlight.CompareTag("Furniture")) && highlight != selection)
         {
-            if (highlight.gameObject.GetComponent<Outline>() != null)
+            Outline outline = highlight.gameObject.GetComponent<Outline>();
+            if (outline == null)
             {
-                highlight.gameObject.GetComponent<Outline>().enabled = true;
+                outline = highlight.gameObject.AddComponent<Outline>();
+                outline.OutlineColor = Color.magenta;
+                outline.OutlineWidth = 7.0f;
             }
-            else
-            {
-                Outline outline = highlight.gameObject.AddComponent<Outline>();
-                outline.enabled = true;
-                highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
-                highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
-            }
+            outline.enabled = true;
         }
         else
         {
@@ -91,27 +92,39 @@ public class OutierObject : MonoBehaviour
         {
             raycaster.Raycast(eventData, results);
             return results.Count > 0;
-        }   
+        }
         return false;
     }
 
     private void HandleSelection(XRRayInteractor rayInteractor)
     {
-        if (highlight)
+        if (highlight != null)
         {
             if (selection != null)
             {
-                selection.gameObject.GetComponent<Outline>().enabled = false;
+                Outline outline = selection.gameObject.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = false;
+                }
             }
-            selection = raycastHit.transform;
-            selection.gameObject.GetComponent<Outline>().enabled = true;
+            selection = highlight;
+            Outline selectionOutline = selection.gameObject.GetComponent<Outline>();
+            if (selectionOutline != null)
+            {
+                selectionOutline.enabled = true;
+            }
             highlight = null;
         }
         else
         {
-            if (selection)
+            if (selection != null)
             {
-                selection.gameObject.GetComponent<Outline>().enabled = false;
+                Outline outline = selection.gameObject.GetComponent<Outline>();
+                if (outline != null)
+                {
+                    outline.enabled = false;
+                }
                 selection = null;
             }
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4375416018972072051}
   m_Layer: 0
   m_Name: trashCan_pedal
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8880331131730552358}
   m_Layer: 0
   m_Name: (Prb)TrashCan
-  m_TagString: Decoration
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 2060382971287297394}
   m_Layer: 0
   m_Name: trashCan
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 9215574786385445640}
   m_Layer: 0
   m_Name: trashCan_body
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 6600611243711714854}
   m_Layer: 0
   m_Name: trashCan_cover
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3116228253402750326}
   m_Layer: 0
   m_Name: recycleBin
-  m_TagString: Decoration
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

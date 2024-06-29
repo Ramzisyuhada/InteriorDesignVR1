@@ -94,7 +94,7 @@ public class MenuController : MonoBehaviour
 
                 DOTween.Play(menucanvas);
             }
-            Destroy(GameObject.Find("Canvas(Clone)"));
+            Destroy(GameObject.Find("Canvas 1(Clone)"));
 
         }
 
@@ -141,7 +141,7 @@ public class MenuController : MonoBehaviour
 
                 DOTween.Play(menucanvas);
             }
-            Destroy(GameObject.Find("Canvas(Clone)"));
+            Destroy(GameObject.Find("Canvas 1(Clone)"));
 
 
         }
