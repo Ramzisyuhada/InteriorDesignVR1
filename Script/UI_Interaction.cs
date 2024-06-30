@@ -203,19 +203,19 @@ public class UI_Interaction : MonoBehaviour
         {
             UpdateControllerActiveState();
 
-            int layerMaskUI = 1 << LayerMask.NameToLayer("UI");
+            int layerMaskUI = 1 << LayerMask.NameToLayer("Door");
             int layerMaskPlayer = 1 << LayerMask.NameToLayer("Player"); // Example: Layer for player
             int combinedLayerMask = layerMaskUI | layerMaskPlayer;
 
-            if (Physics.Raycast(ray, out hit,Mathf.Infinity))
+            if (rayLeft.TryGetCurrent3DRaycastHit(out hit) || rayRight.TryGetCurrent3DRaycastHit(out hit))
             {
-                                    Debug.Log(hit.collider.name);
+                                    Debug.Log(hit.transform.tag);
 
                 if (hit.collider != null)
                 {
                     GameObject hitObject = hit.collider.gameObject;
 /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
-*/                        if (hitObject != null)
+*/                        if (hitObject != null && hitObject.tag != "Door")
                         {
                             static_player = player;
                             barang = hitObject;
@@ -363,7 +363,7 @@ public class UI_Interaction : MonoBehaviour
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
-            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 3.5f;
+            Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
             currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z),1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);

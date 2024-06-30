@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.XR;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 
     public class opencloseDoor : MonoBehaviour
 	{
-        [SerializeField] private InputActionProperty inputActionLeft;
+    private RaycastHit raycastHit;
+
+    [SerializeField] private XRRayInteractor rayLeft;
+		[SerializeField] private XRRayInteractor rayRight;
+		[SerializeField] private InputActionProperty inputActionLeft;
         [SerializeField] private InputActionProperty inputActionRight;
-        public Animator openandclose;
+    [SerializeField] private LayerMask doorLayer; 
+
+    public Animator openandclose;
 		public bool open;
 		public Transform Player;
 
@@ -22,64 +30,63 @@ using UnityEngine.XR;
     }
 
     private void Update()
+    {
+        CheckForDoorInteraction();
+    }
+
+    private void CheckForDoorInteraction()
+    {
+        if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit) || rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
         {
-			OnMouseOver1();
+            if (raycastHit.transform.CompareTag("Door"))
+            {
+                HandleDoorInteraction(raycastHit.transform.gameObject);
+            }
         }
-        void OnMouseOver1()
-		{
-			{
-                float leftValue = inputActionLeft.action.ReadValue<float>();
-                float rightValue = inputActionRight.action.ReadValue<float>();
-                bool inputActive = leftValue > 0.5f || rightValue > 0.5f;
+    }
+
+    private void HandleDoorInteraction(GameObject target)
+    {
+        if (Player != null)
+        {
+            if (openandclose != null)
+            {
+                openandclose = target.GetComponent<Animator>();
+            }
+            float leftInputValue = inputActionLeft.action.ReadValue<float>();
+            float rightInputValue = inputActionRight.action.ReadValue<float>();
+            bool inputActive = leftInputValue > 0.5f || rightInputValue > 0.5f;
+            float distance = Vector3.Distance(Player.position, target.transform.position);
+            Debug.Log("Distance: " + distance);
+
+            if (distance < 15)
+            {
+                if (!open && inputActive && openandclose != null)
+                {
+                    StartCoroutine(OpenDoor());
+                }
+                else if (open && inputActive && openandclose != null)
+                {
+                    StartCoroutine(CloseDoor());
+                }
+            }
+        }
+    }
+
+    private IEnumerator OpenDoor()
+    {
+        openandclose.Play("Opening");
+        open = true;
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator CloseDoor()
+    {
+        Debug.Log("You are closing the door");
+        openandclose.Play("Closing");
+        open = false;
+        yield return new WaitForSeconds(0.5f);
+    }
 
 
-                if (Player)
-				{
-					float dist = Vector3.Distance(Player.position, transform.position);
-				Debug.Log("Jarak : " + dist);
-					if (dist < 5)
-					{
-						if (open == false)
-						{
-							if (inputActive)
-							{
-								StartCoroutine(opening());
-							}
-						}
-						else
-						{
-							if (open == true)
-							{
-								if (inputActive)
-								{
-									StartCoroutine(closing());
-								}
-							}
-
-						}
-
-					}
-				}
-/*				if(devicesleft)
-*/
-			}
-
-		}
-
-		IEnumerator opening()
-		{
-			openandclose.Play("Opening");
-			open = true;
-			yield return new WaitForSeconds(.5f);
-		}
-
-		IEnumerator closing()
-		{
-			print("you are closing the door");
-			openandclose.Play("Closing");
-			open = false;
-			yield return new WaitForSeconds(.5f);
-		}
-
-
-	}
+}

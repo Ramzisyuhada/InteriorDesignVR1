@@ -633,6 +633,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionLeft:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 21b12fb3-4ccb-4bc3-b46e-850cdcd25473
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  inputActionRight:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 809d0302-57c4-429b-bfa3-c2f239a108c8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   pull_01: {fileID: 5545287591542597058}
   open: 0
   Player: {fileID: 0}
@@ -725,6 +749,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionLeft:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 47adf110-53d0-4d48-80fa-9d5fb9417235
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  inputActionRight:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 13492e90-d9ef-482e-9cd6-8adc3568b1f9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   pull_01: {fileID: 5545287591628662486}
   open: 0
   Player: {fileID: 0}
@@ -1016,7 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionLeft:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Input Action Left
       m_Type: 0
@@ -1026,9 +1074,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   inputActionRight:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Input Action Right
       m_Type: 0
@@ -1038,10 +1087,11 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   openandclose: {fileID: 5545287590895851206}
   open: 0
-  Player: {fileID: 0}
+  Player: {fileID: 2990122959593439460, guid: c37ad744352bdcd46be42a0de28c0627, type: 3}
 --- !u!1 &6345318140756405163
 GameObject:
   m_ObjectHideFlags: 0
