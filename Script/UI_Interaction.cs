@@ -497,6 +497,12 @@ public class UI_Interaction : MonoBehaviour
     }
     public void Scake()
     {
+        if (barang.GetComponentInChildren<MeshCollider>() != null)
+            barang.GetComponentInChildren<MeshCollider>().convex = true;
+        if (barang.GetComponent<MeshCollider>() != null)
+            barang.GetComponent<MeshCollider>().convex = true;
+        if (barang.GetComponentInParent<MeshCollider>() != null)
+            barang.GetComponentInParent<MeshCollider>().convex = true;
         if (barang.GetComponent<Rigidbody>() != null)
         {
             Debug.Log("Rigid Body ada");

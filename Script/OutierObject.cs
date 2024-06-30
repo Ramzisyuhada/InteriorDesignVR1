@@ -62,7 +62,7 @@ public class OutierObject : MonoBehaviour
             if (outline == null)
             {
                 outline = highlight.gameObject.AddComponent<Outline>();
-                outline.OutlineColor = Color.magenta;
+                outline.OutlineColor = Color.green;
                 outline.OutlineWidth = 7.0f;
             }
             outline.enabled = true;
@@ -75,13 +75,11 @@ public class OutierObject : MonoBehaviour
 
     private bool IsPointerOverUIElement()
     {
-        // Check using EventSystem
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return true;
         }
 
-        // Additional check using GraphicRaycaster
         PointerEventData eventData = new PointerEventData(EventSystem.current)
         {
             position = new Vector2(Screen.width / 2, Screen.height / 2) // Assuming center of screen for XR
