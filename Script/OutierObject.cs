@@ -44,7 +44,7 @@ public class OutierObject : MonoBehaviour
             HandleSelection(rayLeft);
         }
 
-        if (inputActionSelectRight.action.WasPressedThisFrame())
+         if (inputActionSelectRight.action.WasPressedThisFrame())
         {
             HandleSelection(rayRight);
         }

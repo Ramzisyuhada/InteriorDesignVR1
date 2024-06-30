@@ -36,7 +36,8 @@ using UnityEngine.XR;
                 if (Player)
 				{
 					float dist = Vector3.Distance(Player.position, transform.position);
-					if (dist < 15)
+				Debug.Log("Jarak : " + dist);
+					if (dist < 5)
 					{
 						if (open == false)
 						{

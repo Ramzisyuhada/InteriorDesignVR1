@@ -279,12 +279,13 @@ public class ObjectPlacment : XRGrabInteractable
                         {
                             float objectHeight = objectCollider.bounds.size.y;
 
-                            if (transform.gameObject.name == "Desk A Light Wood(Clone)" || transform.gameObject.name == "Desk A Dark Wood(Clone)" || transform.gameObject.name == "Hall_Table_Light(Clone)")
+                            if ( transform.gameObject.name == "Hall_Table_Light(Clone)")
                             {
                                 
                                 Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + (objectHeight /2), transform.position.z);
                                 transform.position = newPosition;
                             }
+                           
                             else
                             {
                                 Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);

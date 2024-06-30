@@ -295,7 +295,7 @@ public class UI_Interaction : MonoBehaviour
 
     private void DeleteFeature(String name,GameObject canvas)
     {
-        Transform feature = canvas.transform.GetChild(1).GetChild(0);
+        Transform feature = canvas.transform.GetChild(0).GetChild(0);
 
         if (name == "Wall Decoration")
         {

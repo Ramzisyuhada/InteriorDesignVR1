@@ -336,7 +336,7 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Speaker
     <id>k__BackingField: 40
-    <prefab>k__BackingField: {fileID: 6751832589807835815, guid: 6b3d3918a49e54040abf01a0e27b7aa4,
+    <prefab>k__BackingField: {fileID: 6562903043590896498, guid: 93ff70a7cdab53f4d9be1a0126bc9bab,
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 0ea15dc6c3386a740b261d7235cdee59,
@@ -764,14 +764,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 9104e70b62aa02e4f96a5353c1c8f74f,
-      type: 3}
-  - <Jenis>k__BackingField: Meja
-    <name>k__BackingField: Meja+Lampu
-    <id>k__BackingField: 94
-    <prefab>k__BackingField: {fileID: 6732812361099169020, guid: 3dd3c150131f27640b1caf4756afb056,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: d346c155e8c1bf044b5db8a0f05c5448,
       type: 3}
   - <Jenis>k__BackingField: Meja
     <name>k__BackingField: Meja Laci1
@@ -1470,14 +1462,6 @@ MonoBehaviour:
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 05fc56e66a693374197ce3a8b7e426b8,
       type: 3}
   - <Jenis>k__BackingField: Elektronik
-    <name>k__BackingField: Vending Mesin
-    <id>k__BackingField: 183
-    <prefab>k__BackingField: {fileID: 1956597881070382525, guid: 5fab3d9a08a16ed429bbc510962997d8,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 759f2089e123ff64c9b0fb6ad7aa1b40,
-      type: 3}
-  - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Dispenser2
     <id>k__BackingField: 184
     <prefab>k__BackingField: {fileID: 3281542857924279648, guid: 135f561a417209449aa3f0e15225613e,
@@ -1582,14 +1566,6 @@ MonoBehaviour:
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 6c9d6c736987c4240bdba64259e5265b,
       type: 3}
   - <Jenis>k__BackingField: Elektronik
-    <name>k__BackingField: proyektor
-    <id>k__BackingField: 197
-    <prefab>k__BackingField: {fileID: 1504105867294326118, guid: c4769332a3574e543a8455feae3cc05d,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 54c99359d91932841bb5c97fd5046157,
-      type: 3}
-  - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Printer
     <id>k__BackingField: 198
     <prefab>k__BackingField: {fileID: 1649482374922732, guid: 79a5b937093a5864d91d9a3a836ff1d7,
@@ -1600,7 +1576,7 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Printer2
     <id>k__BackingField: 199
-    <prefab>k__BackingField: {fileID: 100000, guid: d734e0f1e8152164f912667b484f1bb9,
+    <prefab>k__BackingField: {fileID: 186199100150105718, guid: 4030b729481fc0242b05239bc9fa959b,
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: e87e3bd21d4b88f44b55320d0ee4f05f,
