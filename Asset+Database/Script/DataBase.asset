@@ -1598,14 +1598,6 @@ MonoBehaviour:
     <SourceImage>k__BackingField: {fileID: 21300000, guid: f8526d315e773ba4db24d577ab8d48f9,
       type: 3}
   - <Jenis>k__BackingField: Elektronik
-    <name>k__BackingField: Printer4
-    <id>k__BackingField: 202
-    <prefab>k__BackingField: {fileID: 924301326717782217, guid: aae064ec06860f04787f3ee19de1c0c1,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: e26089ae31b9f5d498451dbad03b8dc9,
-      type: 3}
-  - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: PC1
     <id>k__BackingField: 203
     <prefab>k__BackingField: {fileID: 1152768899851928, guid: f92a252e273fcb349b88813895ab0264,
@@ -1956,38 +1948,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 145ab9584c32c8845bee106bf631124a,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: R.Simulasi 1
-    <id>k__BackingField: 247
-    <prefab>k__BackingField: {fileID: 1055018998192349279, guid: f89be08cf1ff5e14bbdbd6b3f3a4c0e9,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 2ee1e7b1ca9ea904a82dd494cd4e21b7,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: R.Simulasi 2
-    <id>k__BackingField: 248
-    <prefab>k__BackingField: {fileID: 3717819666736570888, guid: de0a9a242cca71643962fed0e10b34a1,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 0fe6782329b419e4b9276576c0366523,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: R.Simulasi 3
-    <id>k__BackingField: 249
-    <prefab>k__BackingField: {fileID: 8735306563014532023, guid: 50eeda78b43418b4796bf0f20a5686d6,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 28c497558abe92f409187e50bf5e5d1f,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: R.Simulasi 3
-    <id>k__BackingField: 249
-    <prefab>k__BackingField: {fileID: 8735306563014532023, guid: 50eeda78b43418b4796bf0f20a5686d6,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 28c497558abe92f409187e50bf5e5d1f,
       type: 3}
   - <Jenis>k__BackingField: Dekorasi
     <name>k__BackingField: Foto Garuda
