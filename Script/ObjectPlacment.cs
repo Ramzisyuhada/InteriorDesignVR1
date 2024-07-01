@@ -56,8 +56,8 @@ public class ObjectPlacment : XRGrabInteractable
         bool Move = false;
         float value_add;
 
-        private GameObject _hasil;
-
+/*        private GameObject _hasil;
+*/
 
         private Vector3 _preposisiiton;
         private static Quaternion rotasi;
@@ -97,7 +97,7 @@ public class ObjectPlacment : XRGrabInteractable
         UI_Interaction ui = new UI_Interaction();
         _preposisiiton = transform.position;
         Controller currentController = UI_Interaction._currentController;
-        if (GetComponent<MeshCollider>() != null)
+        if (GetComponent<MeshCollider>() )
 
             GetComponent<MeshCollider>().convex = true;
         if (GetComponentInParent<MeshCollider>() != null)
@@ -277,20 +277,12 @@ public class ObjectPlacment : XRGrabInteractable
 
                         if (objectCollider != null)
                         {
-                            float objectHeight = objectCollider.bounds.size.y;
 
-                            if ( transform.gameObject.name == "Hall_Table_Light(Clone)")
-                            {
-                                
-                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + (objectHeight /2), transform.position.z);
-                                transform.position = newPosition;
-                            }
+                            
                            
-                            else
-                            {
                                 Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
                                 transform.position = newPosition;
-                            }
+                            
 
                             return true;
                         }

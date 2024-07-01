@@ -63,7 +63,8 @@ public class MenuController : MonoBehaviour
                 menucanvas = currentCanvas;
                 UI_Interaction ui = new UI_Interaction();
                 Controller currentController = UI_Interaction._currentController;
-                currentController = Controller.None;
+              
+                currentController = Controller.Default;
                 ui.setController(currentController);
                 GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
                 gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);

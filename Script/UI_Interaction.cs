@@ -238,14 +238,22 @@ public class UI_Interaction : MonoBehaviour
 
     public void Close()
     {
+        if(barang.transform.tag != "Floor")
+        {
+            SetControllerType(Controller.None);
 
-        SetControllerType(Controller.None);
+        }
+        else
+        {
+            SetControllerType(Controller.Default);
 
-        if (barang.GetComponentInChildren<MeshCollider>() != null)
+        }
+
+        if (barang.GetComponentInChildren<MeshCollider>() != null && barang.transform.tag != "Floor")
             barang.GetComponentInChildren<MeshCollider>().convex = true;
-        if (barang.GetComponent<MeshCollider>() != null)
+        if (barang.GetComponent<MeshCollider>() != null && barang.transform.tag != "Floor")
             barang.GetComponent<MeshCollider>().convex = true;
-        if (barang.GetComponentInParent<MeshCollider>() != null)
+        if (barang.GetComponentInParent<MeshCollider>() != null && barang.transform.tag != "Floor")
             barang.GetComponentInParent<MeshCollider>().convex = true;
         Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");

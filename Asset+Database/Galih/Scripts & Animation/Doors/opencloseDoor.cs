@@ -49,10 +49,9 @@ using UnityEngine.XR.Interaction.Toolkit;
     {
         if (Player != null)
         {
-            if (openandclose != null)
-            {
+            
                 openandclose = target.GetComponent<Animator>();
-            }
+            
             float leftInputValue = inputActionLeft.action.ReadValue<float>();
             float rightInputValue = inputActionRight.action.ReadValue<float>();
             bool inputActive = leftInputValue > 0.5f || rightInputValue > 0.5f;
