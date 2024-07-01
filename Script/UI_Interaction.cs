@@ -219,7 +219,7 @@ public class UI_Interaction : MonoBehaviour
                         {
                             static_player = player;
                             barang = hitObject;
-
+                            setController(Controller.Default);
 
                             gameobject = barang;
                             ShowCanvas(barang);
@@ -362,7 +362,7 @@ public class UI_Interaction : MonoBehaviour
         {
 
             _currentController = Controller.Default;
-            Transform childTransform = currentCanvas.transform.GetChild(2);
+            Transform childTransform = currentCanvas.transform.GetChild(0);
             GameObject existingColorPicker = childTransform.transform.Find("Color picker(Clone)")?.gameObject;
             if (existingColorPicker != null)
             {
@@ -411,21 +411,31 @@ public class UI_Interaction : MonoBehaviour
     }
     void _actionscale()
     {
-        if (barang.GetComponent<Rigidbody>() != null) {
+        // Check if the object has a Rigidbody component
+        if (barang.GetComponent<Rigidbody>() != null)
+        {
             barang.GetComponent<Rigidbody>().isKinematic = false;
-            
         }
 
         Vector2 leftValue = inputActionLeftrotate.action.ReadValue<Vector2>();
         Vector2 rightValue = inputActionRightrotate.action.ReadValue<Vector2>();
 
         float scaleSpeed = 2f;
+
         float scaleFactor = (leftValue.x - rightValue.x) * scaleSpeed * Time.deltaTime;
 
         Vector3 scaleChange = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+
         Debug.Log(leftValue.x);
 
-        barang.transform.localScale += scaleChange;
+        if (barang.transform.parent != null)
+        {
+            barang.transform.parent.transform.localScale += scaleChange;
+        }
+        else
+        {
+            barang.transform.localScale += scaleChange;
+        }
     }
 
 

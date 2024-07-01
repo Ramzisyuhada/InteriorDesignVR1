@@ -148,7 +148,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 0}
     - renderer: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!65 &7076211680423797575
 BoxCollider:
   m_ObjectHideFlags: 0

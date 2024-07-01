@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4282662057835814}
   - component: {fileID: 4620028129243269278}
-  - component: {fileID: 8489673140785765630}
   - component: {fileID: -7620203967064919372}
   m_Layer: 0
   m_Name: Securety desk Prefab
@@ -62,28 +61,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!64 &8489673140785765630
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364316748305232}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300166, guid: 18cd780e6948a554a850b2d047ebf8fb, type: 3}
 --- !u!114 &-7620203967064919372
 MonoBehaviour:
   m_ObjectHideFlags: 0
