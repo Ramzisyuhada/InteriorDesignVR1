@@ -163,7 +163,7 @@ public class MenuController : MonoBehaviour
     }
     private void ResetUI()
     {
-        Transform content = menucanvas.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0);
+        Transform content = menucanvas.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0);
         Debug.Log(content.gameObject.name);
         for (int i = content.childCount - 1; i >= 0; i--)
         {
@@ -350,7 +350,7 @@ public class MenuController : MonoBehaviour
     private void Inventory(string jenis)
     {
         Transform Background = menucanvas.transform.GetChild(0);
-        Transform ListoObjectItem = Background.GetChild(0);
+        Transform ListoObjectItem = Background.GetChild(1);
         Transform Viweport = ListoObjectItem.GetChild(0);
         Transform Content = Viweport.GetChild(0);
 
