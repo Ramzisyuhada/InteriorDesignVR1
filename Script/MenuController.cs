@@ -349,6 +349,7 @@ public class MenuController : MonoBehaviour
     }
     private void Inventory(string jenis)
     {
+        
         Transform Background = menucanvas.transform.GetChild(0);
         Transform ListoObjectItem = Background.GetChild(1);
         Transform Viweport = ListoObjectItem.GetChild(0);
