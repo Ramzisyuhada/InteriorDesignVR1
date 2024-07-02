@@ -56,7 +56,7 @@ public class OutierObject : MonoBehaviour
             return;
 
         highlight = hit.transform;
-        if ((highlight.CompareTag("Surface") || highlight.CompareTag("Decoration") || highlight.CompareTag("Wall") || highlight.CompareTag("Wall Decoration") || highlight.CompareTag("Furniture") || highlight.CompareTag("Door")) && highlight  != selection)
+        if ((highlight.CompareTag("Surface") || highlight.CompareTag("Decoration") || highlight.CompareTag("Wall") || highlight.CompareTag("Wall Decoration") || highlight.CompareTag("Furniture") || highlight.CompareTag("Door") || highlight.CompareTag("Ceiling")) && highlight  != selection)
         {
             Outline outline = highlight.gameObject.GetComponent<Outline>();
             if (outline == null)
