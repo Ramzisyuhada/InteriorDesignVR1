@@ -439,32 +439,64 @@ public class ObjectPlacment : XRGrabInteractable
 
                     if (Mathf.Approximately(hitY, minY))
                     {
-                        transform.position = new Vector3(hit.point.x, minY, hit.point.z);
+
+                    transform.position = new Vector3(hit.point.x, minY, hit.point.z);
                         Debug.Log("Hit at the bottom");
-                    }
-                    else if (Mathf.Approximately(hitY, centerY))
+                  //  transform.SetParent(hit.transform, true);
+                    Vector3 originalScale = transform.localScale;
+
+                    transform.localScale = originalScale;
+
+
+                }
+                else if (Mathf.Approximately(hitY, centerY))
                     {
                         transform.position = new Vector3(hit.point.x, centerY, hit.point.z);
                         Debug.Log("Hit at the center");
-                    }
-                    else if (Mathf.Approximately(hitY, maxY))
+                    Vector3 originalScale = transform.localScale;
+
+                   // transform.SetParent(hit.transform,true);
+                    transform.localScale = originalScale;
+
+
+                }
+                else if (Mathf.Approximately(hitY, maxY))
                     {
                         transform.position = new Vector3(hit.point.x, maxY, hit.point.z);
                         Debug.Log("Hit at the top");
-                    }
-                    else
-                    {
-                        transform.position = new Vector3(hit.point.x, hitY, hit.point.z);
-                        Debug.Log("Hit somewhere in between");
-                    }
-                    return true;
+                    Vector3 originalScale = transform.localScale;
+
+                  //  transform.SetParent(hit.transform, true);
+                    transform.localScale = originalScale;
+
 
                 }
+                else
+                    {
+                    Vector3 originalScale = transform.localScale;
+
+                    transform.localScale = originalScale;
+                    transform.position = new Vector3(hit.point.x, hitY, hit.point.z);
+                   // transform.SetParent(hit.transform);
+
+                    Debug.Log("Hit somewhere in between");
+                    }
+
+                return true;
+
+
+            }
+           
 
 
 
         }
-            return false;
+        else
+        {
+            transform.SetParent(null);
+
+        }
+        return false;
         }
 
  
