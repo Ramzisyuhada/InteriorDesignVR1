@@ -445,9 +445,10 @@ public class MenuController : MonoBehaviour
     {
 
         Vector3 cameraPosition = Camera.main.transform.position ;
-        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward * 2f;
-
-     
+        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward ;
+        objectPosition.y = objectPosition.y /2 ;
+/*        objectPosition.z = objectPosition.z * 2;
+*/
         float rotasiYSumbuKamera = Camera.main.transform.rotation.eulerAngles.y;
 
         float rotasiYSumbuTerdekat = Mathf.Round(rotasiYSumbuKamera / 90f) * 90f;
