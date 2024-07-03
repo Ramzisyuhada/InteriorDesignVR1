@@ -10,10 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1874213958567396232}
   - component: {fileID: 7262514086000885028}
-  - component: {fileID: 8112327742231731271}
   - component: {fileID: -8438013248881038471}
   - component: {fileID: 552060802306962603}
-  - component: {fileID: 3006305234956232586}
   m_Layer: 0
   m_Name: Desk A Light Wood
   m_TagString: Surface
@@ -64,28 +62,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 0}
   m_Enabled: 0
---- !u!64 &8112327742231731271
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245626856691816754}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2465347888144946421, guid: d97454b56e9c9064ab82914b462071e1, type: 3}
 --- !u!54 &-8438013248881038471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -269,27 +245,6 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
---- !u!65 &3006305234956232586
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245626856691816754}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.3679945, y: 1.1660421, z: 1.5581712}
-  m_Center: {x: 0.012208564, y: -0.5203621, z: 0.014047197}
 --- !u!1 &7711020741655652814
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +256,7 @@ GameObject:
   - component: {fileID: 5021026736680657205}
   - component: {fileID: 6082348591913852481}
   - component: {fileID: 5461284489819190543}
+  - component: {fileID: 1562423890409291949}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -317,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 7711020741655652814}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 1.087, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,3 +329,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1562423890409291949
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711020741655652814}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2465347888144946421, guid: 081d2e046a8ab764b89de6310e5d5867, type: 3}
