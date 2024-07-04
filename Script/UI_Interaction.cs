@@ -10,6 +10,7 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using static UnityEditorInternal.ReorderableList;
 using static ObjectPlacment;
+using System.Linq;
 
 public class UI_Interaction : MonoBehaviour
 {
@@ -78,14 +79,23 @@ public class UI_Interaction : MonoBehaviour
         return _currentController;
     }
 
-    public static Controller _currentController;  
+    public static Controller _currentController;
+
+    string[] tagStr = UnityEditorInternal.InternalEditorUtility.tags;
+
     void Start()
     {
+
+        GameObject gbj = GameObject.Find("Walls");
+        for (int i = 0; i < tagStr.Count(); i++) {
+            Debug.Log(tagStr[i]);
+        }
+       
         database1 = database;
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
         _currentController = Controller.Default;
-            ;
+            
 
 
         }
