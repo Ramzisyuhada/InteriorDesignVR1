@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9220218889694207168}
   - component: {fileID: 6361672857801931603}
   - component: {fileID: 392840788446429906}
+  - component: {fileID: 1435624440060044813}
   m_Layer: 0
   m_Name: Pin Board
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1435624440060044813
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418494655613634399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7458976675190459405, guid: ff8780237d6c1924ead24d3b269711f8, type: 3}
 --- !u!1 &7047254044357036027
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +150,6 @@ GameObject:
   - component: {fileID: 4492481049336501231}
   - component: {fileID: -5523061539083042080}
   - component: {fileID: -7338786363697708841}
-  - component: {fileID: 7316624453769705733}
   m_Layer: 0
   m_Name: Pin Board
   m_TagString: Wall Decoration
@@ -361,24 +383,3 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
---- !u!65 &7316624453769705733
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8819110661602970734}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4985921, y: 1, z: 0.082837015}
-  m_Center: {x: -0.0030777454, y: 0, z: 0.03077729}

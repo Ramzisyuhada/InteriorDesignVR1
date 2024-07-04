@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 8913166054766841756}
   - component: {fileID: 1099892304507697288}
   - component: {fileID: 2102760802744190330}
-  - component: {fileID: 2876665990364394621}
+  - component: {fileID: 6028534564309470191}
   m_Layer: 0
   m_Name: deskPlant
   m_TagString: Untagged
@@ -303,8 +303,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2876665990364394621
-BoxCollider:
+--- !u!64 &6028534564309470191
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -321,6 +321,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2180059, y: 0.2867575, z: 0.18920515}
-  m_Center: {x: -0.0008946657, y: 0.14337875, z: 0.0010691583}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8586742762385202243, guid: 3978e0eca0f17684d8cd75e9959471bb, type: 3}
