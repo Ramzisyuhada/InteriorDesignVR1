@@ -8,7 +8,11 @@ public class CreateTag : MonoBehaviour
    
     void Awake()
     {
-        Create();
+        Create("Walls");
+        Create("Floor");
+
+        GameObject.Find("Plane").tag = "Floor";
+
     }
 
     // Update is called once per frame
@@ -17,7 +21,7 @@ public class CreateTag : MonoBehaviour
         
     }
 
-    private void Create()
+    private void Create(string tag)
     {
         // Open tag manager
         SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
@@ -25,25 +29,25 @@ public class CreateTag : MonoBehaviour
         SerializedProperty tagsProp = tagManager.FindProperty("tags");
         if (tagsProp.arraySize >= 10000)
         {
-            Debug.Log("No more tags can be added to the Tags property. You have " + tagsProp.arraySize + " tags");
+            Debug.Log("No more tags can be added to the Tags property. You have " + tagsProp.arraySize + tag);
         }
         // if not found, add it
-        if (!PropertyExists(tagsProp, 0, tagsProp.arraySize, "Walls"))
+        if (!PropertyExists(tagsProp, 0, tagsProp.arraySize, tag))
         {
             int index = tagsProp.arraySize;
             // Insert new array element
             tagsProp.InsertArrayElementAtIndex(index);
             SerializedProperty sp = tagsProp.GetArrayElementAtIndex(index);
             // Set array element to tagName
-            sp.stringValue = "Walls";
-            Debug.Log("Tag: " + "Walls" + " has been added");
+            sp.stringValue = tag;
+            Debug.Log("Tag: " + tag + " has been added");
             // Save settings
             tagManager.ApplyModifiedProperties();
 
         }
         else
         {
-            Debug.Log ("Tag: " + "Walls" + " already exists");
+            Debug.Log ("Tag: " + tag + " already exists");
         }
     }
 

@@ -16,7 +16,17 @@ public class OutierObject : MonoBehaviour
     [SerializeField] private XRRayInteractor rayRight;
     [SerializeField] private InputActionProperty inputActionSelectLeft;
     [SerializeField] private InputActionProperty inputActionSelectRight;
+    private void Awake()
+    {
+        GameObject player = GameObject.Find("XR Origin (XR Rig)");
+        GameObject cameraobject = player.transform.GetChild(0).gameObject;
+        if (rayLeft == null && rayRight == null)
+        {
+            rayLeft = cameraobject.transform.GetChild(1).GetComponent<XRRayInteractor>();
+            rayRight = cameraobject.transform.GetChild(1).GetComponent<XRRayInteractor>();
 
+        }
+    }
     void Update()
     {
         if (highlight != null)

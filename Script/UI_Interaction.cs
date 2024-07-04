@@ -11,6 +11,7 @@ using UnityEngine.EventSystems;
 using static UnityEditorInternal.ReorderableList;
 using static ObjectPlacment;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class UI_Interaction : MonoBehaviour
 {
@@ -81,24 +82,29 @@ public class UI_Interaction : MonoBehaviour
 
     public static Controller _currentController;
 
-    string[] tagStr = UnityEditorInternal.InternalEditorUtility.tags;
-
+   
     void Start()
     {
-
-        GameObject gbj = GameObject.Find("Walls");
-        for (int i = 0; i < tagStr.Count(); i++) {
-            Debug.Log(tagStr[i]);
-        }
+        Vector2 vector2 = new Vector2(1f,1f);
+       
        
         database1 = database;
         originalCanvasScale = _canvas.transform.localScale;
         originalCanvasRotation = _canvas.transform.rotation;
         _currentController = Controller.Default;
-            
 
+
+        player = GameObject.Find("XR Origin (XR Rig)");
+        GameObject cameraobject = player.transform.GetChild(0).gameObject;
+        
+        if (rayLeft == null && rayRight == null)
+        {
+            rayLeft = cameraobject.transform.GetChild(1).GetComponent<XRRayInteractor>();
+            rayRight = cameraobject.transform.GetChild(2).GetComponent<XRRayInteractor>();
 
         }
+
+    }
 
     void Update()
     {

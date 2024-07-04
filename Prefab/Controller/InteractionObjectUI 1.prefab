@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2640328170359725326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322276727747292201}
+  - component: {fileID: 6327016541157293971}
+  m_Layer: 0
+  m_Name: InteractionObjectUI 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1322276727747292201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2640328170359725326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6327016541157293971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2640328170359725326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d176155dcad4d284ab6f5cd7af37f7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 0}
+  inputActionLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d330fca4-6fb7-4a5b-ba0a-0a835cb27d2b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  inputActionRight:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4e7088bc-0a37-44d0-863d-0e8f2cfd8f26
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  inputActionLeftrotate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Leftrotate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 67f777ff-66e4-45ae-9e1d-9bfda0d6e924
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -7363382999065477798, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  inputActionRightrotate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Rightrotate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 88ebce40-b7df-4a82-89d8-17584dcdbca6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5913262927076077117, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  rayLeft: {fileID: 0}
+  rayRight: {fileID: 0}
+  _canvas: {fileID: 6511706106209502249, guid: 73c2f1f96b9b1754285747af63af5d45, type: 3}
+  colorpicker: {fileID: 0}
+  player: {fileID: 0}
+  colorPicker: {fileID: 0}
