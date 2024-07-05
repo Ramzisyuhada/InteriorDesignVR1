@@ -23,9 +23,7 @@ public class CreateTag : MonoBehaviour
 
     private void Create(string tag)
     {
-        // Open tag manager
         SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
-        // Tags Property
         SerializedProperty tagsProp = tagManager.FindProperty("tags");
         if (tagsProp.arraySize >= 10000)
         {
