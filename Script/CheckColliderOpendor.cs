@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -11,32 +12,44 @@ public class CheckColliderOpendor : MonoBehaviour
 
     private GameObject _menu;
     private GameObject _Interaction;
+    private bool menuIsActive = false;
+        
+
     
-     void OnTriggerEnter(Collider other)
-    {
-        if (_menu.active == false)
+        void OnTriggerEnter(Collider other)
         {
+            if (!_menu.activeSelf && !menuIsActive)
+            {
+            _menu.SetActive(true);
+                _Interaction.SetActive(true);
 
-
-           _menu.SetActive(true);
-           _Interaction.SetActive(true);
-
+                menuIsActive = true;
+            StartCoroutine(Jeda());
 
         }
-       /* if (_menu.active == true)
-        {
+       else  if (_menu.activeSelf && menuIsActive)
+            {
+
             _menu.SetActive(false);
-            _Interaction.SetActive(false);
+                _Interaction.SetActive(false);
+                menuIsActive = false;
+            StartCoroutine(Jeda());
 
-        }*/
-
-
+        }
     }
 
-     void OnTriggerExit(Collider other)
+    IEnumerator Jeda()
+    {
+        yield return new WaitForSeconds(1000f);
+    }
+
+  
+
+
+    void OnTriggerExit(Collider other)
     {
       
-
+         
 
 
 
