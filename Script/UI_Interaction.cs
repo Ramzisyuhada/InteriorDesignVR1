@@ -85,7 +85,6 @@ public class UI_Interaction : MonoBehaviour
    
     void Start()
     {
-        Vector2 vector2 = new Vector2(1f,1f);
        
        
         database1 = database;
@@ -347,10 +346,10 @@ public class UI_Interaction : MonoBehaviour
     private void ShowCanvas(GameObject hitObject)
 
     {
-        
+        Debug.Log("asdasd");
+
         if (currentCanvas == null)
         {
-
             currentCanvas = Instantiate(_canvas);
             Debug.Log(currentCanvas.gameObject.name);
             Vector3 cameraPosition = Camera.main.transform.position;

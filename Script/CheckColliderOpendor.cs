@@ -40,7 +40,7 @@ public class CheckColliderOpendor : MonoBehaviour
 
     IEnumerator Jeda()
     {
-        yield return new WaitForSeconds(1000f);
+        yield return new WaitForSeconds(1.0f);
     }
 
   
@@ -54,15 +54,13 @@ public class CheckColliderOpendor : MonoBehaviour
 
 
     }
-    void Start()
+    private void Awake()
     {
         _controller = GameObject.Find("Controller");
         _menu = _controller.transform.GetChild(0).gameObject;
         _Interaction = _controller.transform.GetChild(1).gameObject;
-
-
-
     }
+    
 
     // Update is called once per frame
     void Update()
