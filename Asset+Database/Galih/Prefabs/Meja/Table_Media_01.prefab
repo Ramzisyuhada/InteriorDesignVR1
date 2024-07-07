@@ -628,11 +628,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5545287591542597063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayLeft: {fileID: 0}
+  rayRight: {fileID: 0}
   inputActionLeft:
     m_UseReference: 0
     m_Action:
@@ -744,11 +746,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5545287591628662491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0d5557a01f4e0740bd53d6ed2ab7327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayLeft: {fileID: 0}
+  rayRight: {fileID: 0}
   inputActionLeft:
     m_UseReference: 0
     m_Action:
@@ -913,7 +917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5601342599470214940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b5e0617227fa4743be84f23d9e5cb42, type: 3}
   m_Name: 
@@ -1058,11 +1062,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5961576764500733094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayLeft: {fileID: 0}
+  rayRight: {fileID: 0}
   inputActionLeft:
     m_UseReference: 1
     m_Action:
@@ -1089,6 +1095,9 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  doorLayer:
+    serializedVersion: 2
+    m_Bits: 0
   openandclose: {fileID: 5545287590895851206}
   open: 0
   Player: {fileID: 2990122959593439460, guid: c37ad744352bdcd46be42a0de28c0627, type: 3}

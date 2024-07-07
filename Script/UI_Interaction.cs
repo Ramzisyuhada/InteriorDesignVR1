@@ -427,10 +427,10 @@ public class UI_Interaction : MonoBehaviour
     void _actionscale()
     {
         // Check if the object has a Rigidbody component
-        if (barang.GetComponent<Rigidbody>() != null)
+       /* if (barang.GetComponent<Rigidbody>() != null)
         {
             barang.GetComponent<Rigidbody>().isKinematic = false;
-        }
+        }*/
 
         Vector2 leftValue = inputActionLeftrotate.action.ReadValue<Vector2>();
         Vector2 rightValue = inputActionRightrotate.action.ReadValue<Vector2>();
@@ -445,7 +445,14 @@ public class UI_Interaction : MonoBehaviour
 
         if (barang.transform.parent != null)
         {
-            barang.transform.parent.transform.localScale += scaleChange;
+
+
+
+           
+             barang.transform.parent.transform.localScale += scaleChange;
+
+           
+
         }
         else
         {
@@ -536,10 +543,21 @@ public class UI_Interaction : MonoBehaviour
             barang.GetComponent<MeshCollider>().convex = true;
         if (barang.GetComponentInParent<MeshCollider>() != null)
             barang.GetComponentInParent<MeshCollider>().convex = true;
+        if (barang.GetComponentInParent<Rigidbody>() != null)
+        {
+            barang.GetComponentInParent<Rigidbody>().isKinematic = false;
+            barang.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
+        }
         if (barang.GetComponent<Rigidbody>() != null)
         {
-            Debug.Log("Rigid Body ada");
             barang.GetComponent<Rigidbody>().isKinematic = false;
+            barang.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
+
+        }
+        if (barang.GetComponentInChildren<Rigidbody>() != null)
+        {
+            barang.GetComponentInChildren<Rigidbody>().isKinematic = false;
+            barang.GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
 
         }
         SetControllerType(Controller.Scale);

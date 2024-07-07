@@ -61,7 +61,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!54 &2908335756200049941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 8001685327878931569}
   - component: {fileID: 1654760573871633135}
   - component: {fileID: 7201517567300398640}
+  - component: {fileID: 1186629438404672744}
   m_Layer: 0
   m_Name: Trash Can
   m_TagString: Untagged
@@ -361,3 +362,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1186629438404672744
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304140121837898395}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 8af37a57cb371f447b808515c123746c, type: 3}

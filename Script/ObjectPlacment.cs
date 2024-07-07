@@ -20,7 +20,8 @@ public class ObjectPlacment : XRGrabInteractable
             Furniture,
             WallDecor,
             CeilingLight,
-            Decoration
+            Decoration,
+            None
         }
 
         public ObjectType GetType()
@@ -330,7 +331,7 @@ public class ObjectPlacment : XRGrabInteractable
         foreach (var direction in raycastDirections)
         {
             
-            if (Physics.Raycast(transform.position, direction, out hit,2F))
+            if (Physics.Raycast(transform.position, direction, out hit,1F))
             {
                 if (hit.collider.CompareTag("Wall"))
                 {
@@ -370,12 +371,11 @@ public class ObjectPlacment : XRGrabInteractable
             }
             else
             {
-                Vector3 offset = closestNormal * 0.01f;
+                Vector3 offset = closestNormal * 0.05f;
                 Vector3 targetPosition = closestPoint + offset;
                 transform.position = targetPosition;
             }
 
-            // Rotate the object to face against the wall's normal.
             Quaternion targetRotation = Quaternion.LookRotation(-closestNormal, Vector3.up);
             transform.rotation = targetRotation;
 
@@ -423,81 +423,54 @@ public class ObjectPlacment : XRGrabInteractable
     }*/
 
     private bool PlaceOnSurface()
+{
+    RaycastHit hit;
+
+    if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
+    {
+        if (hit.collider.CompareTag("Surface"))
         {
-            RaycastHit hit;
-            HashSet<float> Jarak = new HashSet<float>();
-            float x;
-        
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
+            float hitY = hit.point.y;
+            float minY = hit.collider.bounds.min.y;
+            float centerY = hit.collider.bounds.center.y;
+            float maxY = hit.collider.bounds.max.y;
+
+            // Define a small offset to prevent the object from sinking below the surface
+            float offset = 0.01f;
+
+            if (Mathf.Approximately(hitY, minY))
             {
-                if (hit.collider.CompareTag("Surface"))
-                {
-                    float hitY = hit.point.y;
-                    float minY = hit.collider.bounds.min.y;
-                    float centerY = hit.collider.bounds.center.y;
-                    float maxY = hit.collider.bounds.max.y;
-
-                    if (Mathf.Approximately(hitY, minY))
-                    {
-
-                    transform.position = new Vector3(hit.point.x, minY, hit.point.z);
-                        Debug.Log("Hit at the bottom");
-                  //  transform.SetParent(hit.transform, true);
-                    Vector3 originalScale = transform.localScale;
-
-                    transform.localScale = originalScale;
-
-
-                }
-                else if (Mathf.Approximately(hitY, centerY))
-                    {
-                        transform.position = new Vector3(hit.point.x, centerY, hit.point.z);
-                        Debug.Log("Hit at the center");
-                    Vector3 originalScale = transform.localScale;
-
-                   // transform.SetParent(hit.transform,true);
-                    transform.localScale = originalScale;
-
-
-                }
-                else if (Mathf.Approximately(hitY, maxY))
-                    {
-                        transform.position = new Vector3(hit.point.x, maxY, hit.point.z);
-                        Debug.Log("Hit at the top");
-                    Vector3 originalScale = transform.localScale;
-
-                  //  transform.SetParent(hit.transform, true);
-                    transform.localScale = originalScale;
-
-
-                }
-                else
-                    {
-                    Vector3 originalScale = transform.localScale;
-
-                    transform.localScale = originalScale;
-                    transform.position = new Vector3(hit.point.x, hitY, hit.point.z);
-                   // transform.SetParent(hit.transform);
-
-                    Debug.Log("Hit somewhere in between");
-                    }
-
-                return true;
-
-
+                transform.position = new Vector3(hit.point.x, minY + offset, hit.point.z);
+                Debug.Log("Hit at the bottom");
             }
-           
+            else if (Mathf.Approximately(hitY, centerY))
+            {
+                transform.position = new Vector3(hit.point.x, centerY + offset, hit.point.z);
+                Debug.Log("Hit at the center");
+            }
+            else if (Mathf.Approximately(hitY, maxY))
+            {
+                transform.position = new Vector3(hit.point.x, maxY + offset, hit.point.z);
+                Debug.Log("Hit at the top");
+            }
+            else
+            {
+                transform.position = new Vector3(hit.point.x, hitY + offset, hit.point.z);
+                Debug.Log("Hit somewhere in between");
+            }
 
-
-
+            return true;
+        }
         }
         else
         {
-            transform.SetParent(null);
+            Debug.DrawRay(transform.position, Vector3.down, Color.red);
 
         }
+
         return false;
-        }
+}
+
 
  
         private void Update()

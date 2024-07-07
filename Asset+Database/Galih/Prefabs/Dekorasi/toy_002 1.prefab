@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 50fbd10abb1bf674981c5e42d73e5f3e,
         type: 3}
       propertyPath: m_Name
-      value: toy_002
+      value: toy_002 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 50fbd10abb1bf674981c5e42d73e5f3e,
         type: 3}
@@ -149,7 +149,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &4422541302229648172
 MonoBehaviour:
   m_ObjectHideFlags: 0

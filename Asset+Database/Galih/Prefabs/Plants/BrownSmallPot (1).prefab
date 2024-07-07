@@ -320,7 +320,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8659476528073433238}
     - renderer: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!65 &6171359978597221937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-5154846925831601409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +664,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1031145020, guid: 5ceb95693bb26d546b9a620747e48f59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031145021, guid: 5ceb95693bb26d546b9a620747e48f59, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8751446594313058170, guid: 5ceb95693bb26d546b9a620747e48f59, type: 3}
+    - {fileID: 2246654976713501936, guid: 5ceb95693bb26d546b9a620747e48f59, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

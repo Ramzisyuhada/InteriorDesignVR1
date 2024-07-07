@@ -7653,6 +7653,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1993838651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3187898354017475325, guid: c37ad744352bdcd46be42a0de28c0627,
+    type: 3}
+  m_PrefabInstance: {fileID: 2067792519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2023160703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8634,7 +8640,7 @@ PrefabInstance:
     - target: {fileID: 800824867618203459, guid: c37ad744352bdcd46be42a0de28c0627,
         type: 3}
       propertyPath: m_RenderShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 800824867618203459, guid: c37ad744352bdcd46be42a0de28c0627,
         type: 3}
@@ -10074,7 +10080,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 229861497}
+      objectReference: {fileID: 1993838651}
     - target: {fileID: 4261448202071293668, guid: 4f91d2812d5ec384985b51778d205451,
         type: 3}
       propertyPath: _canvas
@@ -10085,7 +10091,7 @@ PrefabInstance:
         type: 3}
       propertyPath: rayLeft
       value: 
-      objectReference: {fileID: 2092701775}
+      objectReference: {fileID: 0}
     - target: {fileID: 4261448202071293668, guid: 4f91d2812d5ec384985b51778d205451,
         type: 3}
       propertyPath: database
@@ -10096,7 +10102,7 @@ PrefabInstance:
         type: 3}
       propertyPath: rayRight
       value: 
-      objectReference: {fileID: 1540411297}
+      objectReference: {fileID: 0}
     - target: {fileID: 4261448202071293668, guid: 4f91d2812d5ec384985b51778d205451,
         type: 3}
       propertyPath: colorPicker
