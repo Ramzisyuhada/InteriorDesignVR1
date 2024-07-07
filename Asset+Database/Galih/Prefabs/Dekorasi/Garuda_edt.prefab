@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4326488839899227705}
   m_Layer: 0
   m_Name: Garuda_edt
-  m_TagString: Decoration
+  m_TagString: Wall Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 8639985632715705860, guid: ec1d74ecc5304c34fbd02f66e6835d82,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Wall Decoration
       objectReference: {fileID: 0}
     - target: {fileID: 8983754937868473534, guid: ec1d74ecc5304c34fbd02f66e6835d82,
         type: 3}
