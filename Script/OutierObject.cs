@@ -38,23 +38,23 @@ public class OutierObject : MonoBehaviour
             }
             highlight = null;
         }
-
-        if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit))
+        if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
+        {
+            HandleRaycastHit(raycastHit);
+        }
+       else if (rayLeft.TryGetCurrent3DRaycastHit(out raycastHit))
         {
             HandleRaycastHit(raycastHit);
         }
 
-        else if (rayRight.TryGetCurrent3DRaycastHit(out raycastHit))
-        {
-            HandleRaycastHit(raycastHit);
-        }
+       
 
         if (inputActionSelectLeft.action.WasPressedThisFrame())
         {
             HandleSelection(rayLeft);
         }
 
-         if (inputActionSelectRight.action.WasPressedThisFrame())
+        else if (inputActionSelectRight.action.WasPressedThisFrame())
         {
             HandleSelection(rayRight);
         }

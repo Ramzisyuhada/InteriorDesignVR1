@@ -11,8 +11,8 @@ public class CreateTag : MonoBehaviour
         Create("Walls");
         Create("Floor");
 
-        GameObject.Find("Plane").tag = "Floor";
-
+/*        GameObject.Find("Plane").tag = "Floor";
+*/
     }
 
     // Update is called once per frame

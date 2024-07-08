@@ -327,15 +327,21 @@ public class UI_Interaction : MonoBehaviour
             feature.Find("Scale").gameObject.SetActive(true);
             feature.Find("Hapus").gameObject.SetActive(true);
         }
-        else if(name == "Surface" || name == "Furniture" || name == "Decoration" || name == "Ceiling")
+        else if(name == "Surface" || name == "Furniture" || name == "Decoration" || name == "Ceiling" || name == "Partisi")
         {
             feature.Find("Rotate").gameObject.SetActive(true);
             feature.Find("Texture").gameObject.SetActive(false);
             feature.Find("Scale").gameObject.SetActive(true);
             feature.Find("Hapus").gameObject.SetActive(true);
 
+        }else if (name == "Ceiling")
+        {
+            feature.Find("Rotate").gameObject.SetActive(false);
+            feature.Find("Texture").gameObject.SetActive(false);
+            feature.Find("Scale").gameObject.SetActive(false);
+            feature.Find("Hapus").gameObject.SetActive(true);
         }
-        else if(name == "Floor" || name == "Wall")
+        else
         {
             feature.Find("Rotate").gameObject.SetActive(false);
             feature.Find("Texture").gameObject.SetActive(true);
@@ -516,19 +522,19 @@ public class UI_Interaction : MonoBehaviour
 
         if (barang.GetComponentInParent<Rigidbody>() != null)
         {
-            barang.GetComponentInParent<Rigidbody>().isKinematic = false;
-            barang.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+/*            barang.GetComponentInParent<Rigidbody>().isKinematic = false;
+*/            barang.GetComponentInParent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
         if (barang.GetComponent<Rigidbody>() != null)
         {
-            barang.GetComponent<Rigidbody>().isKinematic = false;
-            barang.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+/*            barang.GetComponent<Rigidbody>().isKinematic = false;
+*/            barang.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         }
         if (barang.GetComponentInChildren<Rigidbody>() != null)
         {
-            barang.GetComponentInChildren<Rigidbody>().isKinematic = false;
-            barang.GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+/*            barang.GetComponentInChildren<Rigidbody>().isKinematic = false;
+*/            barang.GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         }
         SetControllerType(Controller.Rotation);

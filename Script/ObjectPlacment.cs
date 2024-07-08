@@ -183,8 +183,10 @@ public class ObjectPlacment : XRGrabInteractable
         gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
         if (GetComponent<MeshCollider>() != null)
             GetComponent<MeshCollider>().convex = false;
+
         if (GetComponentInParent<MeshCollider>() != null)
             GetComponentInParent<MeshCollider>().convex = false;
+
         if (GetComponentInChildren<MeshCollider>() != null)
             GetComponentInChildren<MeshCollider>().convex = false;
 
@@ -204,11 +206,11 @@ public class ObjectPlacment : XRGrabInteractable
            {
                objectRenderer.material = _currentmaterial;
            }*/
-        if (!floorcheck && objectType == ObjectType.Furniture)
+    /*    if (!floorcheck && objectType == ObjectType.Furniture)
         {
             transform.position = _preposisiiton;
 
-        }
+        }*/
         Debug.Log(IsAboveOtherObject());
       /*  if (!floorcheck && objectType == ObjectType.Furniture)
         {
@@ -276,21 +278,20 @@ public class ObjectPlacment : XRGrabInteractable
                         objectCollider = GetComponentInChildren<Collider>();
                     }
 
-                        if (objectCollider != null)
-                        {
+                        
 
                             
                            
-                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + 0.01f, transform.position.z);
                                 transform.position = newPosition;
                             
 
                             return true;
-                        }
+                        
 
                 return true;
                     }
-                        else {
+                       /* else {
                         
                             Collider objectCollider = GetComponent<Collider>();
 
@@ -301,7 +302,7 @@ public class ObjectPlacment : XRGrabInteractable
                             }
                             return true;
 
-                        }
+                        }*/
 
 
 
