@@ -61,7 +61,7 @@ public class PertanyaanController : MonoBehaviour
             /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
             */
 
-            if (hitObject != null && hitObject.tag != "Pertanyaan")
+            if (hitObject != null && hitObject.tag == "Pertanyaan")
             {
                 ShowcanvasPertanyaan();
             }

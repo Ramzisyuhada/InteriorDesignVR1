@@ -255,10 +255,7 @@ public class UI_Interaction : MonoBehaviour
                 Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
 
             }
-            if(hitObject != null && hitObject.tag != "Pertanyaan")
-            {
-                ShowcanvasPertanyaan(barang);
-            }
+            
 
             if (hitObject.GetComponent<Canvas>() != null)
             {
@@ -267,24 +264,7 @@ public class UI_Interaction : MonoBehaviour
         }
     }
 
-    private void ShowcanvasPertanyaan(GameObject hitObject)
-    {
-        if (currentPertanyaan_canvas == null)
-        {
-            currentPertanyaan_canvas = Instantiate(_Canvas_pertanyaan);
-            Vector3 camera_posisition = Camera.main.transform.position;
-            Quaternion camera_rotation = Camera.main.transform.rotation;
-            Vector3 targetPosition = camera_posisition + camera_rotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z), 1f);
-
-            currentCanvas.transform.DORotate(camera_rotation.eulerAngles, 0.5f);
-
-            currentCanvas.transform.DORestart();
-
-
-        }
-        
-    }
+ 
     public void Close()
     {
         if(barang.transform.tag != "Floor")
