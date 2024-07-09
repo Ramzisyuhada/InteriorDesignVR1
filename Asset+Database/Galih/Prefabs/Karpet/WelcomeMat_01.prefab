@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9149581147297429241}
   - component: {fileID: -5995599198021403874}
   - component: {fileID: 1903936547624669899}
-  - component: {fileID: 5520419433291595687}
+  - component: {fileID: 4672234438556248874}
   m_Layer: 0
   m_Name: WelcomeMat_01
   m_TagString: Furniture
@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -269,8 +269,8 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
---- !u!64 &5520419433291595687
-MeshCollider:
+--- !u!65 &4672234438556248874
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -287,7 +287,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1670801646005314261, guid: 34e386a75bb8feb4aa0f48b512cbb268, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 1.0417813, y: 0.01575883, z: 1.8593765}
+  m_Center: {x: 0, y: 0.007879374, z: 0}

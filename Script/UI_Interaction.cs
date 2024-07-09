@@ -34,6 +34,8 @@ public class UI_Interaction : MonoBehaviour
     [SerializeField] private GameObject _canvas;
     [SerializeField]
     private GameObject colorpicker;
+    [SerializeField] private GameObject _Canvas_pertanyaan;
+
 
     [SerializeField]
 
@@ -41,6 +43,8 @@ public class UI_Interaction : MonoBehaviour
 
     private static GameObject static_player;
     private static GameObject currentCanvas;
+    private static GameObject currentPertanyaan_canvas;
+    private static float nilai1 ;
     private Vector3 originalCanvasScale;
     private Quaternion originalCanvasRotation;
 
@@ -214,43 +218,73 @@ public class UI_Interaction : MonoBehaviour
         bool inputActive = leftValue > 0.5f || rightValue > 0.5f;
         
         Debug.Log(inputActive);
-        if (inputActive)
-        {
+        
             UpdateControllerActiveState();
 
             int layerMaskUI = 1 << LayerMask.NameToLayer("Door");
             int layerMaskPlayer = 1 << LayerMask.NameToLayer("Player"); // Example: Layer for player
             int combinedLayerMask = layerMaskUI | layerMaskPlayer;
 
-            if (rayLeft.TryGetCurrent3DRaycastHit(out hit) || rayRight.TryGetCurrent3DRaycastHit(out hit))
+            if (rayLeft.TryGetCurrent3DRaycastHit(out hit) && inputActionLeft.action.WasPressedThisFrame())
             {
-                                    Debug.Log(hit.transform.tag);
+                _objectRaycast( hit);               
+            }
 
-                if (hit.collider != null)
-                {
-                    GameObject hitObject = hit.collider.gameObject;
-/*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
-*/                        if (hitObject != null && hitObject.tag != "Door")
-                        {
-                            static_player = player;
-                            barang = hitObject;
-                            setController(Controller.Default);
+            if (rayRight.TryGetCurrent3DRaycastHit(out hit) && inputActionRight.action.WasPressedThisFrame())
+            {
+                _objectRaycast(hit);
 
-                            gameobject = barang;
-                            ShowCanvas(barang);
-                            Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
+            }
 
-                    }
+    }
+    private void _objectRaycast(RaycastHit hit)
+    {
+        if (hit.collider != null)
+        {
+            GameObject hitObject = hit.collider.gameObject;
+            /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
+            */
+            if (hitObject != null && hitObject.tag != "Door")
+            {
+                static_player = player;
+                barang = hitObject;
+                setController(Controller.Default);
 
-                    if (hitObject.GetComponent<Canvas>() != null)
-                    {
-                        return;
-                    }
-                }
+                gameobject = barang;
+                ShowCanvas(barang);
+                Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
+
+            }
+            if(hitObject != null && hitObject.tag != "Pertanyaan")
+            {
+                ShowcanvasPertanyaan(barang);
+            }
+
+            if (hitObject.GetComponent<Canvas>() != null)
+            {
+                return;
             }
         }
     }
 
+    private void ShowcanvasPertanyaan(GameObject hitObject)
+    {
+        if (currentPertanyaan_canvas == null)
+        {
+            currentPertanyaan_canvas = Instantiate(_Canvas_pertanyaan);
+            Vector3 camera_posisition = Camera.main.transform.position;
+            Quaternion camera_rotation = Camera.main.transform.rotation;
+            Vector3 targetPosition = camera_posisition + camera_rotation * Vector3.forward * 2.5f;
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z), 1f);
+
+            currentCanvas.transform.DORotate(camera_rotation.eulerAngles, 0.5f);
+
+            currentCanvas.transform.DORestart();
+
+
+        }
+        
+    }
     public void Close()
     {
         if(barang.transform.tag != "Floor")
@@ -393,7 +427,7 @@ public class UI_Interaction : MonoBehaviour
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z),1f);
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z),1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 

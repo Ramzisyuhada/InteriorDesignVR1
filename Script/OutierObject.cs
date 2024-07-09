@@ -23,7 +23,7 @@ public class OutierObject : MonoBehaviour
         if (rayLeft == null && rayRight == null)
         {
             rayLeft = cameraobject.transform.GetChild(1).GetComponent<XRRayInteractor>();
-            rayRight = cameraobject.transform.GetChild(1).GetComponent<XRRayInteractor>();
+            rayRight = cameraobject.transform.GetChild(2).GetComponent<XRRayInteractor>();
 
         }
     }

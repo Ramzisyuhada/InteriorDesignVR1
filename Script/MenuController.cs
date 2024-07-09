@@ -72,7 +72,7 @@ public class MenuController : MonoBehaviour
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
                 Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
@@ -87,7 +87,7 @@ public class MenuController : MonoBehaviour
                 Quaternion cameraRotation = Camera.main.transform.rotation;
 
                 Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 4.5f;
-                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y / 2, targetPosition.z), 1f);
+                menucanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
 
                 menucanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 
