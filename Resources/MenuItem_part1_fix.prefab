@@ -120,7 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8592153065175880757}
   m_HandleRect: {fileID: 7091043713766286153}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1104,8 +1104,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1584957902830511227}
   m_HandleRect: {fileID: 1524985674067248315}
   m_Direction: 3
-  m_Value: 1.000001
-  m_Size: 0.25233588
+  m_Value: 0.9999976
+  m_Size: 0.25233606
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2312,8 +2312,8 @@ GameObject:
   - component: {fileID: 8709423520836626161}
   - component: {fileID: 5574448200665478061}
   - component: {fileID: 1952659226850251012}
-  - component: {fileID: 3595839928296691350}
   - component: {fileID: -4120090124776081492}
+  - component: {fileID: 3073725235505722751}
   m_Layer: 5
   m_Name: MenuItem_part1_fix
   m_TagString: Untagged
@@ -2338,7 +2338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 24.49, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 592, y: 177.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8709423520836626161
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1952659226850251012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,11 +2400,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3595839928296691350
+--- !u!222 &-4120090124776081492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497703370842192572}
+  m_CullTransparentMesh: 1
+--- !u!114 &3073725235505722751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2421,16 +2429,8 @@ MonoBehaviour:
   m_CheckFor3DOcclusion: 1
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 310
-  m_RaycastTriggerInteraction: 0
---- !u!222 &-4120090124776081492
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4497703370842192572}
-  m_CullTransparentMesh: 1
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &4554132175151041902
 GameObject:
   m_ObjectHideFlags: 0

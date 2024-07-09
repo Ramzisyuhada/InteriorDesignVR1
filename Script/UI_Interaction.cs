@@ -208,7 +208,6 @@ public class UI_Interaction : MonoBehaviour
     }
     private void getobject()
     {
-        if (IsPointerOverUIElement()) return;
 
         Ray ray = new Ray(GetRaycastOrigin(), GetRaycastDirection());
         RaycastHit hit;
@@ -239,12 +238,14 @@ public class UI_Interaction : MonoBehaviour
     }
     private void _objectRaycast(RaycastHit hit)
     {
+        if (IsPointerOverUIElement()) return;
+
         if (hit.collider != null)
         {
             GameObject hitObject = hit.collider.gameObject;
             /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
             */
-            if (hitObject != null && hitObject.tag != "Door")
+            if (hitObject != null && hitObject.tag != "Pertanyaan")
             {
                 static_player = player;
                 barang = hitObject;
@@ -367,6 +368,7 @@ public class UI_Interaction : MonoBehaviour
 
     {
         Debug.Log("asdasd");
+        GameObject player = GameObject.Find("XR Origin (XR Rig)");
 
         if (currentCanvas == null)
         {
@@ -375,7 +377,7 @@ public class UI_Interaction : MonoBehaviour
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z), 1f);
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y , targetPosition.z), 1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 0.5f);
 
@@ -407,7 +409,7 @@ public class UI_Interaction : MonoBehaviour
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y , targetPosition.z),1f);
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y, targetPosition.z),1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 

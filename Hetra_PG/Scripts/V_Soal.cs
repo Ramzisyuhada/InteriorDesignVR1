@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class V_Soal : MonoBehaviour
 {
@@ -39,9 +41,39 @@ public class V_Soal : MonoBehaviour
     [SerializeField] float jawabanBenar = 0;
     [SerializeField] float soalCurr = 0;
 
+
+    [Header("Controller")]
+    [SerializeField] private InputActionProperty inputActionLeft;
+    [SerializeField] private InputActionProperty inputActionRight;
+    [SerializeField] private XRRayInteractor rayLeft;
+    [SerializeField] private XRRayInteractor rayRight;
+
+
+    private GameObject g;
+
+    private XRController controller;
+    private static float nilai ;
     // Start is called before the first frame update
+
+
+    public void close()
+    {
+        GameObject obj = GameObject.Find("Pertanyaan(Clone)");
+        Destroy(obj != null ? obj : null);
+    }
     void Start()
     {
+        
+
+        if(nilai != null)
+        {
+            akurasiTMP.text = nilai.ToString("#.##") + "%";
+
+        }
+
+
+
+
         if (parentPilihanJawaban.transform.childCount == 0) return;
         
         banyakJawabanTersedia = parentPilihanJawaban.transform.childCount;
@@ -86,6 +118,7 @@ public class V_Soal : MonoBehaviour
         }
     }
 
+    
     public void CekJawaban()
     {
         //if( vm_soal.IsMenjawab(UnityEngine.EventSystems.EventSystem
@@ -99,8 +132,10 @@ public class V_Soal : MonoBehaviour
         //}
 
         // get GO UI
-        GameObject g = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
+
+         g = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        Debug.Log(g.gameObject.name);
         // cek jawaban
         bool cek = vm_soal.IsMenjawab(g.GetComponent<V_Temp>()._index, soalTerpilih.kunci);
 
@@ -128,6 +163,7 @@ public class V_Soal : MonoBehaviour
 
     float AkurasiJawabanBenar()
     {
+        nilai = (jawabanBenar / soalCurr) * 100;
         return (jawabanBenar / soalCurr) * 100;
     }
 

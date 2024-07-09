@@ -445,7 +445,7 @@ public class MenuController : MonoBehaviour
     {
 
         Vector3 cameraPosition = Camera.main.transform.position ;
-        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward ;
+        Vector3 objectPosition = cameraPosition + Camera.main.transform.forward * 2;
 /*        objectPosition.y = objectPosition.y  ;
 *//*        objectPosition.z = objectPosition.z * 2;
 */
@@ -458,9 +458,10 @@ public class MenuController : MonoBehaviour
         // Membuat rotasi target
         Quaternion rotasiTarget = Quaternion.Euler(rotasiObjekTerpilih.x, rotasiYSumbuTerdekat, rotasiObjekTerpilih.z);
 
-       
+        GameObject player = GameObject.Find("XR Origin (XR Rig)");
 
 
+        objectPosition.y = player.transform.position.y + 1;
 
         GameObject instantiatedItem = Instantiate(selectedObject, objectPosition, rotasiTarget);
 
