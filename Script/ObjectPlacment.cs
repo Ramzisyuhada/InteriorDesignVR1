@@ -332,7 +332,7 @@ public class ObjectPlacment : XRGrabInteractable
         foreach (var direction in raycastDirections)
         {
             
-            if (Physics.Raycast(transform.position, direction, out hit,1F))
+            if (Physics.Raycast(transform.position, direction, out hit,2F))
             {
                 if (hit.collider.CompareTag("Wall"))
                 {
