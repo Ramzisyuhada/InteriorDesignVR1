@@ -76,13 +76,14 @@ public class PertanyaanController : MonoBehaviour
 
     private void ShowcanvasPertanyaan()
     {
+        GameObject player = GameObject.Find("XR Origin (XR Rig)"); 
         if (currentPertanyaan_canvas == null)
         {
             currentPertanyaan_canvas = Instantiate(_Canvas_pertanyaan);
             Vector3 camera_posisition = Camera.main.transform.position;
             Quaternion camera_rotation = Camera.main.transform.rotation;
-            Vector3 targetPosition = camera_posisition + camera_rotation * Vector3.forward * 2.5f;
-            currentPertanyaan_canvas.transform.DOMove(new Vector3(targetPosition.x, targetPosition.y, targetPosition.z), 1f);
+            Vector3 targetPosition = camera_posisition + camera_rotation * Vector3.forward * 4.5f;
+            currentPertanyaan_canvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y+1, targetPosition.z), 1f);
 
             currentPertanyaan_canvas.transform.DORotate(camera_rotation.eulerAngles, 0.5f);
 
