@@ -377,7 +377,7 @@ public class UI_Interaction : MonoBehaviour
             Vector3 cameraPosition = Camera.main.transform.position;
             Quaternion cameraRotation = Camera.main.transform.rotation;
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y , targetPosition.z), 1f);
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y + 1 , targetPosition.z), 1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 0.5f);
 
@@ -409,7 +409,7 @@ public class UI_Interaction : MonoBehaviour
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
             Vector3 targetPosition = cameraPosition + cameraRotation * Vector3.forward * 2.5f;
-            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y, targetPosition.z),1f);
+            currentCanvas.transform.DOMove(new Vector3(targetPosition.x, player.transform.position.y + 1, targetPosition.z),1f);
 
             currentCanvas.transform.DORotate(cameraRotation.eulerAngles, 1f);
 

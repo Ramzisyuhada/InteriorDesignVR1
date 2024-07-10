@@ -135,7 +135,6 @@ public class V_Soal : MonoBehaviour
 
 
          g = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-        Debug.Log(g.gameObject.name);
         // cek jawaban
         bool cek = vm_soal.IsMenjawab(g.GetComponent<V_Temp>()._index, soalTerpilih.kunci);
 

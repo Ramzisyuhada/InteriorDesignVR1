@@ -12,7 +12,7 @@ public class CheckColliderOpendor : MonoBehaviour
 
     private GameObject _menu;
     private GameObject _Interaction;
-    private bool menuIsActive = false;
+    private static bool menuIsActive = false;
         
 
     
