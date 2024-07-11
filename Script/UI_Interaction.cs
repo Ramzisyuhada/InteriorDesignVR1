@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using DG.Tweening;
 using UnityEngine.EventSystems;
-using static UnityEditorInternal.ReorderableList;
 using static ObjectPlacment;
 using System.Linq;
 using Unity.VisualScripting;

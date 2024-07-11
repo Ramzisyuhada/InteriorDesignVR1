@@ -7,7 +7,6 @@
     using LibCSG;
     using static UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction;
 using static UI_Interaction;
-using UnityEditor.AssetImporters;
 using System;
 using UnityEngine.UIElements;
 using System.Xml.Linq;
