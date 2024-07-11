@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: -7321363151695634771}
   m_Layer: 0
   m_Name: (Prb)CeilingLight2
-  m_TagString: Ceiling
+  m_TagString: Lampu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

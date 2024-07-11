@@ -173,6 +173,6 @@ public class OutierObject : MonoBehaviour
         return transform.CompareTag("Surface") || transform.CompareTag("Decoration") ||
                transform.CompareTag("Wall") || transform.CompareTag("Wall Decoration") ||
                transform.CompareTag("Furniture") || transform.CompareTag("Door") ||
-               transform.CompareTag("Ceiling") || transform.CompareTag("Pertanyaan");
+               transform.CompareTag("Pertanyaan") || transform.CompareTag("Partisi") || transform.CompareTag("Lampu");
     }
 }

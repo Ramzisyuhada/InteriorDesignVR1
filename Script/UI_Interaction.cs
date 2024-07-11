@@ -244,7 +244,7 @@ public class UI_Interaction : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
             /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
             */
-            if (hitObject != null && hitObject.tag != "Pertanyaan")
+            if (hitObject != null && (hitObject.tag != "Pertanyaan" && hitObject.tag != "Floor" && hitObject.tag != "Ceiling"))
             {
                 static_player = player;
                 barang = hitObject;
@@ -348,7 +348,7 @@ public class UI_Interaction : MonoBehaviour
             feature.Find("Scale").gameObject.SetActive(true);
             feature.Find("Hapus").gameObject.SetActive(true);
 
-        }else if (name == "Ceiling")
+        }else if (name == "Lampu")
         {
             feature.Find("Rotate").gameObject.SetActive(false);
             feature.Find("Texture").gameObject.SetActive(false);

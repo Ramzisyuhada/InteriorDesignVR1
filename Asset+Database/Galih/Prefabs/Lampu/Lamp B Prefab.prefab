@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 8302023652112400605}
   m_Layer: 0
   m_Name: Lamp B Prefab
-  m_TagString: Ceiling
+  m_TagString: Lampu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

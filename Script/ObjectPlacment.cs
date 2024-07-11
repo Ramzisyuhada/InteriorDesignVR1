@@ -10,6 +10,7 @@ using static UI_Interaction;
 using System;
 using UnityEngine.UIElements;
 using System.Xml.Linq;
+using UnityEditor.Presets;
 
 public class ObjectPlacment : XRGrabInteractable
     {
@@ -327,11 +328,15 @@ public class ObjectPlacment : XRGrabInteractable
         float closestDistance = Mathf.Infinity;
         Vector3 closestNormal = Vector3.zero;
         Vector3 closestPoint = Vector3.zero;
-        
+        float dir = 1f; 
+        if(transform.gameObject.name == "Garuda_edt(Clone)" || transform.gameObject.name == "Pres_edt(Clone)" || transform.gameObject.name == "Wapres_edt(Clone)")
+        {
+            dir = 0.5f;
+        }
         foreach (var direction in raycastDirections)
         {
             
-            if (Physics.Raycast(transform.position, direction, out hit,2F))
+            if (Physics.Raycast(transform.position, direction, out hit, dir))
             {
                 if (hit.collider.CompareTag("Wall"))
                 {
