@@ -95,7 +95,9 @@ public class MenuController : MonoBehaviour
 
                 DOTween.Play(menucanvas);
             }
-            Destroy(GameObject.Find("Canvas 1(Clone)"));
+            if (GameObject.Find("Canvas 1(Clone)") != null ) Destroy(GameObject.Find("Canvas 1(Clone)"));
+            if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
+
 
         }
 
@@ -142,8 +144,9 @@ public class MenuController : MonoBehaviour
 
                 DOTween.Play(menucanvas);
             }
-            Destroy(GameObject.Find("Canvas 1(Clone)"));
-
+            if (GameObject.Find("Canvas 1(Clone)") != null) Destroy(GameObject.Find("Canvas 1(Clone)"));
+            if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
+            if (GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
 
         }
 

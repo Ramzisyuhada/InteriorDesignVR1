@@ -33,6 +33,8 @@ public class CheckColliderOpendor : MonoBehaviour
                 _Interaction.SetActive(false);
                 menuIsActive = false;
             StartCoroutine(Jeda());
+           /* if (GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
+            if (GameObject.Find("Canvas 1(Clone)") != null) Destroy(GameObject.Find("Canvas 1(Clone)"));*/
 
         }
     }

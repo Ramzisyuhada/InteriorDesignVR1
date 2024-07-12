@@ -251,11 +251,15 @@ public class UI_Interaction : MonoBehaviour
                 setController(Controller.Default);
 
                 gameobject = barang;
+                if(GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
+                if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
+                if (GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
+
                 ShowCanvas(barang);
-                Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
+
 
             }
-            
+
 
             if (hitObject.GetComponent<Canvas>() != null)
             {
@@ -286,7 +290,8 @@ public class UI_Interaction : MonoBehaviour
             barang.GetComponentInParent<MeshCollider>().convex = true;
         Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = true;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = true;
         Destroy(currentCanvas);
 
     }
