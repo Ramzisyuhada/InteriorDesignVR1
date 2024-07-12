@@ -10,7 +10,6 @@ using static UI_Interaction;
 using System;
 using UnityEngine.UIElements;
 using System.Xml.Linq;
-using UnityEditor.Presets;
 
 public class ObjectPlacment : XRGrabInteractable
     {
@@ -124,9 +123,9 @@ public class ObjectPlacment : XRGrabInteractable
 
         }
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-                gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
-
-                originalPosition = transform.position;
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = false;
+        originalPosition = transform.position;
                 /*   if (_material != null)
                    {
                        objectRenderer.material = _material;
@@ -180,7 +179,9 @@ public class ObjectPlacment : XRGrabInteractable
 
         base.OnSelectExited(args);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = true;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = true;
+
         if (GetComponent<MeshCollider>() != null)
             GetComponent<MeshCollider>().convex = false;
 

@@ -554,7 +554,8 @@ public class UI_Interaction : MonoBehaviour
         }
         SetControllerType(Controller.Rotation);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = false;
     }
     public void Scake()
     {
@@ -583,14 +584,16 @@ public class UI_Interaction : MonoBehaviour
         }
         SetControllerType(Controller.Scale);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = false;
     }
     public void Texture1()
     {
 
         SetControllerType(Controller.Texture);
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(false);
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = false;
     }
 
     public void Destroy1()
@@ -598,8 +601,8 @@ public class UI_Interaction : MonoBehaviour
         SetControllerType(Controller.None);
 
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
-        gameObject.transform.Find("Locomotion System").gameObject.SetActive(true);
-
+        gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = true;
+        gameObject.GetComponent<ContinuousMoveProviderBase>().enabled = true;
 
 
 
