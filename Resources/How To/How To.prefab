@@ -229,9 +229,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4592925922250285198, guid: 57fb3eb382978954f9771f17026039c0,
-          type: 3}
-        m_TargetAssemblyTypeName: TutorialController, Assembly-CSharp
+      - m_Target: {fileID: 8505823149894306118}
+        m_TargetAssemblyTypeName: V_HowTo, Assembly-CSharp
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -362,10 +361,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4592925922250285198, guid: 57fb3eb382978954f9771f17026039c0,
-          type: 3}
-        m_TargetAssemblyTypeName: TutorialController, Assembly-CSharp
-        m_MethodName: _prevButton
+      - m_Target: {fileID: 8505823149894306118}
+        m_TargetAssemblyTypeName: V_HowTo, Assembly-CSharp
+        m_MethodName: _prev
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -386,6 +384,7 @@ GameObject:
   - component: {fileID: 8573257112921340499}
   - component: {fileID: 6967767813526795005}
   - component: {fileID: 290220584148943026}
+  - component: {fileID: 8505823149894306118}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -452,6 +451,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8505823149894306118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8235784534178262546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f21fc718567de43b33b79901c0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7f177895e2d289b4a83bab0b3863ac05, type: 2}
+  image: {fileID: 5037249973994203900}
 --- !u!1 &8834581641443867503
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,10 +585,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4592925922250285198, guid: 57fb3eb382978954f9771f17026039c0,
-          type: 3}
-        m_TargetAssemblyTypeName: TutorialController, Assembly-CSharp
-        m_MethodName: _nextButton
+      - m_Target: {fileID: 8505823149894306118}
+        m_TargetAssemblyTypeName: V_HowTo, Assembly-CSharp
+        m_MethodName: _next
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -706,7 +718,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8089862381811752979, guid: 0eabe8a874441c94bb85b96d61874a4a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2772580664832208743}
   m_SourcePrefab: {fileID: 100100000, guid: 0eabe8a874441c94bb85b96d61874a4a, type: 3}
 --- !u!224 &1009859971065363828 stripped
 RectTransform:
@@ -714,3 +730,35 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5232536257351121844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4096378976781245351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8089862381811752979, guid: 0eabe8a874441c94bb85b96d61874a4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232536257351121844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2772580664832208743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096378976781245351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f21fc718567de43b33b79901c0fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 7f177895e2d289b4a83bab0b3863ac05, type: 2}
+  image: {fileID: 5037249973994203900}
+--- !u!114 &5037249973994203900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 971190001033728328, guid: 0eabe8a874441c94bb85b96d61874a4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232536257351121844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096378976781245351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

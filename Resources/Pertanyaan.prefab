@@ -801,6 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6756942951349598008, guid: 3a4f744be211a0643954b13bdc896902,
         type: 3}
+      propertyPath: soalsoal.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756942951349598008, guid: 3a4f744be211a0643954b13bdc896902,
+        type: 3}
       propertyPath: inputActionLeft.m_Action.m_Name
       value: Input Action Left
       objectReference: {fileID: 0}

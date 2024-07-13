@@ -21,7 +21,7 @@ public class TutorialController : MonoBehaviour
     {
         if (GameObject.Find("How To(Clone)") != null)Destroy(GameObject.Find("How To(Clone)"));
     }
-    private void _Findcanvas()
+   /* private void _Findcanvas()
     {
         displayImage =  GameObject.Find("How To(Clone)").transform.GetChild(2).GetChild(1).GetComponent<Image>();
     }
@@ -35,7 +35,7 @@ public class TutorialController : MonoBehaviour
                 displayImage.sprite = Gambar[currentIndex];
             }
         }
-    }
+    }*/
 
     public void _showCanvas()
     {
@@ -71,7 +71,7 @@ public class TutorialController : MonoBehaviour
         if(GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
 
     }
-    public void _nextButton()
+    /*public void _nextButton()
     {
         if (Gambar.Count == 0) return;
 
@@ -98,5 +98,5 @@ public class TutorialController : MonoBehaviour
         }
 
         displayImage.sprite = Gambar[currentIndex];
-    }
+    }*/
 }
