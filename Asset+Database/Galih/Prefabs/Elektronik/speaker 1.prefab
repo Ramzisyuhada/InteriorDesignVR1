@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 3679094440993560656}
   - component: {fileID: 9199520010244346980}
   - component: {fileID: 6498964701910888043}
-  - component: {fileID: 6892172153942529414}
   m_Layer: 0
   m_Name: speaker 1
-  m_TagString: Untagged
+  m_TagString: Decoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,27 +217,6 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
---- !u!65 &6892172153942529414
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6562903043590896498}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.18684763, y: 0.18782847, z: 0.12174317}
-  m_Center: {x: 0, y: 0.08, z: 0}
 --- !u!1001 &3089562461912528578
 PrefabInstance:
   m_ObjectHideFlags: 0

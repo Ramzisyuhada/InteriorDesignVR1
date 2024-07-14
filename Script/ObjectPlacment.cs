@@ -329,7 +329,7 @@ public class ObjectPlacment : XRGrabInteractable
         float closestDistance = Mathf.Infinity;
         Vector3 closestNormal = Vector3.zero;
         Vector3 closestPoint = Vector3.zero;
-        float dir = 1f; 
+        float dir = 2f; 
         if(transform.gameObject.name == "Garuda_edt(Clone)" || transform.gameObject.name == "Pres_edt(Clone)" || transform.gameObject.name == "Wapres_edt(Clone)")
         {
             dir = 0.5f;

@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 1957979691112508774}
   - component: {fileID: 182452831243076355}
   - component: {fileID: 8496615379371033742}
-  - component: {fileID: 6354042097419917295}
+  - component: {fileID: 8327112878738956023}
   m_Layer: 0
   m_Name: desk2_base
   m_TagString: Surface
@@ -475,8 +475,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6354042097419917295
-BoxCollider:
+--- !u!64 &8327112878738956023
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -493,9 +493,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.101547, y: 0.94480604, z: 1.86553}
-  m_Center: {x: -0.044774175, y: 0.47619978, z: -0.0030423105}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3722170503078652854, guid: e0d31913657846c4e9344974cc7f73dd, type: 3}
 --- !u!1 &6270329933509365550
 GameObject:
   m_ObjectHideFlags: 0

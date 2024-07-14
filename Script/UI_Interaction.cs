@@ -195,7 +195,8 @@ public class UI_Interaction : MonoBehaviour
        
         if (barang.transform.parent != null)
         {
-            barang.transform.parent.transform.Rotate(0, rotationAmount, 0, Space.Self);
+            ;
+            barang.transform.parent.Rotate(0, rotationAmount, 0, Space.Self);
 
         }
         else
@@ -244,13 +245,22 @@ public class UI_Interaction : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
             /*                    if (barang != null) barang.GetComponent<Rigidbody>().isKinematic = true;
             */
-            if (hitObject != null && (hitObject.tag != "Pertanyaan" && hitObject.tag != "Floor" && hitObject.tag != "Ceiling"))
+            if ((hit.transform.gameObject.tag != "Pertanyaan" && hit.transform.gameObject.tag != "Floor" && hit.transform.gameObject.tag != "Ceiling"))
             {
                 static_player = player;
-                barang = hitObject;
+                /* if (hit.transform != null && hit.transform.parent != null)
+                 {
+                     Debug.Log(hit.transform.parent.gameObject.name);
+                     barang = hit.transform.parent.gameObject;
+                 }
+                 else
+                 {*/
+                Debug.Log(hitObject.transform.gameObject.name);
+
+                barang = hit.transform.gameObject;
+                gameobject = barang.gameObject;
                 setController(Controller.Default);
 
-                gameobject = barang;
                 if(GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
                 if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
                 if (GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
@@ -261,10 +271,10 @@ public class UI_Interaction : MonoBehaviour
             }
 
 
-            if (hitObject.GetComponent<Canvas>() != null)
+            /*if (hitObject.GetComponent<Canvas>() != null)
             {
                 return;
-            }
+            }*/
         }
     }
 

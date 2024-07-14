@@ -293,14 +293,6 @@ MonoBehaviour:
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: b2f77ec546977dd4d846699634ae6534,
       type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: Map
-    <id>k__BackingField: 35
-    <prefab>k__BackingField: {fileID: 1398788530390132, guid: 9b19a44036ac44243a6c69a62bcfdbdf,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: b2f77ec546977dd4d846699634ae6534,
-      type: 3}
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Phone
     <id>k__BackingField: 36
@@ -348,14 +340,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: baf6c304cf7a90241830c5d3ad044010,
-      type: 3}
-  - <Jenis>k__BackingField: Elektronik
-    <name>k__BackingField: Pendeteksi Asap
-    <id>k__BackingField: 42
-    <prefab>k__BackingField: {fileID: 4763749918957636779, guid: 76a7e6c2e588e024d85efa115fe688c2,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 8aff2dd1376496d4c909449f9610d3a0,
       type: 3}
   - <Jenis>k__BackingField: Lampu
     <name>k__BackingField: LampuAtap1
@@ -693,14 +677,6 @@ MonoBehaviour:
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 19286c914eeab3746b4bcca254892692,
       type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: PapanPin
-    <id>k__BackingField: 85
-    <prefab>k__BackingField: {fileID: 8819110661602970734, guid: e9b08a9384c07594e8fb6a93035efc80,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 490ed8c18f47d2149803be25b5ef76e7,
-      type: 3}
   - <Jenis>k__BackingField: Kursi
     <name>k__BackingField: KursiKecil
     <id>k__BackingField: 86
@@ -956,14 +932,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 4fe7f8bc4a0bfae4dbaa257ba255e3a3,
-      type: 3}
-  - <Jenis>k__BackingField: Toilet
-    <name>k__BackingField: Wastafel
-    <id>k__BackingField: 119
-    <prefab>k__BackingField: {fileID: 1099115644982046, guid: b1295682df892f4458bfeed5b1cc271f,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 3a9c8f33520ed7245afedc0a7d3d7ca8,
       type: 3}
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Monitor Sekuriti
@@ -1430,14 +1398,6 @@ MonoBehaviour:
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 37b7933f13b45a546a0980d201ca90ff,
       type: 3}
   - <Jenis>k__BackingField: Kursi & Sofa
-    <name>k__BackingField: Bangku
-    <id>k__BackingField: 179
-    <prefab>k__BackingField: {fileID: 186889521332780645, guid: 0a29a6c2fa3f00d4588b183f328bccfe,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 514b9e2e59f2b4b4881c41752af5c85d,
-      type: 3}
-  - <Jenis>k__BackingField: Kursi & Sofa
     <name>k__BackingField: Kursi Kerja Jaring
     <id>k__BackingField: 180
     <prefab>k__BackingField: {fileID: 1361454359923718, guid: f9e7055c6d8701d419f91d08a8f1a41b,
@@ -1476,22 +1436,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: c482eedf05208394292f0cef714527ef,
-      type: 3}
-  - <Jenis>k__BackingField: Kursi & Sofa
-    <name>k__BackingField: Sofa Putih
-    <id>k__BackingField: 187
-    <prefab>k__BackingField: {fileID: 7592977215538603244, guid: 302076e25a418954fb6acadb8434b8f6,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: ecf543b0de131d140a68b8ea78b05a92,
-      type: 3}
-  - <Jenis>k__BackingField: Kursi & Sofa
-    <name>k__BackingField: bangku panjang
-    <id>k__BackingField: 188
-    <prefab>k__BackingField: {fileID: 7592977215538603244, guid: 302076e25a418954fb6acadb8434b8f6,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 7127a0288ebbb9f43a4b594df6f49fe0,
       type: 3}
   - <Jenis>k__BackingField: Kursi & Sofa
     <name>k__BackingField: Sofa Coklat
