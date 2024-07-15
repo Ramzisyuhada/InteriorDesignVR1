@@ -74,11 +74,11 @@ public class V_Music : MonoBehaviour
         }
         handlingDropdownChange = true;
 
-        // Lakukan manipulasi UI atau data berdasarkan perubahan dropdown
-        // ...
+   
 
         var selectedItem = m_Musiic.m_MusiicList[value];
-
+        audio.clip = selectedItem;
+        audio.Play();
         Debug.Log("Selected item: " + selectedItem.name);
         handlingDropdownChange = false;
 
@@ -88,7 +88,7 @@ public class V_Music : MonoBehaviour
 
     private void Update()
     {
-        if (!isCoroutineRunning && dropdown.transform.childCount > 3 && eventSystem.IsPointerOverGameObject())
+        if (!isCoroutineRunning &&  eventSystem.IsPointerOverGameObject() && eventSystem.currentSelectedGameObject != null && eventSystem.currentSelectedGameObject.name == "Dropdown")
         {
             StartCoroutine(FindList());
         }
