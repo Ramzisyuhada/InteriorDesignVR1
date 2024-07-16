@@ -803,7 +803,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5104531401931185896}
+        m_TargetAssemblyTypeName: V_Music, Assembly-CSharp
+        m_MethodName: Volome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1910842147692345607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1344,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 98b7a62b9155fc8409e7aeb055c90a9f, type: 3}
   audio: {fileID: 0}
   toggleGroup: {fileID: 1872607378690990431}
+  slider: {fileID: 8111522010623493803}
+  _icon: {fileID: 21300000, guid: c4b89f0fa94aaf04b94df97b55850e38, type: 3}
+  Gambar: {fileID: 6868741890686580284}
   eventSystem: {fileID: 0}
 --- !u!114 &962469129095619565
 MonoBehaviour:
@@ -1375,7 +1390,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3739693595604406806}
   m_Template: {fileID: 5602454123373342906}
-  m_CaptionText: {fileID: 0}
+  m_CaptionText: {fileID: 7685635611391798569}
   m_CaptionImage: {fileID: 0}
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 2650892899844700596}
@@ -1473,7 +1488,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &3403892261696956771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,8 +1523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0495, y: 0.102}
-  m_SizeDelta: {x: 2.4583, y: 0.2587}
+  m_AnchoredPosition: {x: -0.93932, y: 0.102}
+  m_SizeDelta: {x: 0.48065, y: 0.2587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8161282331994956464
 CanvasRenderer:
@@ -1539,7 +1554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1573,7 +1588,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2122,8 +2137,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: V_HowTo, Assembly-CSharp
+      - m_Target: {fileID: 6732866101920236259, guid: b0c4fc898964bf64db01ecef100f7c7f,
+          type: 3}
+        m_TargetAssemblyTypeName: MusicController, Assembly-CSharp
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -2444,7 +2460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3420,7 +3436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6868741890686580284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5104531401931185896}
+        m_TargetAssemblyTypeName: V_Music, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7624385395485073812
 GameObject:
   m_ObjectHideFlags: 0

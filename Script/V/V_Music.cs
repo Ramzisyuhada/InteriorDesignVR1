@@ -5,18 +5,21 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class V_Music : MonoBehaviour
 {
     [SerializeField] M_Musiic m_Musiic;
     [SerializeField] AudioSource audio;
-    [SerializeField] private ToggleGroup toggleGroup;  
-
+    [SerializeField] private ToggleGroup toggleGroup;
+    [SerializeField] Slider slider;
+    [SerializeField] Sprite _icon;
+    [SerializeField] Image Gambar;
     private ScrollRect ScrollRect;
     private GameObject Content;
     private GameObject Item;
-
+    private static Sprite _icon1;
     public EventSystem eventSystem;
 
     private TMP_Dropdown dropdown;
@@ -26,27 +29,61 @@ public class V_Music : MonoBehaviour
     private GameObject blocker;
     bool handlingDropdownChange;
 
+   
     private void Start()
     {
-        audio = Camera.main.GetComponent<AudioSource>();
 
-        // Cache EventSystem once
-        eventSystem = EventSystem.current;
+
+        _icon1 = Gambar.sprite;
+        audio = Camera.main.GetComponent<AudioSource>();
+        if (audio.clip != null)
+        {
+            slider.value = audio.volume;
+        }
+
+            // Cache EventSystem once
+            eventSystem = EventSystem.current;
 
         dropdown = GetComponent<TMP_Dropdown>();
-
+        
         InstantiateItem(m_Musiic.m_MusiicList.Count);
+        slider.onValueChanged.AddListener(delegate { Volume_music(); });
+
+    }
+
+
+    void DestroyCanvas()
+    {
+        
+    }
+    public void PlayMusic()
+    {
+        if(audio.isPlaying)
+        {
+            audio.Pause();
+            Gambar.sprite = _icon1;
+
+        }
+        else
+        {
+            Gambar.sprite = _icon;
+            audio.Play();
+
+        }
+    }
+    private void Volume_music()
+    {
+        audio.volume = slider.value;
     }
     void OnToggleValueChanged(bool newValue)
     {
         Debug.Log("Toggle value changed to: " + newValue);
     }
-    // Function to create item objects based on the song list
     private void InstantiateItem(int length)
     {
         if (m_Musiic == null || m_Musiic.m_MusiicList == null)
         {
-            Debug.LogWarning("Music list not initialized.");
+            Debug.LogWarning("Music tidak di inisialisasi.");
             return;
         }
 
@@ -78,7 +115,13 @@ public class V_Music : MonoBehaviour
 
         var selectedItem = m_Musiic.m_MusiicList[value];
         audio.clip = selectedItem;
-        audio.Play();
+        if (!audio.isPlaying)
+        {
+            Gambar.sprite = _icon1;
+
+        }
+
+        slider.value = audio.volume;
         Debug.Log("Selected item: " + selectedItem.name);
         handlingDropdownChange = false;
 
@@ -108,5 +151,6 @@ public class V_Music : MonoBehaviour
         }
         isCoroutineRunning = false;
     }
+
 
 }
