@@ -17,7 +17,8 @@ public class CheckColliderOpendor : MonoBehaviour
     
         void OnTriggerEnter(Collider other)
         {
-            if (!_menu.activeSelf && !menuIsActive)
+            if (!_menu.activeSelf && !menuIsActive 
+            && other.CompareTag("Player"))
             {
             _menu.SetActive(true);
                 _Interaction.SetActive(true);
@@ -26,7 +27,7 @@ public class CheckColliderOpendor : MonoBehaviour
             StartCoroutine(Jeda());
 
         }
-       else  if (_menu.activeSelf && menuIsActive)
+       else  if (_menu.activeSelf && menuIsActive && other.CompareTag("Player"))
             {
 
             _menu.SetActive(false);

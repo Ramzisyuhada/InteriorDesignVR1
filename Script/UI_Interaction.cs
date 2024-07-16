@@ -264,6 +264,7 @@ public class UI_Interaction : MonoBehaviour
                 if(GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
                 if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
                 if (GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
+                if (GameObject.Find("Menu(Clone)") != null) Destroy(GameObject.Find("Menu(Clone)"));
 
                 ShowCanvas(barang);
 

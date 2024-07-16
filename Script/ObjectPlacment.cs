@@ -10,6 +10,9 @@ using static UI_Interaction;
 using System;
 using UnityEngine.UIElements;
 using System.Xml.Linq;
+using Unity.VisualScripting;
+using TMPro;
+using WallPen;
 
 public class ObjectPlacment : XRGrabInteractable
     {
@@ -262,224 +265,227 @@ public class ObjectPlacment : XRGrabInteractable
         }
     
     private bool PlaceOnFloor()
+     {
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
         {
-                RaycastHit hit;
-                int layerMask = LayerMask.GetMask("Floor"); 
-               
-
-        if (Physics.Raycast(transform.position, Vector3.down , out hit,1f))
+            if (hit.transform.CompareTag("Floor"))
+            {
+                // Check if there's an object directly below the new position
+                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + 0.01f, transform.position.z);
+                Collider[] colliders = Physics.OverlapSphere(newPosition, 0.01f);
+                bool isOccupied = false;
+                foreach (var collider in colliders)
                 {
-
-                    if (hit.collider.CompareTag("Floor"))
+                    if (collider.gameObject != gameObject && !collider.CompareTag("Floor"))
                     {
-                    Collider objectCollider = GetComponent<Collider>();
-
-                    if (objectCollider == null)
-                    {
-                        objectCollider = GetComponentInChildren<Collider>();
+                        // There is another object in the way
+                        isOccupied = true;
+                        break;
                     }
-
-                        
-
-                            
-                           
-                                Vector3 newPosition = new Vector3(transform.position.x, hit.point.y + 0.01f, transform.position.z);
-                                transform.position = newPosition;
-                            
-
-                            return true;
-                        
-
-                return true;
-                    }
-                       /* else {
-                        
-                            Collider objectCollider = GetComponent<Collider>();
-
-                            if (objectCollider != null)
-                            {
-                                float objectHeight = objectCollider.bounds.size.y;
-                                transform.position = new Vector3(transform.position.x, hit.point.y+ objectHeight, transform.position.z);
-                            }
-                            return true;
-
-                        }*/
-
-
-
-
                 }
-                else
+
+                if (!isOccupied)
                 {
-                    Debug.DrawRay(transform.position, Vector3.down * 2, Color.red);
-
+                    transform.position = newPosition;
+                    return true;
                 }
-        /*        Debug.DrawRay(transform.position, Vector3.right, Color.red);
-        */
+            }
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 2, Color.red);
+        }
 
         return false;
-        }
+    }
+    GameObject asd;
 
     private bool PlaceOnWall()
     {
         RaycastHit hit;
-        Vector3[] raycastDirections = { transform.forward, transform.right, -transform.right };
+        List<Vector3> raycastDirections = new List<Vector3> { transform.forward, transform.right, -transform.right };
 
         bool wallFound = false;
-        float closestDistance = Mathf.Infinity;
+        float closestDistance =Mathf.Infinity;
         Vector3 closestNormal = Vector3.zero;
         Vector3 closestPoint = Vector3.zero;
-        float dir = 2f; 
+        Vector3 offset1 = Vector3.zero;
+        Vector3 originalPosition = transform.position;
+        float dir = 1f; 
         if(transform.gameObject.name == "Garuda_edt(Clone)" || transform.gameObject.name == "Pres_edt(Clone)" || transform.gameObject.name == "Wapres_edt(Clone)")
         {
             dir = 0.5f;
-        }
+       }
         foreach (var direction in raycastDirections)
         {
             
             if (Physics.Raycast(transform.position, direction, out hit, dir))
             {
+                asd = hit.transform.gameObject;
+                
                 if (hit.collider.CompareTag("Wall"))
                 {
                     float distanceToHit = Vector3.Distance(transform.position, hit.point);
-
                     if (distanceToHit < closestDistance)
                     {
                         closestDistance = distanceToHit;
                         closestNormal = hit.normal;
                         closestPoint = hit.point;
+
                         wallFound = true;
+                        break;  
                     }
+                    
                 }
             }
             else
             {
                 Debug.DrawRay(transform.position, direction, Color.red);
+
             }
         }
 
         if (wallFound)
         {
-            RaycastHit[] hitsForward = Physics.RaycastAll(closestPoint + closestNormal * 0.01f, transform.forward, 1f);
-            RaycastHit[] hitsBackward = Physics.RaycastAll(closestPoint - closestNormal * 0.01f, -transform.forward, 1f);
-
-            RaycastHit hitForward;
-            RaycastHit hitBackward;
-
-
-            bool forwardWall = Physics.Raycast(closestPoint + closestNormal * 0.01f, transform.forward, out hitForward, 1f) && hitForward.collider.CompareTag("Wall");
-            bool backwardWall = Physics.Raycast(closestPoint - closestNormal * 0.01f, -transform.forward, out hitBackward, 1f) && hitBackward.collider.CompareTag("Wall");
-
-            if (forwardWall && backwardWall)
-            {
-                Vector3 midpoint = (hitForward.point + hitBackward.point) / 2f;
-                transform.position = midpoint;
-            }
-            else
-            {
+         
                 Vector3 offset = closestNormal * 0.05f;
                 Vector3 targetPosition = closestPoint + offset;
+                Quaternion targetRotation = Quaternion.LookRotation(-closestNormal, Vector3.up);
+                transform.rotation = targetRotation;       
                 transform.position = targetPosition;
-            }
-
-            Quaternion targetRotation = Quaternion.LookRotation(-closestNormal, Vector3.up);
-            transform.rotation = targetRotation;
-
-            return true;
+                wals = asd;
+                return true;
         }
 
         return false;
     }
 
-
+    private static GameObject wals;
+    private bool isSnappedToWall = false;
     private bool PlaceOnCeiling()
         {
             RaycastHit hit;
        
-            if (Physics.Raycast(transform.position, Vector3.up, out hit, Mathf.Infinity))
+            if (Physics.Raycast(transform.position, Vector3.up, out hit, 1f))
             {
-                if (hit.collider.CompareTag("Ceiling"))
+            Vector3 newPosition = new Vector3(transform.position.x, hit.point.y, transform.position.z);
+            Collider[] colliders = Physics.OverlapSphere(newPosition, 0.01f);
+            bool isOccupied = false;
+
+            foreach (var collider in colliders)
+            {
+                Debug.Log(collider.tag);
+                if (!collider.CompareTag("Ceiling"))
                 {
-                    transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
-
-                    Debug.Log("Objects on wall:");
-
-                    return true;
+                    isOccupied = true;
+                    break;
                 }
             }
+
+            if (!isOccupied)
+            {
+                transform.position = newPosition;
+                return true;
+            }
+        }
         
             return false;
         }
         public static bool floorcheck;
-/*     public void OnTriggerEnter(Collider collider)
-     {
-        if (collider.gameObject.tag == "Floor")
-        {
-            Debug.Log("Sedang di floor");
-           floorcheck = true;
-        }
-     }
+    /*     public void OnTriggerEnter(Collider collider)
+         {
+            if (collider.gameObject.tag == "Floor")
+            {
+                Debug.Log("Sedang di floor");
+               floorcheck = true;
+            }
+         }
 
-    public void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.tag == "Floor")
+        public void OnTriggerExit(Collider collider)
         {
-            floorcheck = false;
-        }
-    }*/
+            if (collider.gameObject.tag == "Floor")
+            {
+                floorcheck = false;
+            }
+        }*/
 
     private bool PlaceOnSurface()
-{
-    RaycastHit hit;
-
-    if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
     {
-        if (hit.collider.CompareTag("Surface"))
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
         {
-            float hitY = hit.point.y;
-            float minY = hit.collider.bounds.min.y;
-            float centerY = hit.collider.bounds.center.y;
-            float maxY = hit.collider.bounds.max.y;
+            if (hit.collider.CompareTag("Surface"))
+            {
+                // Check if there's an object directly below the hit point
+                Vector3 newPosition = CalculateNewPosition(hit.point, hit.collider.bounds);
 
-            // Define a small offset to prevent the object from sinking below the surface
-            float offset = 0.01f;
+                Collider[] colliders = Physics.OverlapSphere(newPosition, 0.1f);
+                bool isOccupied = false;
+                foreach (var collider in colliders)
+                {
+                    if (!collider.CompareTag("Surface") && collider.gameObject != gameObject)
+                    {
+                        isOccupied = true;
+                        break;
+                    }
+                }
 
-            if (Mathf.Approximately(hitY, minY))
-            {
-                transform.position = new Vector3(hit.point.x, minY + offset, hit.point.z);
-                Debug.Log("Hit at the bottom");
+                if (!isOccupied)
+                {
+                    transform.position = newPosition;
+                    return true;
+                }
             }
-            else if (Mathf.Approximately(hitY, centerY))
-            {
-                transform.position = new Vector3(hit.point.x, centerY + offset, hit.point.z);
-                Debug.Log("Hit at the center");
-            }
-            else if (Mathf.Approximately(hitY, maxY))
-            {
-                transform.position = new Vector3(hit.point.x, maxY + offset, hit.point.z);
-                Debug.Log("Hit at the top");
-            }
-            else
-            {
-                transform.position = new Vector3(hit.point.x, hitY + offset, hit.point.z);
-                Debug.Log("Hit somewhere in between");
-            }
-
-            return true;
-        }
         }
         else
         {
-            Debug.DrawRay(transform.position, Vector3.down, Color.red);
-
+            Debug.DrawRay(transform.position, Vector3.down * 1f, Color.red);
         }
 
         return false;
-}
+    }
+
+    private Vector3 CalculateNewPosition(Vector3 hitPoint, Bounds surfaceBounds)
+    {
+        float minY = surfaceBounds.min.y;
+        float centerY = surfaceBounds.center.y;
+        float maxY = surfaceBounds.max.y;
+
+        // Define a small offset to prevent the object from sinking below the surface
+        float offset = 0.01f;
+
+        float hitY = hitPoint.y;
+        Vector3 newPosition = Vector3.zero;
+
+        if (Mathf.Approximately(hitY, minY))
+        {
+            newPosition = new Vector3(hitPoint.x, minY + offset, hitPoint.z);
+            Debug.Log("Hit at the bottom");
+        }
+        else if (Mathf.Approximately(hitY, centerY))
+        {
+            newPosition = new Vector3(hitPoint.x, centerY + offset, hitPoint.z);
+            Debug.Log("Hit at the center");
+        }
+        else if (Mathf.Approximately(hitY, maxY))
+        {
+            newPosition = new Vector3(hitPoint.x, maxY + offset, hitPoint.z);
+            Debug.Log("Hit at the top");
+        }
+        else
+        {
+            newPosition = new Vector3(hitPoint.x, hitY + offset, hitPoint.z);
+            Debug.Log("Hit somewhere in between");
+        }
+
+        return newPosition;
+    }
 
 
- 
-        private void Update()
+    private void Update()
         {
             SnapToPosition();
 

@@ -85,5 +85,8 @@ public class MenuUtamaController : MonoBehaviour
         if (GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
         if (GameObject.Find("How To(Clone)") != null) Destroy(GameObject.Find("How To(Clone)"));
         if (GameObject.Find("Pertanyaan(Clone)") != null) Destroy(GameObject.Find("Pertanyaan(Clone)"));
+        if (GameObject.Find("Canvas 1(Clone)") != null) Destroy(GameObject.Find("Canvas 1(Clone)"));
+
+       
     }
 }
