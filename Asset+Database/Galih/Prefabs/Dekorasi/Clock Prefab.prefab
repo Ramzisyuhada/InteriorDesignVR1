@@ -52,10 +52,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09709077, y: 0.64163876, z: 0.62616044}
-  m_Center: {x: -0.03491209, y: 0.009156406, z: 0.0020429194}
+  m_Size: {x: 0.40654358, y: 0.64449334, z: 0.20468998}
+  m_Center: {x: 0.079148665, y: 0.00083500147, z: -0.084250584}
 --- !u!54 &3362915698695160873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 4633850008460458}
   - component: {fileID: 33707524877551746}
   - component: {fileID: 23783852627197450}
-  - component: {fileID: 5466915868681007665}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -323,25 +322,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5466915868681007665
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612546874267180}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 8e0070b5b411d204a804fff8e62d694e, type: 3}

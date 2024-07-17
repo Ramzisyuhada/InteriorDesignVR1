@@ -313,10 +313,10 @@ public class ObjectPlacment : XRGrabInteractable
         Vector3 closestPoint = Vector3.zero;
         Vector3 offset1 = Vector3.zero;
         Vector3 originalPosition = transform.position;
-        float dir = 1f; 
+        float dir = 2f; 
         if(transform.gameObject.name == "Garuda_edt(Clone)" || transform.gameObject.name == "Pres_edt(Clone)" || transform.gameObject.name == "Wapres_edt(Clone)")
         {
-            dir = 0.5f;
+            dir = 1f;
        }
         foreach (var direction in raycastDirections)
         {
@@ -335,15 +335,15 @@ public class ObjectPlacment : XRGrabInteractable
                         closestPoint = hit.point;
 
                         wallFound = true;
-                        break;  
                     }
-                    
+
+
+                    break;   
                 }
             }
             else
             {
                 Debug.DrawRay(transform.position, direction, Color.red);
-
             }
         }
 
@@ -356,6 +356,7 @@ public class ObjectPlacment : XRGrabInteractable
                 transform.rotation = targetRotation;       
                 transform.position = targetPosition;
                 wals = asd;
+                isSnappedToWall = true;
                 return true;
         }
 

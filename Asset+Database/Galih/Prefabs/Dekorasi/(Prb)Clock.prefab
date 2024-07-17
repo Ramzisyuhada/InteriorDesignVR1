@@ -361,7 +361,6 @@ GameObject:
   - component: {fileID: 6703227189302143604}
   - component: {fileID: 7676053748732163822}
   - component: {fileID: 1991845478663690471}
-  - component: {fileID: 2834006093350662649}
   m_Layer: 0
   m_Name: clock_body
   m_TagString: Untagged
@@ -435,27 +434,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2834006093350662649
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7778862988685746837}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.57698464, y: 0.57698464, z: 0.050000094}
-  m_Center: {x: 0.0000019520521, y: 0, z: 0.024999022}
 --- !u!1 &7905967547564436280
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,9 +443,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7420932954599747970}
-  - component: {fileID: 545382263715702736}
   - component: {fileID: -643162392995634621}
   - component: {fileID: 2771653645240157999}
+  - component: {fileID: 6786604277557425351}
   m_Layer: 0
   m_Name: (Prb)Clock
   m_TagString: Wall Decoration
@@ -491,28 +469,6 @@ Transform:
   - {fileID: 8473409441100465802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &545382263715702736
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7905967547564436280}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 916089969032299387, guid: 538ebcc8575799746881a05c02d1ae04, type: 3}
 --- !u!54 &-643162392995634621
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -696,3 +652,24 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
+--- !u!65 &6786604277557425351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905967547564436280}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.65, y: 0.57698464, z: 0.14}
+  m_Center: {x: 0.0000019520521, y: 0, z: 0.024999022}

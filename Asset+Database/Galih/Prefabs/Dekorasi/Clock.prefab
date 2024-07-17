@@ -284,9 +284,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6034954896618647611}
   - component: {fileID: 2930329075301540572}
-  - component: {fileID: 108288382348670207}
   - component: {fileID: -8701038720169609339}
   - component: {fileID: -6712646959897641514}
+  - component: {fileID: 6282548978382177301}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Wall Decoration
@@ -339,28 +339,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2889519261086371170}
   m_Enabled: 1
---- !u!64 &108288382348670207
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7653966420844915478}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2797687578962592920, guid: 340e458ff4749664e8d7afca50ebbdb7, type: 3}
 --- !u!54 &-8701038720169609339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -544,3 +522,24 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1
+--- !u!65 &6282548978382177301
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653966420844915478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3985564, y: 0.39620322, z: 0.08579746}
+  m_Center: {x: -0.0030669868, y: -0.0022153556, z: 0.0037868563}
