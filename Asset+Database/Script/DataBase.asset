@@ -416,10 +416,10 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Dekorasi
     <name>k__BackingField: TandaKeluar
     <id>k__BackingField: 52
-    <prefab>k__BackingField: {fileID: 1124677066532276, guid: 2df4114bb280d25418ca52939e84b23f,
+    <prefab>k__BackingField: {fileID: 5180236202471552131, guid: 3832ff239b56d9c46afdb2e2c6e5d5a9,
       type: 3}
     <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: ce59b30e29027724ba2abc997ef7ef81,
+    <SourceImage>k__BackingField: {fileID: 21300000, guid: 55284628fa66cdd4186a3ea54ff9c87c,
       type: 3}
   - <Jenis>k__BackingField: Lampu
     <name>k__BackingField: lampu+kipas
@@ -452,14 +452,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 22f8edae3085f2a41a7d4060ad77892b,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: RakDinding1
-    <id>k__BackingField: 57
-    <prefab>k__BackingField: {fileID: 5180236202471552131, guid: 3832ff239b56d9c46afdb2e2c6e5d5a9,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: 55284628fa66cdd4186a3ea54ff9c87c,
       type: 3}
   - <Jenis>k__BackingField: Dekorasi
     <name>k__BackingField: Rakdinding2
@@ -500,30 +492,6 @@ MonoBehaviour:
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 2dd25dc4c97df7044a4770e882816533,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: PenandaToilet
-    <id>k__BackingField: 63
-    <prefab>k__BackingField: {fileID: 1500948800940416, guid: 60703c96bc9c6524ab54de501c41d6a1,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: a795b8720fd400a48a197e2bd7ec8d96,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: Tanda Tempat Simpan
-    <id>k__BackingField: 64
-    <prefab>k__BackingField: {fileID: 1999101617881280, guid: 731e7a769243e0e438355e5d96f2b365,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: eee8dc048128bfb46af512ad3c4f6bdc,
-      type: 3}
-  - <Jenis>k__BackingField: Dekorasi
-    <name>k__BackingField: Penanda Security
-    <id>k__BackingField: 65
-    <prefab>k__BackingField: {fileID: 1769953744756366, guid: 2e78930ef070a334990dba032ebe04a1,
-      type: 3}
-    <materials>k__BackingField: []
-    <SourceImage>k__BackingField: {fileID: 21300000, guid: c28998b79e9e2d240972233006304cdb,
       type: 3}
   - <Jenis>k__BackingField: Dekorasi
     <name>k__BackingField: RakDinding3
@@ -944,7 +912,7 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: Tv Tembok1
     <id>k__BackingField: 121
-    <prefab>k__BackingField: {fileID: 1000012576842408, guid: 465aef85895ef654fb4858d8408d2c53,
+    <prefab>k__BackingField: {fileID: 424228889617987557, guid: 8b324e846968a8d4c8fe58b0d2b34a52,
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: c0b5945a896cae44a806ac3ac8dbbc19,
@@ -1328,7 +1296,7 @@ MonoBehaviour:
   - <Jenis>k__BackingField: Elektronik
     <name>k__BackingField: TV Besar
     <id>k__BackingField: 170
-    <prefab>k__BackingField: {fileID: 8890821166399119553, guid: f4d7002baeaf1e949bacaefa7a444af6,
+    <prefab>k__BackingField: {fileID: 8687466775635781089, guid: 3b1eb1ad81c21be4e9638de933c544f4,
       type: 3}
     <materials>k__BackingField: []
     <SourceImage>k__BackingField: {fileID: 21300000, guid: 05e33c338c48f5b4384a2381091d2eee,

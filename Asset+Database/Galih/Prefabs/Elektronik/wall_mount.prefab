@@ -932,7 +932,6 @@ GameObject:
   - component: {fileID: 4000010523639348}
   - component: {fileID: 205000010156422930}
   - component: {fileID: 2751780178519012895}
-  - component: {fileID: 8377022923015430761}
   - component: {fileID: -529962964925341815}
   - component: {fileID: 7811536959969112041}
   m_Layer: 0
@@ -1004,28 +1003,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.28, y: 0.81, z: 0.8473433}
   m_Center: {x: 0.02000001, y: 0.030000007, z: 0.34632826}
---- !u!64 &8377022923015430761
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012576842408}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &-529962964925341815
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1205,7 +1182,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  objectType: 3
+  objectType: 1
   _material: {fileID: 2100000, guid: ca9a44e0788efcd41965bd259d587028, type: 2}
   _currentmaterial: {fileID: 0}
   snapThreshold: 1

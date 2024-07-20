@@ -282,7 +282,7 @@ public class UI_Interaction : MonoBehaviour
  
     public void Close()
     {
-        if(barang.transform.tag != "Floor")
+        if(barang.transform.tag != "Wall")
         {
             SetControllerType(Controller.None);
 
@@ -293,12 +293,12 @@ public class UI_Interaction : MonoBehaviour
 
         }
 
-        if (barang.GetComponentInChildren<MeshCollider>() != null && barang.transform.tag != "Floor")
-            barang.GetComponentInChildren<MeshCollider>().convex = true;
-        if (barang.GetComponent<MeshCollider>() != null && barang.transform.tag != "Floor")
-            barang.GetComponent<MeshCollider>().convex = true;
-        if (barang.GetComponentInParent<MeshCollider>() != null && barang.transform.tag != "Floor")
-            barang.GetComponentInParent<MeshCollider>().convex = true;
+        if (barang.GetComponentInChildren<MeshCollider>() != null && barang.transform.tag != "Wall")
+            barang.GetComponentInChildren<MeshCollider>().convex = false;
+        if (barang.GetComponent<MeshCollider>() != null && barang.transform.tag != "Wall")
+            barang.GetComponent<MeshCollider>().convex = false;
+        if (barang.GetComponentInParent<MeshCollider>() != null && barang.transform.tag != "Wall")
+            barang.GetComponentInParent<MeshCollider>().convex = false;
         Destroy(GameObject.Find("Canvas(Clone)"));
         GameObject gameObject = GameObject.Find("XR Origin (XR Rig)");
         gameObject.GetComponent<ContinuousTurnProviderBase>().enabled = true;

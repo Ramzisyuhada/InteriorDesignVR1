@@ -24,7 +24,6 @@ public class CheckColliderOpendor : MonoBehaviour
                 _Interaction.SetActive(true);
 
                 menuIsActive = true;
-            StartCoroutine(Jeda());
 
         }
        else  if (_menu.activeSelf && menuIsActive && other.CompareTag("Player"))
@@ -33,7 +32,6 @@ public class CheckColliderOpendor : MonoBehaviour
             _menu.SetActive(false);
                 _Interaction.SetActive(false);
                 menuIsActive = false;
-            StartCoroutine(Jeda());
            /* if (GameObject.Find("MenuItem_part1_fix(Clone)") != null) Destroy(GameObject.Find("MenuItem_part1_fix(Clone)"));
             if (GameObject.Find("Canvas 1(Clone)") != null) Destroy(GameObject.Find("Canvas 1(Clone)"));*/
 
