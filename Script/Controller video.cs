@@ -32,7 +32,6 @@ public class Controllervideo : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         Click();
@@ -43,12 +42,15 @@ public class Controllervideo : MonoBehaviour
         RaycastHit hit;
         if (rayLeft.TryGetCurrent3DRaycastHit(out hit) && inputActionLeft.action.WasPressedThisFrame())
         {
+            if(hit.transform.GetComponentInChildren<VideoPlayer>() != null && hit.transform.CompareTag("Video"))
             _objectRaycast(hit);
         }
 
         if (rayRight.TryGetCurrent3DRaycastHit(out hit) && inputActionRight.action.WasPressedThisFrame())
         {
-            _objectRaycast(hit);
+            if (hit.transform.GetComponentInChildren<VideoPlayer>()  != null && hit.transform.CompareTag("Video"))
+
+                _objectRaycast(hit);
 
         }
     }
@@ -67,7 +69,7 @@ public class Controllervideo : MonoBehaviour
     {
         isPlayingVid = !isPlayingVid;
 
-        if (isPlayingVid)
+        if (isPlayingVid  )
         {
             player = hit.transform.GetComponentInChildren<VideoPlayer>();
 
