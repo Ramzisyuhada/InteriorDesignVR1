@@ -305,7 +305,7 @@ public class ObjectPlacment : XRGrabInteractable
     private bool PlaceOnWall()
     {
         RaycastHit hit;
-        List<Vector3> raycastDirections = new List<Vector3> { transform.forward, transform.right, -transform.right , -transform.forward };
+        List<Vector3> raycastDirections = new List<Vector3> { transform.forward, transform.right, -transform.right  };
 
         bool wallFound = false;
         float closestDistance =Mathf.Infinity;

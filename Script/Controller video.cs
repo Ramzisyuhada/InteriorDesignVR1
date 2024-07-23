@@ -51,7 +51,7 @@ public class Controllervideo : MonoBehaviour
             if (hit.transform.GetComponentInChildren<VideoPlayer>()  != null && hit.transform.CompareTag("Video"))
 
                 _objectRaycast(hit);
-
+                
         }
     }
 
