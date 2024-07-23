@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11884698, g: 0.18339385, b: 0.3297491, a: 1}
+  m_IndirectSpecularColor: {r: 0.11865487, g: 0.18314816, b: 0.32950285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12889,9 +12889,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3933536849073448154, guid: bbd5522335fb57948b490ad0a5f432be,
         type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: fdd8d6115b1c9544393702b384335027,
+        type: 3}
+    - target: {fileID: 3933536849073448154, guid: bbd5522335fb57948b490ad0a5f432be,
+        type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3933536849073448154, guid: bbd5522335fb57948b490ad0a5f432be,
+        type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933536849155654380, guid: bbd5522335fb57948b490ad0a5f432be,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: fdd8d6115b1c9544393702b384335027,
+        type: 3}
     - target: {fileID: 3933536849155654380, guid: bbd5522335fb57948b490ad0a5f432be,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -12905,7 +12922,7 @@ PrefabInstance:
     - target: {fileID: 3933536849155654380, guid: bbd5522335fb57948b490ad0a5f432be,
         type: 3}
       propertyPath: m_DirectAudioMutes.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3933536849155654380, guid: bbd5522335fb57948b490ad0a5f432be,
         type: 3}

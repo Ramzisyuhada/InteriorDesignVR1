@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Video;
@@ -20,7 +21,6 @@ public class Controllervideo : MonoBehaviour
     private VideoPlayer player;
     void Start()
     {
-        player = GetComponentInChildren<VideoPlayer>();
         GameObject player1 = GameObject.Find("XR Origin (XR Rig)");
         GameObject cameraobject = player1.transform.GetChild(0).gameObject;
 
@@ -56,25 +56,27 @@ public class Controllervideo : MonoBehaviour
 
     private void _objectRaycast(RaycastHit hit)
     {
-        if (hit.transform.gameObject.name == "TV_Apt_01")
-        {
-            Play();
-        }
+        
+            Play(hit);
+        
      
     }
 
     bool isPlayingVid = false;
-    private void Play()
+    private void Play(RaycastHit hit)
     {
         isPlayingVid = !isPlayingVid;
 
         if (isPlayingVid)
         {
+            player = hit.transform.GetComponentInChildren<VideoPlayer>();
 
             player.Play();
         }
         else
         {
+            player = hit.transform.GetComponentInChildren<VideoPlayer>();
+
             player.Stop();
 
         }
