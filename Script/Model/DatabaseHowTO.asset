@@ -13,9 +13,27 @@ MonoBehaviour:
   m_Name: DatabaseHowTO
   m_EditorClassIdentifier: 
   list:
-  - <sprite>k__BackingField: {fileID: 21300000, guid: 2d27386fafc308e4aa0c544bc6437f84,
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 18365501943033944b0d56889b263a66,
       type: 3}
     <Index>k__BackingField: 0
-  - <sprite>k__BackingField: {fileID: 21300000, guid: b859e2642f21af94783301c172920665,
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 38301ba303ca5de4ebc54760eff42d55,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 3db064293460b75479a23bd9681793dd,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: f416b74f8439faa4b8b04243fd45aa68,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 4240774232d3ce44b93b4ecf534eb97f,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 0e5492c1396b0ec4aa05966397917266,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: c9ba14e5c4ad11248b909fa4ae43765d,
+      type: 3}
+    <Index>k__BackingField: 0
+  - <sprite>k__BackingField: {fileID: 21300000, guid: 5c72d96efce8ff34f9f7e1ded4e548f9,
       type: 3}
     <Index>k__BackingField: 0
