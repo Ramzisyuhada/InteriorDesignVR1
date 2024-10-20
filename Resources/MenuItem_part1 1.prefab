@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1584957902830511227}
   m_HandleRect: {fileID: 1524985674067248315}
   m_Direction: 3
-  m_Value: 1.000002
+  m_Value: 1.0000006
   m_Size: 0.3332444
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1952659226850251012
 MonoBehaviour:
   m_ObjectHideFlags: 0
