@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae41b2d90ae459f4e85fa1eb92fb4da4, type: 3}
+  m_Name: Demo Wallset
+  m_EditorClassIdentifier: 
+  wall: {fileID: 6828672277662432919, guid: 3c18fee7bd7eb1b4e937dd8b392bb4eb, type: 3}
+  corner: {fileID: 6486968674743117589, guid: bf670bb3f156c324aba4a15090316d7d, type: 3}
+  stub: {fileID: 4069719838053450379, guid: 08a4da7faf1f769439f76677cd7c34a2, type: 3}
+  TPoint: {fileID: 4123131908038930058, guid: 1a286b0fd3a374b40952e5793856078a, type: 3}
+  pole: {fileID: 1637581035608877229, guid: c31f8afe854a96548be8e644ac949b05, type: 3}
+  cross: {fileID: 0}

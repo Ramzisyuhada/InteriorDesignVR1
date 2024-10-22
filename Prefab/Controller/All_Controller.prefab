@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3773980638106981892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8980833716770188933}
+  - component: {fileID: 7655749576072421871}
+  - component: {fileID: 6110035668161189475}
+  - component: {fileID: 6732866101920236259}
+  - component: {fileID: 1813608767886948125}
+  m_Layer: 0
+  m_Name: All_Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8980833716770188933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773980638106981892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7655749576072421871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773980638106981892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4888375c3afffae40b8bb0dc64a3a1f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7fb6ee15-1875-4473-97d4-906d0921493c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  inputActionRight:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 08e99019-9902-40af-b6f5-b3388ae51ce9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  rayLeft: {fileID: 0}
+  rayRight: {fileID: 0}
+  _Canvas_pertanyaan: {fileID: 1159128977764456767, guid: 35122395377d7a648a5d96bd162721a1,
+    type: 3}
+--- !u!114 &6110035668161189475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773980638106981892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9d319729e7d143b89002734048fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gambar:
+  - {fileID: 21300000, guid: b859e2642f21af94783301c172920665, type: 3}
+  - {fileID: 21300000, guid: 2d27386fafc308e4aa0c544bc6437f84, type: 3}
+  _canvas: {fileID: 1159128977764456767, guid: d8422f426b8b5954b9fc48ba882758d2, type: 3}
+--- !u!114 &6732866101920236259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773980638106981892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dc781949b3bb6439bec532c856df48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 1159128977764456767, guid: 9b89cdc4ae67ae14cbdc99a143e09d01, type: 3}
+--- !u!114 &1813608767886948125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773980638106981892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4400581e717894e9910cd1ce7211e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputActionLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 403cca23-cd5b-4153-b676-d5b5a96168ff
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5469779502570545813, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  InputActionRight:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2bd4d404-1815-43f5-b266-3a0325cb1abc
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 9168686443847010946, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  Canvas_Menu: {fileID: 4497703370842192572, guid: 8fa073f219e978e4d98e0b2995061de7,
+    type: 3}
